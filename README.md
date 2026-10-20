@@ -3,9 +3,9 @@
 This repository contains the code and experimental setup for **Assignment 2: Reasoning** in the Agentic LLM course. In this project, we study the reasoning and self-reflection abilities of Large Language Models (LLMs) on interactive puzzle and game benchmarks using the **[BALROG](https://balrogai.com)** framework.
 
 The project is divided into three key stages:
-1. **Exercise 1: Baseline Benchmark Evaluation** — Running baseline evaluations with a naive agent on local models (`Qwen2.5-7B`, `SmolLM3-3B`) and cloud models (`Gemini-3.5-Flash-Lite`) across environments such as **BabyAI** and **Crafter**.
-2. **Exercise 2: Custom Reasoning Agent** — Improving reasoning capabilities by developing a custom agent using Chain-of-Thought (CoT) prompting.
-3. **Exercise 3: Self-Reflection Agent** — Implementing an agent based on the Reflexion architecture that extracts lessons from failed attempts across episodes.
+1. **Exercise 1: Baseline Benchmark Evaluation** : Running baseline evaluations with a naive agent on local models (`Qwen2.5-7B`, `SmolLM3-3B`) and cloud models (`Gemini-3.5-Flash-Lite`) across environments such as **BabyAI** and **Crafter**.
+2. **Exercise 2: Custom Reasoning Agent** : Improving reasoning capabilities by developing a custom agent using Chain-of-Thought (CoT) prompting.
+3. **Exercise 3: Self-Reflection Agent** : Implementing an agent based on the Reflexion architecture that extracts lessons from failed attempts across episodes.
 
 ---
 
@@ -121,15 +121,45 @@ python eval.py \
   client.model_id="Qwen/Qwen2.5-7B-Instruct-AWQ" \
   client.generate_kwargs.max_tokens=512
 ```
+## 6. Result Processing (Aggregating Mean and Standard Error)
+
+We provide `results_processing.py` to automatically scan run output directories under `results/`, combine multiple runs using statistical pooling, and calculate the overall and per-task **progression percentage** ($\text{mean} \pm \text{standard error}$) as well as the average step counts.
+
+### Usage Syntax:
+
+```bash
+python results_processing.py "<keyword_pattern>" [environments...]
+```
+
+- **`<keyword_pattern>`**: Pattern or keyword used to match subdirectories inside `results/` (e.g., model name, date, or experiment tags like `Qwen`, `gemini`, or glob patterns like `"10-19*ref*Qwen"`).
+- **`[environments...]`** *(optional)*: One or more target environments to inspect (e.g., `babyai`, `crafter`). If omitted, it defaults to evaluating both `babyai` and `crafter`.
+
+### Examples:
+
+1. **Filtering by specific run tag and environment (e.g., Reflexion Qwen runs on BabyAI):**
+   ```bash
+   python results_processing.py "10-19*ref*Qwen" babyai
+   ```
+
+2. **Generic keyword search across all default environments (`babyai` and `crafter`):**
+   ```bash
+   python results_processing.py "Qwen"
+   ```
+
+3. **Evaluating Cloud LLM (Gemini) baseline results:**
+   ```bash
+   python results_processing.py "gemini" babyai crafter
+   ```
 
 ---
 
-## 6. Repository Structure
+## 7. Repository Structure
 
 ```text
 ├── agents/
 │   ├── custom/        # Implementation for Exercise 2 (CoT Agent)
 │   └── reflection/    # Implementation for Exercise 3 (Reflexion Agent)
 ├── exp_1.sh           # Shell script to automate multiple experiment runs
+├── results_processing.py           # python script to calculate mean and sd from result files
 └── README.md          # Project documentation
 ```
