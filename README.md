@@ -1,115 +1,136 @@
-<p align="center">
-  <a href="https://balrogai.com">
-    <img src="docs/imgs/balrog_banner.png" width="50%" alt="BALROG Agent" />
-  </a>
-</p>
+# Agentic LLM: Reasoning and Self-Reflection in BALROG
+
+This repository contains the code and experimental setup for **Assignment 2: Reasoning** in the Agentic LLM course. In this project, we study the reasoning and self-reflection abilities of Large Language Models (LLMs) on interactive puzzle and game benchmarks using the **[BALROG](https://balrogai.com)** framework.
+
+The project is divided into three key stages:
+1. **Exercise 1: Baseline Benchmark Evaluation** — Running baseline evaluations with a naive agent on local models (`Qwen2.5-7B`, `SmolLM3-3B`) and cloud models (`Gemini-3.5-Flash-Lite`) across environments such as **BabyAI** and **Crafter**.
+2. **Exercise 2: Custom Reasoning Agent** — Improving reasoning capabilities by developing a custom agent using Chain-of-Thought (CoT) prompting.
+3. **Exercise 3: Self-Reflection Agent** — Implementing an agent based on the Reflexion architecture that extracts lessons from failed attempts across episodes.
 
 ---
 
-# BALROG: Benchmarking Agentic LLM and VLM Reasoning On Games
+## 1. Local LLM Server Setup (vLLM)
 
-BALROG is a novel benchmark evaluating agentic LLM and VLM capabilities on long-horizon interactive tasks using reinforcement learning environments. Check out how current models fare on our [leaderboard](https://balrogai.com). You can read more about BALROG in our [paper](https://arxiv.org/abs/2411.13543).
-
-## Features
-
-- Comprehensive evaluation of agentic abilities
-- Support for both language and vision-language models
-- Integration with popular AI APIs and local deployment
-- Easy integration for custom agents, new environments and new models
-
-## Installation
-
-We advise using conda for the installation
+To run experiments with locally hosted open-source models, launch an OpenAI-compatible server using `vllm` in your first terminal:
 
 ```bash
-conda create -n balrog python=3.10 -y
-conda activate balrog
-
-git clone https://github.com/balrog-ai/BALROG.git
-cd BALROG
-pip install -e .
-balrog-post-install
+vllm serve Qwen/Qwen2.5-7B-Instruct-AWQ \
+  --port 8000 \
+  --max-model-len 4096 \
+  --gpu-memory-utilization 0.95 \
+  --enforce-eager
 ```
 
-On Mac make sure you have `wget` installed for the `balrog-post-install`
+> **Model Switch:** You can replace the model path with another model if needed, such as `HuggingFaceTB/SmolLM3-3B`.
 
-## Docker
-
-We have provided some docker images. Please see the [relevant README](docker/README.md).
-
-## ⚡️ Evaluate using vLLM locally
-
-We support running LLMs/VLMs locally using [vLLM](https://github.com/vllm-project/vllm). You can spin up a vLLM client and evaluate your agent on BALROG in the following way:
+In your evaluation terminal, export the environment variables so that the client routes requests to the local server:
 
 ```bash
-pip install vllm numpy==1.23
-vllm serve meta-llama/Llama-3.2-1B-Instruct --port 8080
-
-python eval.py \
-  agent.type=naive \
-  agent.max_image_history=0 \
-  agent.max_text_history=16 \
-  eval.num_workers=32 \
-  client.client_name=vllm \
-  client.model_id=meta-llama/Llama-3.2-1B-Instruct \
-  client.base_url=http://0.0.0.0:8080/v1
+export OPENAI_API_KEY="dummy"
+export OPENAI_BASE_URL="http://localhost:8000/v1"
 ```
 
-On Mac you might have to first export the following to suppress some fork() errors:
+---
 
-```
-export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
-```
+## 2. Automated Experiments Script
 
-Check out [vLLM](https://github.com/vllm-project/vllm) for more options on how to serve your models fast and efficiently.
-
-## 🛜 Evaluate using API
-
-We support how of the box clients for OpenAI, Anthropic and Google Gemini APIs. If you want to evaluate an agent using one of these APIs, you first have to set up your API key in one of two ways:
-
-You can either directly export it:
+To run evaluations conveniently across 3 separate runs (10 episodes each), you can execute the provided shell script:
 
 ```bash
-export OPENAI_API_KEY=<KEY>
-export ANTHROPIC_API_KEY=<KEY>
-export GEMINI_API_KEY=<KEY>
+bash exp_1.sh
 ```
 
-Or you can modify the `SECRETS` file, adding your api keys.
+---
 
-You can then run the evaluation with:
+## 3. Exercise 1: Baseline Benchmark Evaluation
+
+In Exercise 1, we establish the baseline performance using the standard `naive` agent.
+
+### Run Command Example:
 
 ```bash
 python eval.py \
+  envs.names=babyai \
+  tasks.babyai_tasks=['BabyAI-MixedTrainLocal-v0/pickup'] \
+  eval.num_workers=10 \
   agent.type=naive \
   agent.max_image_history=0 \
-  agent.max_text_history=16 \
-  eval.num_workers=16 \
+  agent.max_text_history=5 \
   client.client_name=openai \
-  client.model_id=gpt-4o-mini-2024-07-18
+  client.model_id="Qwen/Qwen2.5-7B-Instruct-AWQ" \
+  client.generate_kwargs.max_tokens=512
 ```
 
-## Documentation
+- **`envs.names`**: Environment name (`babyai` or `crafter`).
+- **`tasks.babyai_tasks`**: Specific tasks to evaluate (e.g., `pickup`, `goto`, `open`).
+- **`agent.type`**: Set to `naive`.
+- **`eval.num_workers`**: Number of parallel workers used for evaluation.
 
-- [Evaluation Guide](https://github.com/balrog-ai/BALROG/blob/main/docs/evaluation.md) - Detailed instructions for various evaluation scenarios
-- [Agent Development](https://github.com/balrog-ai/BALROG/blob/main/docs/agents.md) - Tutorial on creating custom agents
-- [Few Shot Learning](https://github.com/balrog-ai/BALROG/blob/main/docs/few_shot_learning.md) - Instructions on how to run Few Shot Learning
+---
 
-We welcome contributions! Please see our [Contributing Guidelines](https://github.com/balrog-ai/BALROG/blob/main/docs/contribution.md) for details.
+## 4. Exercise 2: Custom Reasoning Agent (Chain-of-Thought)
 
-## License
+For Exercise 2, we implement a custom agent that introduces structured reasoning. Instead of predicting the next action directly, the model is prompted to think step-by-step:
+1. **THOUGHT**: Evaluates previous actions and current observations.
+2. **PLAN**: Maintains and updates the high-level plan.
+3. **ACTION**: Decides on the next concrete executable action.
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+- **Agent Implementation:** Located in `agents/custom/`
 
-## Citation
+### Run Command:
 
-If you use BALROG in any of your work, please cite:
+Run the same evaluation script with `agent.type=custom`:
 
+```bash
+python eval.py \
+  envs.names=babyai \
+  tasks.babyai_tasks=['BabyAI-MixedTrainLocal-v0/pickup'] \
+  eval.num_workers=10 \
+  agent.type=custom \
+  agent.max_image_history=0 \
+  agent.max_text_history=5 \
+  client.client_name=openai \
+  client.model_id="Qwen/Qwen2.5-7B-Instruct-AWQ" \
+  client.generate_kwargs.max_tokens=512
 ```
-@article{paglieri2024balrog,
-  title={Benchmarking Agentic LLM and VLM Reasoning On Games},
-  author={Paglieri, Davide and Cupia{\l}, Bart{\l}omiej and Coward, Sam and Piterbarg, Ulyana and Wo{\l}czyk, Maciej and Khan, Akbir and Pignatelli, Eduardo and Kuci{\'n}ski, {\L}ukasz and Pinto, Lerrel and Fergus, Rob and Foerster, Jakob Nicolaus and Parker-Holder, Jack and Rockt{\"a}schel, Tim},
-  journal={arXiv preprint arXiv:2411.13543},
-  year={2024}
-}
+
+---
+
+## 5. Exercise 3: Self-Reflection Agent (Reflexion)
+
+In Exercise 3, we implement a self-reflection mechanism based on the **Reflexion** framework. When an episode fails or remains incomplete, the agent reviews the final outcome and its recent trajectory to generate concise, actionable `LESSON` statements. These lessons are stored and injected into the prompt of subsequent attempts.
+
+- **Agent Implementation:** Located in `agents/reflection/`
+
+### Important Setup Note:
+> **Set `eval.num_workers=1`:** Because the agent saves lessons and updates shared memory sequentially after each episode, running with a single worker is strongly recommended to prevent memory collisions and race conditions.
+
+### Run Command:
+
+Run the evaluation script with `agent.type=ref`:
+
+```bash
+python eval.py \
+  envs.names=babyai \
+  tasks.babyai_tasks=['BabyAI-MixedTrainLocal-v0/pickup'] \
+  eval.num_workers=1 \
+  agent.type=ref \
+  agent.max_image_history=0 \
+  agent.max_text_history=5 \
+  client.client_name=openai \
+  client.model_id="Qwen/Qwen2.5-7B-Instruct-AWQ" \
+  client.generate_kwargs.max_tokens=512
+```
+
+---
+
+## 6. Repository Structure
+
+```text
+├── agents/
+│   ├── custom/        # Implementation for Exercise 2 (CoT Agent)
+│   └── reflection/    # Implementation for Exercise 3 (Reflexion Agent)
+├── eval.py            # Main evaluation runner from BALROG
+├── exp_1.sh           # Shell script to automate multiple experiment runs
+└── README.md          # Project documentation
 ```
