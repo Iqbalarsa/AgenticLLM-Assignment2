@@ -130,7 +130,6 @@ python eval.py \
 ├── agents/
 │   ├── custom/        # Implementation for Exercise 2 (CoT Agent)
 │   └── reflection/    # Implementation for Exercise 3 (Reflexion Agent)
-├── eval.py            # Main evaluation runner from BALROG
 ├── exp_1.sh           # Shell script to automate multiple experiment runs
 └── README.md          # Project documentation
 ```
