@@ -1,0 +1,475 @@
+Step,Action,Reasoning,Observation,Reward,Done
+0,turn right,"Thought: Given the current observation, there is a wall blocking the path both forward and to the right. Since we cannot see any objects or doors directly in front of us, our primary goal should be to explore the environment. We need to move in a direction where we might find a door or an object that could help us progress towards opening the yellow door. 
+
+Since moving forward is blocked by a wall, we should try moving to the right. This might give us a better view of the environment and potentially lead us to an area where we can find a key or a way to open the yellow door.
+Plan: Move right to explore the environment.","a wall 2 steps forward
+a locked yellow door 2 steps right",0,False
+1,go forward,"Thought: From the previous observation, there was a locked yellow door 2 steps to the right. Now, upon turning right, I see a wall 2 steps forward and the same locked yellow door 2 steps right. This suggests that the wall obstructs my direct path to the door. My plan should be to find a way around or through the wall to reach the door.
+Plan: Move around the wall to approach the yellow door.","a wall 1 step forward
+a wall 2 steps right",0,False
+2,go forward,"Thought: The previous action was to go forward, which brought me to a wall. This means I need to find another way to approach the yellow door. Turning right would have brought me closer to the door, but now there's a wall in that direction as well. Since there's no other immediate obstacle in front of me, I should try going forward again to see if I can navigate around the walls.
+Plan: Move around the wall to approach the yellow door.","a wall 1 step forward
+a wall 2 steps right",0,False
+3,turn left,"Thought: From the previous observation, I moved forward and encountered another wall, so I need to continue moving around the wall to get closer to the yellow door. My next action should be to turn left to proceed around the wall.
+Plan: Move around the wall to approach the yellow door.","a wall 5 steps forward
+a wall 1 step right",0,False
+4,turn right,"Thought: From the previous observations, it seems like going forward and turning left did not help me get closer to the yellow door. The walls are blocking my path. I need to move around the wall to approach the door. Turning right again might help me navigate around the wall and get closer to the door.
+Plan: Move around the wall to approach the yellow door.","a wall 1 step forward
+a wall 2 steps right",0,False
+5,turn left,"Thought: From the previous observations, it seems like moving forward just puts me back against the wall. Turning right also led me to another wall. Given the layout, it's clear that there are walls obstructing my path to the yellow door. To proceed, I need to find a way to navigate around these walls. Turning left from the current position might help me find an alternate route.
+Plan: Move around the wall to approach the yellow door.","a wall 5 steps forward
+a wall 1 step right",0,False
+6,turn left,"Thought: From the previous observations, it seems like there was a wall blocking my path when I tried to go forward. Turning right did not help either as it just led me back to another wall. Now, I need to try turning left again to see if I can find a clear path. If turning left does not work, I might need to reassess the situation.
+Plan: Move around the wall to approach the yellow door.","a wall 6 steps forward
+a wall 2 steps left
+a locked yellow door 2 steps left and 1 step forward",0,False
+7,go forward,"Thought: From the observations, it seems that there is a wall blocking my path when moving directly towards the yellow door. The walls are positioned such that turning left will allow me to move closer to the yellow door. My previous actions were to turn left, but it did not change my observation, indicating that I need to move forward to bypass the wall.
+Plan: Move around the wall to approach the yellow door.","a wall 5 steps forward
+a locked yellow door 2 steps left",0,False
+8,turn left,"Thought: From the previous observation, I moved forward and approached the wall. Now, the observation indicates that there is a locked yellow door 2 steps left from my position. This means that moving left should bring me closer to the door. I need to move left to get closer to the door.
+Plan: Move left to approach the yellow door.","a wall 2 steps left
+a locked yellow door 2 steps forward",0,False
+9,go forward,"Thought: From the previous observations, I moved left but ended up facing the same configuration of objects. Now, I need to move directly towards the yellow door. My next action should be to go forward since the yellow door is 2 steps ahead.
+Plan: Move forward to approach the yellow door.","a wall 2 steps left
+a locked yellow door 1 step forward",0,False
+10,go forward,"Thought: From the previous observation, I moved forward and approached the yellow door. However, I am still not in front of the door, as indicated by the current observation where the door is only 1 step forward. My plan is to continue moving forward until I am directly in front of the yellow door.
+Plan: Move forward until directly in front of the yellow door.","a wall 2 steps left
+a locked yellow door 1 step forward",0,False
+11,toggle,"Thought: From the previous observations, we moved closer to the yellow door with each 'go forward' action. The current observation shows that we are now 1 step forward from the yellow door. The next logical step would be to toggle the door to unlock it and proceed.
+Plan: Unlock the yellow door.","a wall 2 steps left
+a locked yellow door 1 step forward",0,False
+12,toggle,"Thought: The toggle action was used to try to unlock the yellow door, but the door remained locked. Given the observation, there is still a wall to the left and the door is directly in front of me. Since the door is still locked, it suggests that the toggle action might need to be repeated to ensure the door is properly unlocked. There are no other objects or paths to explore at this point.
+Plan: Unlock the yellow door.","a wall 2 steps left
+a locked yellow door 1 step forward",0,False
+13,toggle,"Thought: From the observations, it appears that the yellow door remains locked after attempting to toggle it. This suggests that the toggle action might not be effective on a locked door. Since my goal is to unlock the yellow door, I need to continue trying to find a way to interact with it effectively.
+Plan: Continue attempting to interact with the yellow door using the toggle action until it becomes unlocked.","a wall 2 steps left
+a locked yellow door 1 step forward",0,False
+14,toggle,"Thought: From the observations, it seems that the yellow door remains locked after multiple attempts to toggle it. Given that the door is locked, it might require a key or some other form of interaction that I haven't encountered yet. However, since the door is directly in front of me and no other objects or obstacles are preventing me from interacting with it, I should continue to attempt toggling the door.
+Plan: Continue attempting to interact with the yellow door using the toggle action until it becomes unlocked.","a wall 2 steps left
+a locked yellow door 1 step forward",0,False
+15,toggle,"Thought: From the repeated observations, it seems that the toggle action is not changing the state of the yellow door. This means the door might require a key or some other action to unlock it, rather than just toggling. Since the toggle action hasn't succeeded in unlocking the door, I will continue to toggle it but also consider looking for a key or another method to unlock the door.
+Plan: Continue toggling the door until it unlocks. If that fails, look for a key or alternative method to unlock the door.","a wall 2 steps left
+a locked yellow door 1 step forward",0,False
+16,turn left,"Thought: From the previous observations, it seems that simply toggling the door does not unlock it. Since there are no other objects or keys visible, and the door remains locked, continuing to toggle the door is not likely to be effective. There might be a need to explore further or find another approach to unlocking the door.
+Plan: No changes to the plan.","a wall 2 steps forward
+a locked yellow door 1 step right",0,False
+17,toggle,"Thought: From the previous observations, it seems that simply toggling the door isn't changing its state. Given that the door is still locked, I need to consider other options. The plan should be to continue trying to unlock the door using the toggle action, as there's no mention of any keys or other objects that could be used to unlock it. If toggling the door doesn't work after a few attempts, I might need to explore the area further, but based on the current information, it makes the most sense to stick with the toggle action.
+Plan: Continue toggling the door until it unlocks.","a wall 2 steps forward
+a locked yellow door 1 step right",0,False
+18,go forward,"Thought: From the previous observations, it seems like the yellow door is still locked after using the toggle action. Given that the door is now one step to the right, I need to approach it first before attempting to toggle it again.
+Plan: Move towards the yellow door and then try to unlock it.","a wall 1 step forward
+a wall 1 step right",0,False
+19,turn right,"Thought: From the previous observations, I turned left and moved forward, which led me to a wall. Now, I need to move closer to the yellow door. Since the yellow door is only one step to the right, I should move there.
+Plan: Move towards the yellow door.","a wall 1 step forward
+a wall 1 step left
+a locked yellow door 1 step right and 1 step forward",0,False
+20,turn right,"Thought: From the previous observations, moving forward led me to another wall. Therefore, my next action should be to turn right and move closer to the yellow door.
+Plan: Move towards the yellow door.","a wall 6 steps forward
+a wall 1 step left
+a locked yellow door 1 step left and 1 step forward",0,False
+21,turn left,"Thought: From the previous observations, it seems like turning right did not lead us closer to the yellow door. Instead, it moved us towards more walls. Now, we need to move towards the left where the yellow door is located.
+Plan: Move towards the left to reach the yellow door.","a wall 1 step forward
+a wall 1 step left
+a locked yellow door 1 step right and 1 step forward",0,False
+22,turn right,"Thought: From the previous observations, it seems like turning left did not help me progress closer to the yellow door. Instead, it moved me further away from it. Therefore, I need to re-evaluate my approach. Turning right might be a better option to move closer to the door.
+Plan: Move towards the yellow door by exploring the path to the right.","a wall 6 steps forward
+a wall 1 step left
+a locked yellow door 1 step left and 1 step forward",0,False
+23,turn left,"Thought: From the previous observations, we can see that there is a locked yellow door 1 step left and 1 step forward. My current position is a wall 6 steps forward. To reach the yellow door, I need to move left and then forward. The best next action is to move left.
+Plan: Move left and then forward to reach the yellow door.","a wall 1 step forward
+a wall 1 step left
+a locked yellow door 1 step right and 1 step forward",0,False
+24,turn left,"Thought: From the previous observations, it seems like turning left did not lead me closer to the yellow door. Now, the observation confirms that the yellow door is 1 step right and 1 step forward. Based on this, my plan should be to move left and then forward to reach the yellow door.
+Plan: Move left and then forward to reach the yellow door.","a wall 1 step forward
+a wall 1 step right",0,False
+25,go forward,"Thought: From the previous observations, it seems that turning left has been moving me towards the yellow door. However, the current observation indicates that there is no longer a wall to my right, suggesting that the yellow door might be closer now. My plan was to move left and then forward to reach the yellow door. Given this observation, I should proceed forward to reach the door.
+Plan: Move forward to reach the yellow door.","a wall 1 step forward
+a wall 1 step right",0,False
+26,turn left,"Thought: From the previous observations, it seems like moving forward did not reveal the yellow door as expected. The walls are blocking my path, so going forward again would likely result in hitting another wall. My plan is to try turning left to find an alternative path to the yellow door.
+Plan: Turn left to find an alternative path to the yellow door.","a wall 6 steps forward
+a wall 1 step right",0,False
+27,turn left,"Thought: From the previous observations, turning left did not reveal any new paths or objects. The walls block the forward path, and there is no indication of the yellow door. Turning left again might help explore another direction.
+Plan: Continue exploring by turning left.","a wall 6 steps forward
+a wall 1 step left
+a locked yellow door 1 step left and 1 step forward",0,False
+28,go forward,"Thought: From the previous observations, it seems like turning left has led us into a corridor where we encounter walls. Turning left again would likely continue this pattern. However, now we see a locked yellow door at our position (1 step left and 1 step forward), which suggests we might need to find a key or manipulate something to open it. Since we don't have any objects and there's no indication of a key or other manipulable object, the best course of action is to approach the door directly.
+Plan: Approach the yellow door.","a wall 5 steps forward
+a locked yellow door 1 step left",0,False
+29,turn left,"Thought: From the previous observation, we were approaching the yellow door. However, after moving forward, the observation shows that there is now a wall in front of us and the yellow door is to the left. This suggests that moving forward was not the correct action as it led us into a wall. We need to adjust our approach to reach the yellow door.
+Plan: Approach the yellow door from the left side.","a wall 2 steps left
+a locked yellow door 1 step forward",0,False
+30,go forward,"Thought: From the previous observation, we turned left to approach the yellow door from the left side. However, now the observation indicates that there is a wall 2 steps left and a locked yellow door 1 step forward. This means we need to go forward to interact with the yellow door.
+Plan: Approach the yellow door directly.","a wall 2 steps left
+a locked yellow door 1 step forward",0,False
+31,go forward,"Thought: From the previous observation, we were able to move closer to the yellow door. Now, we need to continue moving forward to approach the door directly.
+Plan: Approach the yellow door directly.","a wall 2 steps left
+a locked yellow door 1 step forward",0,False
+32,go forward,"Thought: From the previous observations, it seems that going forward has not moved me closer to the yellow door. Given the current observation, I still see the yellow door 1 step forward. This means I need to continue moving forward until I am in front of the door.
+Plan: Continue moving forward until the yellow door is in front of me.","a wall 2 steps left
+a locked yellow door 1 step forward",0,False
+33,go forward,"Thought: Based on the observations, I need to move closer to the yellow door. My previous actions have not changed my position relative to the door, so I should continue going forward.
+Plan: Continue moving forward until the yellow door is in front of me.","a wall 2 steps left
+a locked yellow door 1 step forward",0,False
+34,go forward,"Thought: From the observations, it appears that the yellow door remains 1 step forward, indicating that my previous actions of going forward did not change the position of the door relative to me. This suggests that I need to continue moving forward until the yellow door is directly in front of me.
+Plan: Continue moving forward until the yellow door is in front of me.","a wall 2 steps left
+a locked yellow door 1 step forward",0,False
+35,go forward,"Thought: From the previous observations, it seems like moving forward hasn't changed my position relative to the objects. This means the wall and the locked yellow door are still directly ahead. Given this, I need to continue moving forward until the yellow door is directly in front of me.
+Plan: Continue moving forward until the yellow door is in front of me.","a wall 2 steps left
+a locked yellow door 1 step forward",0,False
+36,go forward,"Thought: From the previous observations, it seems that moving forward hasn't changed my position relative to the wall and the locked yellow door. Since the yellow door is always 1 step forward, I need to continue moving forward until I am directly in front of the door.
+Plan: Continue moving forward until the yellow door is in front of me.","a wall 2 steps left
+a locked yellow door 1 step forward",0,False
+37,go forward,"Thought: From the previous observations, it seems that moving forward does not change the layout in front of me. This suggests that there might be an obstacle or the door remains at the same position. Since the yellow door is still one step forward, continuing to move forward makes sense to eventually align myself directly in front of the door.
+Plan: Continue moving forward until the yellow door is in front of me.","a wall 2 steps left
+a locked yellow door 1 step forward",0,False
+38,go forward,"Thought: From the previous observations, it seems like moving forward hasn't changed the layout. I am still 1 step away from the locked yellow door. Since the observation did not change, it indicates that I need to continue moving forward to get closer to the door.
+Plan: Continue moving forward until the yellow door is in front of me.","a wall 2 steps left
+a locked yellow door 1 step forward",0,False
+39,turn left,"Thought: From the previous observations, it seems that moving forward hasn't changed my position relative to the objects. I am still two steps away from a wall and one step away from a locked yellow door. Since the yellow door is still in front of me after multiple attempts, I need to find another way to interact with it. Turning might help me approach the door from a different angle or reveal any keys or mechanisms needed to unlock it.
+Plan: Turn left to see if there are any keys or mechanisms near the door.","a wall 2 steps forward
+a locked yellow door 1 step right",0,False
+40,go forward,"Thought: From the previous observations, we were directly facing the locked yellow door. Turning left should allow us to approach a potential key or mechanism on the other side of the wall. This could potentially help us unlock the door.
+Plan: Investigate the area to the left of the wall to find a key or mechanism.","a wall 1 step forward
+a wall 1 step right",0,False
+41,turn right,"Thought: From the previous observations, I moved forward and encountered walls both in front and to the right. This suggests there are no accessible areas to the left of the wall where I am currently positioned. Given this, I should investigate the area to the right to see if there is any object that might be useful for opening the yellow door.
+Plan: Investigate the area to the right for any useful objects.","a wall 1 step forward
+a wall 1 step left
+a locked yellow door 1 step right and 1 step forward",0,False
+42,go forward,"Thought: From the previous observation, I moved forward and encountered walls both to the left and right. This means there are no objects to interact with directly ahead or to the left. The yellow door is located 1 step to the right and 1 step forward. My plan should be to move closer to the door.
+Plan: Move towards the yellow door.","a wall 1 step forward
+a wall 1 step left
+a locked yellow door 1 step right and 1 step forward",0,False
+43,turn right,"Thought: From the observations, it's clear that the yellow door is located 1 step right and 1 step forward from my current position. My previous action was to go forward, which moved me closer to the door but did not align me directly with the door. Now, I need to turn right to face the door directly before interacting with it.
+Plan: Move directly towards the yellow door.","a wall 6 steps forward
+a wall 1 step left
+a locked yellow door 1 step left and 1 step forward",0,False
+44,turn left,"Thought: From the observations, it's clear that the walls block my path towards the yellow door when moving forward or left. Therefore, I need to find another direction to approach the door. Since turning right would still be blocked by the wall, I should try moving backward to find an alternative route.
+Plan: Move backward to find an alternative route.","a wall 1 step forward
+a wall 1 step left
+a locked yellow door 1 step right and 1 step forward",0,False
+45,turn left,"Thought: From the previous observations, it seems that going forward and turning right did not lead to the yellow door. Instead, it led me to walls. Turning left now will help me explore the area more thoroughly. If there's an alternative path, this action will reveal it.
+Plan: Explore the area by moving left to find a path to the yellow door.","a wall 1 step forward
+a wall 1 step right",0,False
+46,go forward,"Thought: From the previous observations, it seems like turning left didn't lead me closer to the yellow door, as I am now facing a wall and another wall. Given the previous observation showed a locked yellow door to the right and forward, it makes sense to go forward from this position to potentially unlock the door.
+Plan: Continue moving forward to reach the yellow door.","a wall 1 step forward
+a wall 1 step right",0,False
+47,go forward,"Thought: From the previous observations, it seems that after turning left, the path was blocked by a wall. Moving forward again would likely lead us closer to the yellow door, as there are still walls to the left and right but no indication of an obstacle directly in front. Therefore, continuing to move forward should bring us closer to our goal.
+Plan: Continue moving forward to reach the yellow door.","a wall 1 step forward
+a wall 1 step right",0,False
+48,turn right,"Thought: From the previous observations, it seems that moving forward did not change the layout of walls in front of me. This suggests that I am still in a corridor without any immediate changes in direction. Given the current observation, it still does not provide any new information about the location of the yellow door. Based on the previous observations, the yellow door was to the left and forward, but now it appears to be to the right and forward. Since going forward did not change the layout, I should try a different action to potentially reveal the location of the yellow door.
+Plan: Turn right to check the area where the yellow door might be located.","a wall 1 step forward
+a wall 1 step left
+a locked yellow door 1 step right and 1 step forward",0,False
+49,go forward,"Thought: From the previous observations, going forward and turning right did not reveal any new information about the locked yellow door. The door is still at the same position relative to me. Therefore, I need to explore further to find a way to interact with the door. Turning right was a good move to check the area, but now I should continue moving towards the door.
+Plan: Move closer to the yellow door by going forward.","a wall 1 step forward
+a wall 1 step left
+a locked yellow door 1 step right and 1 step forward",0,False
+50,turn right,"Thought: From the previous observations, moving forward did not change the scenery, indicating that the door was likely blocked by walls. Now that I have a clearer view, I can see the yellow door 1 step right and forward. My plan should be to move closer to the door by going right and then forward.
+Plan: Move closer to the yellow door by going right and then forward.","a wall 6 steps forward
+a wall 1 step left
+a locked yellow door 1 step left and 1 step forward",0,False
+51,go forward,"Thought: From the previous observation, I turned right, which brought me closer to the yellow door. However, the observation still shows the same layout, indicating that I need to move forward to get closer to the yellow door. My plan remains the same: move closer to the yellow door by going right and then forward.
+Plan: Move closer to the yellow door by going right and then forward.","a wall 5 steps forward
+a locked yellow door 1 step left",0,False
+52,turn right,"Thought: From the previous observations, it seems like moving forward did not bring us closer to the yellow door. Now, based on the current observation, the yellow door is located 1 step left. My plan should be to move right to face the door and then proceed forward to reach it.
+Plan: Move right to face the yellow door and then go forward to reach it.","a wall 6 steps forward
+a wall 2 steps right",0,False
+53,go left,"Thought: From the previous observations, we moved right to face the yellow door. Now, the observation confirms that the yellow door is directly left of our position. My plan was to move left towards the door and then go forward to reach it. Given the current observation aligns with the plan, no changes are needed.
+Plan: No changes to the plan.","
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 5 steps forward
+a wall 2 steps right",0,False
+54,turn left,"Thought: From the previous observation, we were facing the yellow door. However, the observation now shows a wall 5 steps forward and another wall 2 steps right. This suggests that taking the action ""go forward"" led us to move away from the yellow door and into a different part of the environment. 
+
+Given this, we need to adjust our plan to reposition ourselves so that we can face the yellow door again. The best action here is to go left to reface the yellow door.
+Plan: Turn left to reface the yellow door.","a wall 5 steps forward
+a locked yellow door 2 steps left",0,False
+55,turn right,"Thought: From the previous observation, we were facing a wall 2 steps right. Turning left would help us face the yellow door. However, after executing the turn left action, the observation did not change. This suggests that turning left might not have worked as intended, and we are still facing the wall 2 steps right. Therefore, we need to try another approach.
+Plan: Turn right to face the yellow door.","a wall 5 steps forward
+a wall 2 steps right",0,False
+56,turn left,"Thought: From the previous observation, the yellow door was two steps left. Turning right would place the yellow door directly in front of me. However, the current observation shows only walls both forward and to the right. This suggests that turning right might not have been the correct action since the yellow door is still not directly in front of me.
+Plan: Turn left to face the yellow door.","a wall 5 steps forward
+a locked yellow door 2 steps left",0,False
+57,turn left,"Thought: From the current observation, we are still facing a wall 5 steps forward and a locked yellow door 2 steps left. This means our previous actions did not change our orientation. We need to turn left to face the yellow door directly.
+Plan: Turn left to face the yellow door.","a wall 2 steps left
+a locked yellow door 2 steps forward",0,False
+58,toggle,"Thought: The previous actions turned left twice, which brought me back to facing the yellow door. This means turning left was correct as it aligned me with the yellow door. Since the door is now directly in front of me and it is locked, the next action should be to attempt to interact with it using the 'toggle' action.
+Plan: Interact with the yellow door using the 'toggle' action.","a wall 2 steps left
+a locked yellow door 2 steps forward",0,False
+59,turn left,"Thought: From the previous observation, the yellow door was directly in front of me after turning left twice. After attempting to toggle the door, it still appears to be locked. Since the door did not unlock, there might be an additional step required to interact with the door properly.
+Plan: No changes to the plan.","a wall 2 steps forward
+a locked yellow door 2 steps right",0,False
+60,turn right,"Thought: From the previous observations, it seems that interacting with the yellow door did not unlock it. The observation shows that the yellow door is still locked 2 steps right. Therefore, I need to move closer to the door before attempting to interact with it again.
+Plan: Move closer to the yellow door.","a wall 2 steps left
+a locked yellow door 2 steps forward",0,False
+61,go forward,"Thought: From the previous observations, it seems like turning left did not bring me closer to the yellow door. Now, facing the wall 2 steps forward and the locked yellow door 2 steps forward, my plan should be to move closer to the door. Turning right will not help since the door is directly in front of me. Therefore, I need to go forward to get closer to the door.
+Plan: Move closer to the yellow door by going forward.","a wall 2 steps left
+a locked yellow door 1 step forward",0,False
+62,toggle,"Thought: From the previous observation, the yellow door was two steps forward. After turning right and going forward, the yellow door is now one step forward. This means we are moving closer to the yellow door as planned. Next, we should try to unlock the door.
+Plan: Unlock the yellow door by interacting with it.","a wall 2 steps left
+a locked yellow door 1 step forward",0,False
+63,go forward,"Thought: Previously, I turned right and went forward, which brought me closer to the yellow door. However, the door remains locked, indicating that the toggle action did not unlock it. Given the observation, I still face the same configuration where a wall is to my left and the yellow door is directly in front of me. Since the door is locked and I cannot interact with objects on the left side, I need to continue moving forward until I am within reach of the door handle.
+Plan: Unlock the yellow door by interacting with it.","a wall 2 steps left
+a locked yellow door 1 step forward",0,False
+64,toggle,"Thought: From the previous observation, we were able to unlock the yellow door by moving forward. However, the current observation shows that the yellow door is still locked and 1 step forward. This suggests that our previous interaction did not unlock the door. We need to try interacting with the door again.
+Plan: Interact with the yellow door to attempt unlocking it.","a wall 2 steps left
+a locked yellow door 1 step forward",0,False
+65,toggle,"Thought: From the previous observations, it seems that interacting with the yellow door did not unlock it, as the door remains locked. Since there is no indication that picking up or dropping any objects would help (as there are no objects mentioned), the next logical step is to try another interaction with the door. Given that the door is locked, it might be necessary to find a key or another method to unlock it, but for now, let's try toggling again in case there was a mistake or the door requires multiple attempts.
+Plan: Interact with the yellow door again to see if it unlocks.","a wall 2 steps left
+a locked yellow door 1 step forward",0,False
+66,go forward,"Thought: From the observations, it seems that interacting with the yellow door did not unlock it. Given that the door remains locked after multiple attempts, it suggests that we might need to find another key or method to unlock it. However, since no other objects or keys are mentioned in the observation, it is likely that the door does not unlock through direct interaction (toggle).
+Plan: No changes to the plan.","a wall 2 steps left
+a locked yellow door 1 step forward",0,False
+67,toggle,"Thought: From the previous observations, it seems the yellow door is still locked after interacting with it. Since the door was locked initially and no other objects were picked up or moved, it makes sense to try interacting with the door again to see if it unlocks.
+Plan: Interact with the yellow door again to see if it unlocks.","a wall 2 steps left
+a locked yellow door 1 step forward",0,False
+68,turn left,"Thought: From the previous observations, it seems that interacting with the yellow door did not unlock it. Given that the door is still locked after multiple toggle attempts, it's likely that the door requires something to be done before it unlocks. Since picking up objects is a possible action and there might be an object needed to unlock the door, I should check if there is any object nearby.
+Plan: Check for any objects nearby and pick them up if found.","a wall 2 steps forward
+a locked yellow door 1 step right",0,False
+69,go forward,"Thought: From the previous observations, we were directly in front of the locked yellow door. After turning left, we see a wall in front of us and a locked yellow door to our right. This means we need to approach the door from the side rather than from the front. Since there are no objects in front of us that we can interact with, there's no need to pick anything up. We should continue moving towards the door.
+Plan: Approach the yellow door from the side.","a wall 1 step forward
+a wall 1 step right",0,False
+70,turn right,"Thought: From the previous observations, we moved forward and encountered walls both in front and to the right. This means we need to find another way to approach the yellow door. Turning left again would likely result in facing a wall, so we should try turning right this time.
+Plan: Approach the yellow door from the other side.","a wall 1 step forward
+a wall 1 step left
+a locked yellow door 1 step right and 1 step forward",0,False
+71,turn left,"Thought: From the previous observations, it seems like turning right did not lead me closer to the yellow door. Instead, it placed me at the back of the room, where there are walls obstructing my path. To approach the yellow door from the other side, I need to find a path that leads directly to the door without getting blocked by walls. Turning left from the current position should help me explore the area closer to the door.
+Plan: Approach the yellow door from the other side.","a wall 1 step forward
+a wall 1 step right",0,False
+72,turn left,"Thought: From the observations, we can see that there are walls blocking our path forward and to the right. Given our previous plan was to approach the yellow door from the other side, we need to find a way to get around the walls. Since turning left did not help us move towards the door, we should continue trying to navigate around the walls.
+Plan: Approach the yellow door from the other side.","a wall 6 steps forward
+a wall 1 step right",0,False
+73,go forward,"Thought: From the previous observations, it seems that turning left repeatedly has brought me back to the same positions, suggesting a circular movement around walls. To approach the yellow door, I need to find a path that leads directly towards it. The current observation shows walls in front and to the right, indicating that turning right would not lead me closer to the door. Therefore, I should continue moving forward until I find a clear path to the door.
+Plan: Approach the yellow door from the forward direction.","a wall 5 steps forward
+a wall 1 step right",0,False
+74,turn right,"Thought: From the observations, it seems like going forward previously did not bring us closer to the yellow door. We need to adjust our approach to get closer to the door. Since the door is located at the intersection of moving right and forward, we should try moving right next to see if it brings us closer to the door.
+Plan: Approach the yellow door from the right direction.","a wall 1 step forward
+a wall 2 steps right",0,False
+75,turn right,"Thought: From the previous observations, it seems like moving forward consistently has been bringing me towards the yellow door. However, the current observation indicates that there are walls in front and to the right, suggesting I need to approach the yellow door from the right direction. Since turning right would likely position me better to interact with the yellow door, I should execute this action.
+Plan: Approach the yellow door from the right direction.","a wall 2 steps forward
+a wall 1 step left
+a locked yellow door 1 step right and 2 steps forward",0,False
+76,go forward,"Thought: From the observations, it seems like turning right was the correct move as we are now facing the yellow door. However, there is still a wall in the way. The plan should be to continue moving forward until the wall is behind us and we are directly in front of the yellow door.
+Plan: Approach the yellow door from the right direction.","a wall 1 step forward
+a wall 1 step left
+a locked yellow door 1 step right and 1 step forward",0,False
+77,turn right,"Thought: From the previous observation, we were facing a wall 1 step forward and a wall 1 step left. We moved forward, and now we see a wall 1 step forward and a wall 1 step left, indicating that we are still in the same position. This suggests that moving forward did not help us progress towards the door. Given the current observation, we need to turn right to face the yellow door.
+Plan: Approach the yellow door from the right direction.","a wall 6 steps forward
+a wall 1 step left
+a locked yellow door 1 step left and 1 step forward",0,False
+78,go forward,"Thought: From the previous observations, I turned right to face the yellow door. Now, the observation confirms that the yellow door is indeed 1 step left and 1 step forward. My plan was to approach the yellow door from the correct direction, which aligns with the updated observation. No changes to the plan.
+Plan: Approach the yellow door from the right direction.","a wall 5 steps forward
+a locked yellow door 1 step left",0,False
+79,go left,"Thought: From the previous observations, it seems like we are moving closer to the yellow door as we proceed. Initially, the door was 1 step right and 1 step forward, but now it is just 1 step left. This suggests we are on the correct path to approach the door from the left. The next logical step is to pick up any object that might be useful to interact with the door, though there is no specific mention of needing an object to unlock it. Given the options, we should try to interact with the door using the 'toggle' action if there is an object in front of us. However, since the door is currently unattended, we need to proceed towards it.
+Plan: Approach the yellow door from the left direction.","
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 4 steps forward
+a wall 1 step left",0,False
+80,go left,"Thought: The previous action was to go forward, which moved us closer to the yellow door. However, the current observation shows that there is a wall 4 steps forward and a wall 1 step left. This means we are still far from the yellow door. We need to continue moving towards the door.
+Plan: Approach the yellow door from the left direction.","
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 3 steps forward
+a wall 1 step left",0,False
+81,go left,"Thought: From the previous observations, it seems like the default action was chosen, which led to the observation of walls blocking the path. Given the current observation, there is still a wall directly ahead, so moving forward would not be beneficial. Instead, I should continue to approach the yellow door from the left direction.
+Plan: Approach the yellow door from the left direction.","
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 2 steps forward
+a wall 1 step left",0,False
+82,go forward,"Thought: Based on the observations, I have been moving forward and encountered walls on my left. Now that I am two steps away from the yellow door, I should continue moving forward to approach it from the left side.
+Plan: Approach the yellow door from the left direction.","a wall 1 step forward
+a wall 1 step left",0,False
+83,go forward,"Thought: From the observations, it seems that both directions (left and forward) lead to walls, which means I am likely against the wall. My original plan was to approach the yellow door from the left, but now I need to reassess my position and find a way to interact with the door.
+Plan: First, I need to determine my exact position relative to the door. To do this, I will try moving forward again to see if I can clear the wall and get closer to the door.","a wall 1 step forward
+a wall 1 step left",0,False
+84,turn left,"Thought: From the previous observations, it seems that the walls are obstructing my path. Moving forward again would likely result in hitting another wall, as there are walls both in front of me and to the left. To better understand my position and potentially find a way around the walls, I should try turning left to see if I can find an alternative route.
+Plan: Turn left to explore a potential alternative path.","a wall 1 step forward
+a wall 1 step right",0,False
+85,turn right,"Thought: From the previous observations, it seems that going forward repeatedly only leads to walls. Turning left was intended to explore an alternative path, but the current observation still shows walls both forward and to the right. Given this, it's likely that turning left was not successful in finding an alternative path either.
+Plan: Turn right to further explore the surroundings and find a potential path that might lead to the yellow door.","a wall 1 step forward
+a wall 1 step left",0,False
+86,go forward,"Thought: From the previous observations, turning left only led to walls, indicating that this direction is blocked or does not lead to the yellow door. Turning right was also blocked by a wall. Given these observations, it seems there might be limited options for movement in this immediate area. However, since we haven't explored the area fully, we should continue to move forward to see if there's another path available.
+Plan: Continue exploring by moving forward to see if there is a different path that could lead to the yellow door.","a wall 1 step forward
+a wall 1 step left",0,False
+87,go forward,"Thought: From the previous observations, it seems that the walls are blocking my path directly forward and to the left. Moving forward might reveal a different path that could potentially lead to the yellow door.
+Plan: Continue exploring by moving forward to see if there is a different path that could lead to the yellow door.","a wall 1 step forward
+a wall 1 step left",0,False
+88,turn left,"Thought: From the previous observations, it seems that going forward leads to walls both to the left and right. This suggests that moving forward may not be the best choice since it just keeps us within the same confined space. Instead, we should try turning left to explore another potential path.
+Plan: Continue exploring by turning left to see if it leads to the yellow door.","a wall 1 step forward
+a wall 1 step right",0,False
+89,turn left,"Thought: From the previous observations, it seems that going forward only led to walls, and turning right also only led to walls. This suggests that the path might be obstructed or there are no objects of interest directly ahead or to the right. Turning left is the next logical step to explore a different direction.
+Plan: Continue exploring by turning left to see if it leads to the yellow door.","a wall 6 steps forward
+a wall 1 step right
+a locked yellow door 1 step right and 4 steps forward",0,False
+90,turn left,"Thought: From the previous observations, it seems that going forward or turning right does not lead to the yellow door. Turning left was suggested to explore further. However, after turning left, the observation still shows only walls and no sign of the yellow door. This indicates that the path to the yellow door might be obstructed or requires a different approach.
+Plan: Continue exploring by turning left until the yellow door is found or a viable path is identified.","a wall 1 step left
+a yellow key 5 steps forward",0,False
+91,go forward,"Thought: From the previous observation, we were facing a wall to the left and had to turn left to find a path. Now, we have moved forward and see a wall to the left and a yellow key 5 steps forward. This means we are on the right track as we are moving closer to finding the yellow door. We should continue moving forward until we reach the yellow key.
+Plan: Continue moving forward until the yellow key is picked up, then use the key to open the yellow door.","a wall 1 step left
+a yellow key 4 steps forward",0,False
+92,go forward,"Thought: From the previous observations, the yellow key is getting closer as we move forward. In the current observation, the yellow key is now 4 steps forward. My plan is to continue moving forward until I pick up the yellow key, and then use it to open the yellow door.
+Plan: Continue moving forward until the yellow key is picked up, then use the key to open the yellow door.","a wall 1 step left
+a yellow key 3 steps forward",0,False
+93,go forward,"Thought: From the previous observations, we moved closer to the yellow key but still haven't picked it up. We need to continue moving forward until the yellow key is directly in front of us so we can pick it up. After picking up the yellow key, we will need to go back to the yellow door and use the key to open it.
+Plan: Continue moving forward until the yellow key is picked up, then use the key to open the yellow door.","a wall 1 step left
+a yellow key 2 steps forward",0,False
+94,go forward,"Thought: From the previous observations, we can see that the yellow key is moving closer to us as we move forward. The next logical step is to pick up the key once it's within reach.
+Plan: Continue moving forward until the yellow key is picked up, then use the key to open the yellow door.","a wall 1 step left
+a yellow key 1 step forward",0,False
+95,pick up,"Thought: From the previous observations, it's clear that the yellow key is getting closer as we move forward. Now, the key is just one step ahead of us. The next logical step is to pick up the key.
+Plan: Pick up the yellow key and then use it to open the yellow door.","You carry a yellow key
+a wall 2 steps forward
+a wall 1 step left",0,False
+96,go forward,"Thought: Previously, I picked up the yellow key. Now, I need to find the yellow door to use the key. The observation shows a wall 2 steps forward and a wall 1 step left. There is no indication of a door yet, so I should continue moving forward to locate the door.
+Plan: Move forward until the yellow door is in front of me, then use the yellow key to open it.","You carry a yellow key
+a wall 1 step forward
+a wall 1 step left",0,False
+97,go forward,"Thought: From the previous observations, it seems that moving forward has brought us closer to the yellow key, but we are still not directly in front of the yellow door. We need to continue moving forward until the yellow door is in front of us, and then use the yellow key to open it.
+Plan: Move forward until the yellow door is in front of me, then use the yellow key to open it.","You carry a yellow key
+a wall 1 step forward
+a wall 1 step left",0,False
+98,go forward,"Thought: From the previous observations, we moved forward and picked up the yellow key. Now, there are walls both forward and to the left, but no indication of the yellow door. We need to continue moving forward until the yellow door is in front of us. If we encounter any obstacles other than the yellow door, we can try turning left or right to find the door.
+Plan: Move forward until the yellow door is in front of me, then use the yellow key to open it.","You carry a yellow key
+a wall 1 step forward
+a wall 1 step left",0,False
+99,turn right,"Thought: From the previous observations, it seems that moving forward repeatedly hasn't changed the layout or brought us closer to the yellow door. We need to re-evaluate our position and strategy. Since we know there's a wall both forward and to the left, and we are carrying a yellow key, the logical next step would be to try turning right and then move forward to see if the yellow door is revealed.
+Plan: Turn right and then go forward.","You carry a yellow key
+a wall 6 steps forward
+a wall 1 step left",0,False
+100,go forward,"Thought: From the previous observations, it seems like turning right did not lead to any new discoveries. The wall configuration remained the same, indicating that there might be no immediate path to the door when moving straight or turning right. Let's re-evaluate the layout and consider going forward from the current position to see if we can find the door or another key.
+Plan: Go forward.","You carry a yellow key
+a wall 5 steps forward
+a wall 1 step left",0,False
+101,go forward,"Thought: From the previous observations, it seems like going forward repeatedly is not changing the environment. This suggests that there might be a long corridor ahead. In this case, continuing to go forward would likely lead to finding the yellow door. Therefore, there are no immediate changes needed to the plan.
+Plan: No changes to the plan.","You carry a yellow key
+a wall 4 steps forward
+a wall 1 step left",0,False
+102,go forward,"Thought: From the previous observations, it seems that going forward is leading me towards the wall. However, I still haven't interacted with any objects yet. The yellow key might be useful later when interacting with locks. For now, I should continue moving forward until I find something to interact with, such as a lock or a keyhole.
+Plan: Continue moving forward until an interaction point is found.","You carry a yellow key
+a wall 3 steps forward
+a wall 1 step left",0,False
+103,go forward,"Thought: From the previous observations, it seems we are consistently moving closer to a point where we can interact with something. We need to continue moving forward until we reach the yellow door. Given the observations, we are now 3 steps away from a wall, which suggests we are close to the door. If we move forward once more, we should be at the door and able to use the yellow key to open it.
+Plan: Continue moving forward until the yellow door is reached and interact with it using the yellow key.","You carry a yellow key
+a wall 2 steps forward
+a wall 1 step left",0,False
+104,go forward,"Thought: Based on the current observation, we are now 2 steps away from the yellow door. The plan is to continue moving forward until we reach the door and then use the yellow key to open it. Since we are only 2 steps away, the next action should be to go forward.
+Plan: Continue moving forward until the yellow door is reached and interact with it using the yellow key.","You carry a yellow key
+a wall 1 step forward
+a wall 1 step left",0,False
+105,toggle,"Thought: From the observations, it appears we are now directly in front of the yellow door. Since we carry the yellow key, our plan should be to use it to open the door. We should proceed with the toggle action to interact with the door.
+Plan: Use the yellow key to open the yellow door.","You carry a yellow key
+a wall 1 step forward
+a wall 1 step left",0,False
+106,turn left,"Thought: The previous action was to toggle the object in front of me, which should have been the yellow door. However, no changes were observed, suggesting the door did not open. Given that there are walls both forward and to the left, and I am still carrying the yellow key, it indicates that the door might be the only path ahead. Since the door didn't open, I need to reconsider my approach.
+Plan: Use the yellow key to open the yellow door.","You carry a yellow key
+a wall 1 step forward
+a wall 1 step right",0,False
+107,turn right,"Thought: From the previous observations, it seems like I was unable to toggle the object because there is no object in front of me. Now, I see that there is a wall both forward and to the right, which means the object must be either to the left or behind me. Since I previously turned left, the only direction left to check is behind me. I need to turn around to face the door and then use the yellow key to open it.
+Plan: Turn around to face the door and use the yellow key to open it.","You carry a yellow key
+a wall 1 step forward
+a wall 1 step left",0,False
+108,go forward,"Thought: From the previous observations, it seems that turning left did not lead me to the door but rather a wall. Therefore, my previous plan to turn left and face the door needs adjustment. Now, facing a wall to the left and a wall to the right, the only logical direction to move is forward to see if the door is directly in front of me. If the door is not in front, I will need to adjust my strategy accordingly.
+Plan: Turn around to face the door and use the yellow key to open it.","You carry a yellow key
+a wall 1 step forward
+a wall 1 step left",0,False
+109,turn left,"Thought: From the previous observations, it seems that the wall to the left contains the yellow door. My current plan is to face the door and use the yellow key to open it. To do this, I need to turn left to face the door and then use the key.
+Plan: Turn left to face the door and use the yellow key to open it.","You carry a yellow key
+a wall 1 step forward
+a wall 1 step right",0,False
+110,go forward,"Thought: From the previous observations, it seems like there are walls both to the left and right of the path ahead. This suggests that the walls block any further movement in those directions. Given the current observation, the only viable option to proceed towards the door is to go forward. Once we move forward, we should be able to see the door and use the yellow key to open it.
+Plan: Go forward to reach the door, then use the yellow key to open it.","You carry a yellow key
+a wall 1 step forward
+a wall 1 step right",0,False
+111,go forward,"Thought: From the previous observations, it seems like going forward didn't lead us to the door because we encountered a wall both to our right and left. Turning left and right didn't help either, as we ended up back at the same configuration of walls. The only logical step now is to go forward again, hoping to find the door.
+Plan: Go forward to reach the door, then use the yellow key to open it.","You carry a yellow key
+a wall 1 step forward
+a wall 1 step right",0,False
+112,turn right,"Thought: From the previous observations, it seems that going forward has not led us closer to the door. The walls are still positioned the same way, indicating that we might be at the same spot. Since our goal is to open the yellow door, we should attempt to move in a different direction to see if the door is located elsewhere.
+Plan: Go right to explore a different path.","You carry a yellow key
+a wall 1 step forward
+a wall 1 step left",0,False
+113,go forward,"Thought: From the previous observations, going forward twice didn't reveal any new information about the layout. Turning right was my attempt to explore a different path. Now, the observation shows that there is a wall both forward and to the left. This suggests that the layout is more confined than expected, and turning right was a good move to explore a new path.
+Plan: Go forward to continue exploring the new path.","You carry a yellow key
+a wall 1 step forward
+a wall 1 step left",0,False
+114,toggle,"Thought: From the previous observations, it seems that going forward did not lead to any new developments as the same obstacles were present. Turning right allowed me to explore a new path, but going forward again from that observation did not reveal anything new either. The walls are still in the same positions, indicating that there might be no other paths to explore for now. Given this, I should try interacting with the objects in front of me using the toggle action to see if I can unlock or open something.
+Plan: Use the yellow key to attempt unlocking the door.","You carry a yellow key
+a wall 1 step forward
+a wall 1 step left",0,False
+115,turn left,"Thought: From the previous observation, I used the yellow key to interact with something, but it was likely a wall rather than a door since there is no indication of a door being unlocked. Given the current observation, there is still no indication of a door. The walls are positioned consistently, so it's unlikely I moved into a different room or area. My best course of action now is to try another method to potentially reveal or unlock the door.
+Plan: Look for the door by moving and checking different positions.","You carry a yellow key
+a wall 1 step forward
+a wall 1 step right",0,False
+116,go forward,"Thought: From the previous observations, it seems like toggling did not open the door. Moving forward and turning right didn't reveal any new information either. The only thing we know for certain is that there is a wall in front of us and to our right. Given that the door is likely yellow and we need to open it, let's try going forward again to see if we can get closer to the door.
+Plan: Continue moving forward to find the door.","You carry a yellow key
+a wall 1 step forward
+a wall 1 step right",0,False
+117,go forward,"Thought: From the previous observations, it seems like the yellow key did not unlock anything when I tried to toggle it. Given the current observation, there is still no indication of a door, but there is a wall to the right. Since my plan was to continue moving forward to find the door, I should do so. However, if there is a possibility that the door could be on the side, I should check the walls on both sides before concluding that the door is directly ahead.
+Plan: Continue moving forward to find the door.","You carry a yellow key
+a wall 1 step forward
+a wall 1 step right",0,False
+118,turn left,"Thought: From the previous observations, it seems like going forward didn't lead us closer to the door. Since we are still seeing walls in the forward and right directions, let's try turning left to see if there's a different path.
+Plan: Continue exploring by turning left and then proceed forward.","You carry a yellow key
+a wall 6 steps forward
+a wall 1 step right",0,False
+119,turn left,"Thought: From the previous observations, it seems that going forward didn't reveal any new information. Turning left might help me explore a different path. If there is a door ahead, turning left could bring me closer to it. After turning left, proceeding forward should help me discover more about the layout of the environment.
+Plan: Continue exploring by turning left and then proceed forward.","You carry a yellow key
+a wall 6 steps forward
+a wall 1 step left
+a locked yellow door 1 step right and 6 steps forward",0,False
+120,go forward,"Thought: From the previous observations, it seems that turning left did not lead to the yellow door. Now, I see that there is a locked yellow door 1 step right and 6 steps forward. Since I am carrying a yellow key, my next step should be to get closer to the door and use the key to open it.
+Plan: Go forward to reach the yellow door and use the key to open it.","You carry a yellow key
+a wall 5 steps forward
+a wall 1 step left
+a locked yellow door 1 step right and 5 steps forward",0,False
+121,go forward,"Thought: From the previous observation, we were one step away from the yellow door. After moving forward, we are now five steps away from the door. This means we need to move closer to the door before using the key.
+Plan: Go forward until we are next to the yellow door, then use the key to open it.","You carry a yellow key
+a wall 4 steps forward
+a wall 1 step left
+a locked yellow door 1 step right and 4 steps forward",0,False
+122,go forward,"Thought: From the previous observation, we were two steps away from the yellow door. After going forward once, we are now three steps away from the door. We need to continue moving forward until we are adjacent to the door.
+Plan: Go forward until we are next to the yellow door, then use the key to open it.","You carry a yellow key
+a wall 3 steps forward
+a wall 1 step left
+a locked yellow door 1 step right and 3 steps forward",0,False
+123,go forward,"Thought: From the observations, it's clear that the yellow door is 1 step right and 3 steps forward from my current position. My plan is to continue moving forward until I am next to the yellow door, and then use the yellow key to open it. Since I am 3 steps forward from the door, I need to move forward one more time to be directly next to the door.
+Plan: Go forward until next to the yellow door, then use the key to open it.","You carry a yellow key
+a wall 2 steps forward
+a wall 1 step left
+a locked yellow door 1 step right and 2 steps forward",0,False
+124,go forward,"Thought: From the observations, it's clear that I need to move closer to the yellow door. I am currently two steps away from it. My plan is to go forward until I am next to the yellow door, and then use the yellow key to open it. Since I am two steps away, my next action should be to go forward.
+Plan: Go forward until next to the yellow door, then use the key to open it.","You carry a yellow key
+a wall 1 step forward
+a wall 1 step left
+a locked yellow door 1 step right and 1 step forward",0,False
+125,toggle,"Thought: From the previous observations, I moved closer to the yellow door. Now, I am only 1 step away from it. My next step should be to use the yellow key to open the door.
+Plan: Use the yellow key to open the yellow door.","You carry a yellow key
+a wall 1 step forward
+a wall 1 step left
+a locked yellow door 1 step right and 1 step forward",0,False
+126,toggle,"Thought: From the previous actions, it seems like moving forward was the correct decision as we are now at the position where the yellow key can be used on the yellow door. The observation confirms that we are still carrying the yellow key and are positioned correctly to use it on the door. Therefore, we should attempt to use the key on the door.
+Plan: Use the yellow key to open the yellow door.","You carry a yellow key
+a wall 1 step forward
+a wall 1 step left
+a locked yellow door 1 step right and 1 step forward",0,False
+127,go right,"Thought: From the previous observations, it seems that my toggle action did not unlock the door because the door is still described as ""locked"". This indicates that the key has not yet been used to interact with the door. Therefore, I need to approach the door and use the key to try unlocking it.
+Plan: Use the yellow key to open the yellow door.","
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+You carry a yellow key
+a wall 1 step forward
+a wall 1 step left
+a locked yellow door 1 step right and 1 step forward",0,True

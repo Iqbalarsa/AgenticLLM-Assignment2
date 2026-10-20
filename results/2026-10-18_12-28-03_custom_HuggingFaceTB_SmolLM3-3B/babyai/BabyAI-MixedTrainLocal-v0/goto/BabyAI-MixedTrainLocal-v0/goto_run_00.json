@@ -1,0 +1,63 @@
+{
+    "task": "BabyAI-MixedTrainLocal-v0/goto",
+    "action_frequency": {
+        "turn left": 2,
+        "go forward": 22
+    },
+    "input_tokens": 23678,
+    "output_tokens": 11946,
+    "done": true,
+    "episode_return": 0.6625,
+    "num_steps": 24,
+    "failed_candidates": [
+        "turn left\n\nWait, in the instructions it says to write the plan if any changes, or \"No changes to the plan\" only if a plan was already present. Since there was no previous plan, the plan should not be written. The plan I am deciding on now is not a past plan but the new plan for this round.\n\nACTION: turn left\n\nRevised response:\n\nTHOUGHT: Grey key is 3 steps left and 4 steps forward; turning left will move towards the grey key.\nPLAN: N/A (no prior plan)\nACTION: turn left",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+    ],
+    "mission": "go to the grey key",
+    "progression": 1.0,
+    "process_num": "ForkProcess-1",
+    "seed": 4294003290,
+    "agent": {
+        "type": "custom",
+        "remember_cot": true,
+        "max_text_history": 5,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "openai",
+        "model_id": "HuggingFaceTB/SmolLM3-3B",
+        "base_url": "http://localhost:8080/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 512,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

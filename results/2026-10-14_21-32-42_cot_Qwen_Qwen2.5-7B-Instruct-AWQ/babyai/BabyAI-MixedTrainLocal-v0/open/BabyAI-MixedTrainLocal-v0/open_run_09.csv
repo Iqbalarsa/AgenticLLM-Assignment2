@@ -1,0 +1,1149 @@
+Step,Action,Reasoning,Observation,Reward,Done
+0,go forward,"Given the current observation, the best course of action is to move forward until the wall is out of sight, which will allow us to navigate around the corner and potentially find the door.
+
+Step-by-step reasoning:
+1. There is a wall 4 steps forward, so moving forward will bring us closer to whatever is beyond that wall.
+2. After moving forward, we should check our surroundings again to see if we can find the door or another path.
+
+ACTION: go forward","a wall 3 steps forward
+a wall 3 steps left",0,False
+1,turn left,"Given the current observation, we have walls both forward and to the left. We need to explore the area to the left to see if there are any openings or objects that could help us progress.
+
+Step-by-step reasoning:
+1. Turn left to face the wall 3 steps away.
+2. Move forward to see if there is an opening or a way around the wall.
+3. If there is no clear path, we may need to explore further left or try other actions.
+
+ACTION: turn left","a wall 3 steps forward
+a wall 3 steps right
+a yellow key 2 steps left",0,False
+2,pick up,"Given the current observation, we have a wall directly ahead and to the right, but there is a yellow key 2 steps to the left. The best course of action is to pick up the yellow key, as it might be useful later.
+
+Step-by-step reasoning:
+1. Turn left to face the yellow key.
+2. Pick up the yellow key.
+
+ACTION: pick up","a wall 3 steps forward
+a wall 3 steps right
+a yellow key 2 steps left",0,False
+3,pick up,"Given the current observation, we are facing a similar situation as before. There is a wall directly ahead and to the right, but there is a yellow key 2 steps to the left. The best course of action is to pick up the yellow key, as it might be useful later.
+
+Step-by-step reasoning:
+1. Turn left to face the yellow key.
+2. Pick up the yellow key.
+
+ACTION: pick up","a wall 3 steps forward
+a wall 3 steps right
+a yellow key 2 steps left",0,False
+4,pick up,"Step-by-step reasoning:
+1. We are currently facing a wall directly ahead and to the right.
+2. There is a yellow key 2 steps to the left.
+3. Turning left will allow us to reach and pick up the yellow key.
+4. After picking up the yellow key, we may need to find a door that can be unlocked with this key.
+
+Best course of action:
+ACTION: pick up","a wall 3 steps forward
+a wall 3 steps right
+a yellow key 2 steps left",0,False
+5,pick up,"Step-by-step reasoning:
+1. We are currently facing a wall directly ahead and to the right.
+2. There is a yellow key 2 steps to the left.
+3. Turning left will allow us to reach and pick up the yellow key.
+4. After picking up the yellow key, we may need to find a door that can be unlocked with this key.
+
+Best course of action:
+ACTION: pick up","a wall 3 steps forward
+a wall 3 steps right
+a yellow key 2 steps left",0,False
+6,pick up,"Step-by-step reasoning:
+1. We are currently facing a wall directly ahead and to the right.
+2. There is a yellow key 2 steps to the left.
+3. Turning left will allow us to reach and pick up the yellow key.
+4. After picking up the yellow key, we may need to find a door that can be unlocked with this key.
+
+Best course of action:
+ACTION: pick up","a wall 3 steps forward
+a wall 3 steps right
+a yellow key 2 steps left",0,False
+7,turn left,"Step-by-step reasoning:
+1. We are currently facing a wall directly ahead and to the right.
+2. There is a yellow key 2 steps to the left.
+3. Turning left will allow us to reach and pick up the yellow key.
+4. After picking up the yellow key, we may need to find a door that can be unlocked with this key.
+
+Best course of action:
+ACTION: turn left","a wall 3 steps right
+a locked yellow door 2 steps left and 4 steps forward
+a yellow key 2 steps forward",0,False
+8,go forward,"Step-by-step reasoning:
+1. We are currently facing a wall directly to the right.
+2. There is a locked yellow door 2 steps left and 4 steps forward.
+3. There is a yellow key 2 steps forward.
+4. To unlock the door, we first need to pick up the yellow key.
+5. After picking up the key, we need to move to the door and use the key to unlock it.
+
+Best course of action:
+ACTION: go forward","a wall 3 steps right
+a locked yellow door 2 steps left and 3 steps forward
+a yellow key 1 step forward",0,False
+9,go forward,"Step-by-step reasoning:
+1. We are currently facing a wall directly to the right.
+2. There is a locked yellow door 2 steps left and 3 steps forward.
+3. There is a yellow key 1 step forward.
+4. To unlock the door, we first need to pick up the yellow key.
+5. After picking up the key, we need to move to the door and use the key to unlock it.
+
+Best course of action:
+ACTION: go forward","a wall 3 steps right
+a locked yellow door 2 steps left and 3 steps forward
+a yellow key 1 step forward",0,False
+10,pick up,ACTION: pick up,"You carry a yellow key
+a wall 3 steps forward
+a wall 3 steps right
+a locked yellow door 2 steps left and 3 steps forward",0,False
+11,go forward,"Based on the current observation, we need to move closer to the locked yellow door to use the yellow key. Here’s the step-by-step plan:
+
+1. Go forward to get closer to the door.
+2. Use the toggle action to unlock the door.
+
+ACTION: go forward","You carry a yellow key
+a wall 2 steps forward
+a wall 3 steps right
+a locked yellow door 2 steps left and 2 steps forward",0,False
+12,toggle,"Now that we are closer to the door, we can proceed to unlock it using the yellow key.
+
+ACTION: toggle","You carry a yellow key
+a wall 2 steps forward
+a wall 3 steps right
+a locked yellow door 2 steps left and 2 steps forward",0,False
+13,go forward,"Let's break down the next steps:
+
+1. We need to unlock the yellow door.
+2. To do this, we need to get within range of the door.
+3. The door is two steps left and two steps forward from our current position.
+
+Given this, the best course of action is to move left and then forward to reach the door.
+
+ACTION: turn left
+
+After turning left, we should move forward to get closer to the door.
+
+ACTION: go forward","You carry a yellow key
+a wall 1 step forward
+a wall 3 steps right
+a locked yellow door 2 steps left and 1 step forward",0,False
+14,go forward,"Let's break down the next steps:
+
+1. The yellow door is now one step left and one step forward from our current position.
+2. We need to move left to align ourselves with the door.
+3. After moving left, we need to move forward to interact with the door.
+
+ACTION: turn left
+
+After turning left, we should move forward to get closer to the door.
+
+ACTION: go forward","You carry a yellow key
+a wall 1 step forward
+a wall 3 steps right
+a locked yellow door 2 steps left and 1 step forward",0,False
+15,go forward,"Let's break down the next steps:
+
+1. The yellow door is now two steps left and one step forward from our current position.
+2. We need to move left to align ourselves with the door.
+3. After moving left, we need to move forward to interact with the door.
+
+ACTION: turn left
+
+After turning left, we should move forward to get closer to the door.
+
+ACTION: go forward","You carry a yellow key
+a wall 1 step forward
+a wall 3 steps right
+a locked yellow door 2 steps left and 1 step forward",0,False
+16,turn left,"First, let's summarize the situation based on the current observation:
+
+- You are carrying a yellow key.
+- There is a wall 1 step forward.
+- A wall is 3 steps to the right.
+- A locked yellow door is 2 steps left and 1 step forward from your current position.
+
+The best course of action is to move left until you are directly in front of the door, then proceed forward to interact with it.
+
+ACTION: turn left","You carry a yellow key
+a wall 4 steps forward
+a wall 1 step right
+a locked yellow door 1 step right and 2 steps forward",0,False
+17,turn right,"Based on the current observation, let's break down the best course of action step by step:
+
+1. There is a wall directly in front of you, so moving forward will not help.
+2. A wall is to your right, so moving right will not help.
+3. The locked yellow door is 1 step right and 2 steps forward from your current position.
+
+To reach the door, you need to move right and then forward. 
+
+ACTION: turn right","You carry a yellow key
+a wall 1 step forward
+a wall 3 steps right
+a locked yellow door 2 steps left and 1 step forward",0,False
+18,turn left,"Based on the current observation, the best course of action is to move towards the locked yellow door. Since the door is located 2 steps left and 1 step forward from your current position, you need to first turn left and then go forward.
+
+ACTION: turn left","You carry a yellow key
+a wall 4 steps forward
+a wall 1 step right
+a locked yellow door 1 step right and 2 steps forward",0,False
+19,turn right,"Based on the current observation, the best course of action is to move towards the locked yellow door. The door is located 1 step right and 2 steps forward from your current position. To reach the door, you need to first turn right and then go forward twice.
+
+ACTION: turn right","You carry a yellow key
+a wall 1 step forward
+a wall 3 steps right
+a locked yellow door 2 steps left and 1 step forward",0,False
+20,turn left,"Based on the current observation, the best course of action is to turn left to face the locked yellow door, which is 2 steps left and 1 step forward from your current position.
+
+Step-by-step reasoning:
+1. Turn left to face the direction of the door.
+2. Move forward twice to reach the door.
+
+ACTION: turn left","You carry a yellow key
+a wall 4 steps forward
+a wall 1 step right
+a locked yellow door 1 step right and 2 steps forward",0,False
+21,turn right,"Step-by-step reasoning:
+1. Turn right to face the direction of the door.
+2. Move forward twice to reach the door.
+3. Use the toggle action to interact with the door and open it.
+
+ACTION: turn right","You carry a yellow key
+a wall 1 step forward
+a wall 3 steps right
+a locked yellow door 2 steps left and 1 step forward",0,False
+22,turn left,"Step-by-step reasoning:
+1. The current observation shows that the door is located 2 steps to the left and 1 step forward.
+2. To reach the door, we need to turn left to face the direction of the door.
+3. After turning left, we need to move forward twice to reach the door.
+
+ACTION: turn left","You carry a yellow key
+a wall 4 steps forward
+a wall 1 step right
+a locked yellow door 1 step right and 2 steps forward",0,False
+23,turn right,"Step-by-step reasoning:
+1. The current observation shows that the door is located 1 step right and 2 steps forward.
+2. To reach the door, we need to turn right to face the direction of the door.
+3. After turning right, we need to move forward twice to reach the door.
+
+ACTION: turn right","You carry a yellow key
+a wall 1 step forward
+a wall 3 steps right
+a locked yellow door 2 steps left and 1 step forward",0,False
+24,turn left,"Step-by-step reasoning:
+1. The current observation shows that the door is located 2 steps left and 1 step forward.
+2. To reach the door, we need to turn left to face the direction of the door.
+3. After turning left, we need to move forward once to reach the door.
+4. Once at the door, we can use the yellow key to unlock it.
+
+ACTION: turn left","You carry a yellow key
+a wall 4 steps forward
+a wall 1 step right
+a locked yellow door 1 step right and 2 steps forward",0,False
+25,turn right,"Step-by-step reasoning:
+1. The current observation shows that the door is located 1 step right and 2 steps forward.
+2. To reach the door, we need to turn right to face the direction of the door.
+3. After turning right, we need to move forward twice to reach the door.
+4. Once at the door, we can use the yellow key to unlock it.
+
+ACTION: turn right","You carry a yellow key
+a wall 1 step forward
+a wall 3 steps right
+a locked yellow door 2 steps left and 1 step forward",0,False
+26,turn left,"Step-by-step reasoning:
+1. The current observation shows that the door is located 2 steps left and 1 step forward.
+2. To reach the door, we need to turn left to face the direction of the door.
+3. After turning left, we need to move forward once to reach the door.
+4. Once at the door, we can use the yellow key to unlock it.
+
+ACTION: turn left","You carry a yellow key
+a wall 4 steps forward
+a wall 1 step right
+a locked yellow door 1 step right and 2 steps forward",0,False
+27,turn right,"Step-by-step reasoning:
+1. The current observation shows that the door is located 1 step right and 2 steps forward.
+2. To reach the door, we need to turn right to face the direction of the door.
+3. After turning right, we need to move forward two times to reach the door.
+4. Once at the door, we can use the yellow key to unlock it.
+
+ACTION: turn right","You carry a yellow key
+a wall 1 step forward
+a wall 3 steps right
+a locked yellow door 2 steps left and 1 step forward",0,False
+28,turn left,"Step-by-step reasoning:
+1. The current observation shows that the door is located 2 steps left and 1 step forward.
+2. To reach the door, we need to turn left to face the direction of the door.
+3. After turning left, we need to move forward one time to reach the door.
+4. Once at the door, we can use the yellow key to unlock it.
+
+ACTION: turn left","You carry a yellow key
+a wall 4 steps forward
+a wall 1 step right
+a locked yellow door 1 step right and 2 steps forward",0,False
+29,turn right,"Step-by-step reasoning:
+1. The current observation shows that the door is located 1 step right and 2 steps forward.
+2. To reach the door, we need to turn right to face the direction of the door.
+3. After turning right, we need to move forward two times to reach the door.
+4. Once at the door, we can use the yellow key to unlock it.
+
+ACTION: turn right","You carry a yellow key
+a wall 1 step forward
+a wall 3 steps right
+a locked yellow door 2 steps left and 1 step forward",0,False
+30,turn left,"First, let's break down the steps:
+
+1. **Identify the Door's Location**: The door is 2 steps left and 1 step forward from your current position.
+2. **Turn Left**: To move towards the door, you need to turn left.
+3. **Move Forward**: After turning left, you need to move forward two times to reach the door.
+4. **Use Key**: Once you reach the door, use the yellow key to unlock it.
+
+ACTION: turn left","You carry a yellow key
+a wall 4 steps forward
+a wall 1 step right
+a locked yellow door 1 step right and 2 steps forward",0,False
+31,turn right,"Based on the current observation:
+
+1. **Identify the Door's Location**: The door is 1 step right and 2 steps forward from your current position.
+2. **Turn Right**: To move towards the door, you need to turn right.
+3. **Move Forward**: After turning right, you need to move forward two times to reach the door.
+4. **Use Key**: Once you reach the door, use the yellow key to unlock it.
+
+ACTION: turn right","You carry a yellow key
+a wall 1 step forward
+a wall 3 steps right
+a locked yellow door 2 steps left and 1 step forward",0,False
+32,turn left,"Based on the current observation:
+
+1. **Identify the Door's Location**: The door is 2 steps left and 1 step forward from your current position.
+2. **Turn Left**: To move towards the door, you need to turn left.
+3. **Move Forward**: After turning left, you need to move forward one time to reach the door.
+4. **Use Key**: Once you reach the door, use the yellow key to unlock it.
+
+ACTION: turn left","You carry a yellow key
+a wall 4 steps forward
+a wall 1 step right
+a locked yellow door 1 step right and 2 steps forward",0,False
+33,turn right,"Based on the current observation:
+
+1. **Identify the Door's Location**: The door is 1 step right and 2 steps forward from your current position.
+2. **Turn Right**: To move towards the door, you need to turn right.
+3. **Move Forward**: After turning right, you need to move forward two times to reach the door.
+4. **Use Key**: Once you reach the door, use the yellow key to unlock it.
+
+ACTION: turn right","You carry a yellow key
+a wall 1 step forward
+a wall 3 steps right
+a locked yellow door 2 steps left and 1 step forward",0,False
+34,turn left,"Based on the current observation:
+
+1. **Identify the Door's Location**: The door is 2 steps left and 1 step forward from your current position.
+2. **Turn Left**: To move towards the door, you need to turn left.
+3. **Move Forward**: After turning left, you need to move forward two times to reach the door.
+4. **Use Key**: Once you reach the door, use the yellow key to unlock it.
+
+ACTION: turn left","You carry a yellow key
+a wall 4 steps forward
+a wall 1 step right
+a locked yellow door 1 step right and 2 steps forward",0,False
+35,turn right,"Based on the current observation:
+
+1. **Identify the Door's Location**: The door is 1 step right and 2 steps forward from your current position.
+2. **Turn Right**: To move towards the door, you need to turn right.
+3. **Move Forward**: After turning right, you need to move forward two times to reach the door.
+4. **Use Key**: Once you reach the door, use the yellow key to unlock it.
+
+ACTION: turn right","You carry a yellow key
+a wall 1 step forward
+a wall 3 steps right
+a locked yellow door 2 steps left and 1 step forward",0,False
+36,turn left,"Based on the current observation:
+
+1. **Identify the Door's Location**: The door is 2 steps left and 1 step forward from your current position.
+2. **Turn Left**: To move towards the door, you need to turn left.
+3. **Move Forward**: After turning left, you need to move forward one time to reach the door.
+4. **Use Key**: Once you reach the door, use the yellow key to unlock it.
+
+ACTION: turn left","You carry a yellow key
+a wall 4 steps forward
+a wall 1 step right
+a locked yellow door 1 step right and 2 steps forward",0,False
+37,turn right,"Based on the current observation:
+
+1. **Identify the Door's Location**: The door is 1 step right and 2 steps forward from your current position.
+2. **Turn Right**: To move towards the door, you need to turn right.
+3. **Move Forward**: After turning right, you need to move forward two times to reach the door.
+4. **Use Key**: Once you reach the door, use the yellow key to unlock it.
+
+ACTION: turn right","You carry a yellow key
+a wall 1 step forward
+a wall 3 steps right
+a locked yellow door 2 steps left and 1 step forward",0,False
+38,turn left,"Given the current observation:
+
+1. **Identify the Door's Location**: The door is 2 steps left and 1 step forward from your current position.
+2. **Turn Left**: To move towards the door, you need to turn left.
+3. **Move Forward**: After turning left, you need to move forward one time to reach the door.
+4. **Use Key**: Once you reach the door, use the yellow key to unlock it.
+
+ACTION: turn left","You carry a yellow key
+a wall 4 steps forward
+a wall 1 step right
+a locked yellow door 1 step right and 2 steps forward",0,False
+39,turn right,"Given the current observation:
+
+1. **Identify the Door's Location**: The door is 1 step right and 2 steps forward from your current position.
+2. **Turn Right**: To move towards the door, you need to turn right.
+3. **Move Forward**: After turning right, you need to move forward two times to reach the door.
+4. **Use Key**: Once you reach the door, use the yellow key to unlock it.
+
+ACTION: turn right","You carry a yellow key
+a wall 1 step forward
+a wall 3 steps right
+a locked yellow door 2 steps left and 1 step forward",0,False
+40,turn left,"Given the current observation:
+
+1. **Identify the Door's Location**: The door is 2 steps left and 1 step forward from your current position.
+2. **Turn Left**: To move towards the door, you need to turn left.
+3. **Move Forward**: After turning left, you need to move forward to reach the door.
+4. **Use Key**: Once you reach the door, use the yellow key to unlock it.
+
+ACTION: turn left","You carry a yellow key
+a wall 4 steps forward
+a wall 1 step right
+a locked yellow door 1 step right and 2 steps forward",0,False
+41,turn right,"Given the current observation:
+
+1. **Identify the Door's Location**: The door is 1 step right and 2 steps forward from your current position.
+2. **Turn Right**: To move towards the door, you need to turn right.
+3. **Move Forward**: After turning right, you need to move forward to reach the door.
+4. **Use Key**: Once you reach the door, use the yellow key to unlock it.
+
+ACTION: turn right","You carry a yellow key
+a wall 1 step forward
+a wall 3 steps right
+a locked yellow door 2 steps left and 1 step forward",0,False
+42,turn left,"Based on the current observation:
+
+1. **Identify the Door's Location**: The door is 2 steps left and 1 step forward from your current position.
+2. **Turn Left**: To move towards the door, you need to turn left.
+3. **Move Forward**: After turning left, you need to move forward to reach the door.
+4. **Use Key**: Once you reach the door, use the yellow key to unlock it.
+
+ACTION: turn left","You carry a yellow key
+a wall 4 steps forward
+a wall 1 step right
+a locked yellow door 1 step right and 2 steps forward",0,False
+43,turn right,"Based on the current observation:
+
+1. **Identify the Door's Location**: The door is 1 step right and 2 steps forward from your current position.
+2. **Turn Right**: To move towards the door, you need to turn right.
+3. **Move Forward**: After turning right, you need to move forward to reach the door.
+4. **Use Key**: Once you reach the door, use the yellow key to unlock it.
+
+ACTION: turn right","You carry a yellow key
+a wall 1 step forward
+a wall 3 steps right
+a locked yellow door 2 steps left and 1 step forward",0,False
+44,turn left,"Based on the current observation:
+
+1. **Identify the Door's Location**: The door is 2 steps left and 1 step forward from your current position.
+2. **Turn Left**: To move towards the door, you need to turn left.
+3. **Move Forward**: After turning left, you need to move forward to reach the door.
+4. **Use Key**: Once you reach the door, use the yellow key to unlock it.
+
+ACTION: turn left","You carry a yellow key
+a wall 4 steps forward
+a wall 1 step right
+a locked yellow door 1 step right and 2 steps forward",0,False
+45,turn right,"Based on the current observation:
+
+1. **Identify the Door's Location**: The door is 1 step right and 2 steps forward from your current position.
+2. **Turn Right**: To move towards the door, you need to turn right.
+3. **Move Forward**: After turning right, you need to move forward to reach the door.
+4. **Use Key**: Once you reach the door, use the yellow key to unlock it.
+
+ACTION: turn right","You carry a yellow key
+a wall 1 step forward
+a wall 3 steps right
+a locked yellow door 2 steps left and 1 step forward",0,False
+46,turn left,"Based on the current observation:
+
+1. **Identify the Door's Location**: The door is 2 steps left and 1 step forward from your current position.
+2. **Turn Left**: To move towards the door, you need to turn left.
+3. **Move Forward**: After turning left, you need to move forward to reach the door.
+4. **Use Key**: Once you reach the door, use the yellow key to unlock it.
+
+ACTION: turn left","You carry a yellow key
+a wall 4 steps forward
+a wall 1 step right
+a locked yellow door 1 step right and 2 steps forward",0,False
+47,turn right,"Based on the current observation:
+
+1. **Identify the Door's Location**: The door is 1 step right and 2 steps forward from your current position.
+2. **Turn Right**: To move towards the door, you need to turn right.
+3. **Move Forward**: After turning right, you need to move forward twice to reach the door.
+4. **Use Key**: Once you reach the door, use the yellow key to unlock it.
+
+ACTION: turn right","You carry a yellow key
+a wall 1 step forward
+a wall 3 steps right
+a locked yellow door 2 steps left and 1 step forward",0,False
+48,turn left,"Based on the current observation:
+
+1. **Identify the Door's Location**: The door is 2 steps left and 1 step forward from your current position.
+2. **Turn Left**: To move towards the door, you need to turn left.
+3. **Move Forward**: After turning left, you need to move forward once to reach the door.
+4. **Use Key**: Once you reach the door, use the yellow key to unlock it.
+
+ACTION: turn left","You carry a yellow key
+a wall 4 steps forward
+a wall 1 step right
+a locked yellow door 1 step right and 2 steps forward",0,False
+49,turn right,"Based on the current observation:
+
+1. **Identify the Door's Location**: The door is 1 step right and 2 steps forward from your current position.
+2. **Turn Right**: To move towards the door, you need to turn right.
+3. **Move Forward**: After turning right, you need to move forward twice to reach the door.
+4. **Use Key**: Once you reach the door, use the yellow key to unlock it.
+
+ACTION: turn right","You carry a yellow key
+a wall 1 step forward
+a wall 3 steps right
+a locked yellow door 2 steps left and 1 step forward",0,False
+50,turn left,"Based on the current observation:
+
+1. **Identify the Door's Location**: The door is 2 steps left and 1 step forward from your current position.
+2. **Turn Left**: To move towards the door, you need to turn left.
+3. **Move Forward**: After turning left, you need to move forward once to reach the door.
+4. **Use Key**: Once you reach the door, use the yellow key to unlock it.
+
+ACTION: turn left","You carry a yellow key
+a wall 4 steps forward
+a wall 1 step right
+a locked yellow door 1 step right and 2 steps forward",0,False
+51,turn right,"Based on the current observation:
+
+1. **Identify the Door's Location**: The door is 1 step right and 2 steps forward from your current position.
+2. **Turn Right**: To move towards the door, you need to turn right.
+3. **Move Forward**: After turning right, you need to move forward twice to reach the door.
+4. **Use Key**: Once you reach the door, use the yellow key to unlock it.
+
+ACTION: turn right","You carry a yellow key
+a wall 1 step forward
+a wall 3 steps right
+a locked yellow door 2 steps left and 1 step forward",0,False
+52,turn left,"Based on the current observation:
+
+1. **Identify the Door's Location**: The door is 2 steps left and 1 step forward from your current position.
+2. **Turn Left**: To move towards the door, you need to turn left.
+3. **Move Forward**: After turning left, you need to move forward once to reach the door.
+4. **Use Key**: Once you reach the door, use the yellow key to unlock it.
+
+ACTION: turn left","You carry a yellow key
+a wall 4 steps forward
+a wall 1 step right
+a locked yellow door 1 step right and 2 steps forward",0,False
+53,turn right,"Based on the current observation:
+
+1. **Identify the Door's Location**: The door is 1 step right and 2 steps forward from your current position.
+2. **Turn Right**: To move towards the door, you need to turn right.
+3. **Move Forward**: After turning right, you need to move forward twice to reach the door.
+4. **Use Key**: Once you reach the door, use the yellow key to unlock it.
+
+ACTION: turn right","You carry a yellow key
+a wall 1 step forward
+a wall 3 steps right
+a locked yellow door 2 steps left and 1 step forward",0,False
+54,turn left,"Based on the current observation:
+
+1. **Identify the Door's Location**: The door is 2 steps left and 1 step forward from your current position.
+2. **Turn Left**: To move towards the door, you need to turn left.
+3. **Move Forward**: After turning left, you need to move forward once to reach the door.
+4. **Use Key**: Once you reach the door, use the yellow key to unlock it.
+
+ACTION: turn left","You carry a yellow key
+a wall 4 steps forward
+a wall 1 step right
+a locked yellow door 1 step right and 2 steps forward",0,False
+55,turn right,"Based on the current observation:
+
+1. **Identify the Door's Location**: The door is 1 step right and 2 steps forward from your current position.
+2. **Turn Right**: To move towards the door, you need to turn right.
+3. **Move Forward**: After turning right, you need to move forward twice to reach the door.
+4. **Use Key**: Once you reach the door, use the yellow key to unlock it.
+
+ACTION: turn right","You carry a yellow key
+a wall 1 step forward
+a wall 3 steps right
+a locked yellow door 2 steps left and 1 step forward",0,False
+56,turn left,"Based on the current observation:
+
+1. **Identify the Door's Location**: The door is 2 steps left and 1 step forward from your current position.
+2. **Turn Left**: To move towards the door, you need to turn left.
+3. **Move Forward**: After turning left, you need to move forward once to reach the door.
+4. **Use Key**: Once you reach the door, use the yellow key to unlock it.
+
+ACTION: turn left","You carry a yellow key
+a wall 4 steps forward
+a wall 1 step right
+a locked yellow door 1 step right and 2 steps forward",0,False
+57,turn right,"Given the current observation, let's break down the steps:
+
+1. **Identify the Door's Location**: The door is 1 step right and 2 steps forward from your current position.
+2. **Turn Right**: To move towards the door, you need to turn right.
+3. **Move Forward**: After turning right, you need to move forward twice to reach the door.
+4. **Use Key**: Once you reach the door, use the yellow key to unlock it.
+
+ACTION: turn right","You carry a yellow key
+a wall 1 step forward
+a wall 3 steps right
+a locked yellow door 2 steps left and 1 step forward",0,False
+58,turn left,"Given the current observation, let's break down the steps:
+
+1. **Identify the Door's Location**: The door is 2 steps left and 1 step forward from your current position.
+2. **Turn Left**: To move towards the door, you need to turn left.
+3. **Move Forward**: After turning left, you need to move forward once to reach the door.
+4. **Use Key**: Once you reach the door, use the yellow key to unlock it.
+
+ACTION: turn left","You carry a yellow key
+a wall 4 steps forward
+a wall 1 step right
+a locked yellow door 1 step right and 2 steps forward",0,False
+59,turn right,"Given the current observation, let's break down the steps:
+
+1. **Identify the Door's Location**: The door is 1 step right and 2 steps forward from your current position.
+2. **Turn Right**: To move towards the door, you need to turn right.
+3. **Move Forward**: After turning right, you need to move forward twice to reach the door.
+4. **Use Key**: Once you reach the door, use the yellow key to unlock it.
+
+ACTION: turn right","You carry a yellow key
+a wall 1 step forward
+a wall 3 steps right
+a locked yellow door 2 steps left and 1 step forward",0,False
+60,turn left,"Given the current observation, let's break down the steps:
+
+1. **Identify the Door's Location**: The door is 2 steps left and 1 step forward from your current position.
+2. **Turn Left**: To move towards the door, you need to turn left.
+3. **Move Forward**: After turning left, you need to move forward once to reach the door.
+4. **Use Key**: Once you reach the door, use the yellow key to unlock it.
+
+ACTION: turn left","You carry a yellow key
+a wall 4 steps forward
+a wall 1 step right
+a locked yellow door 1 step right and 2 steps forward",0,False
+61,turn right,"Given the current observation, let's break down the steps:
+
+1. **Identify the Door's Location**: The door is 1 step right and 2 steps forward from your current position.
+2. **Turn Right**: To move towards the door, you need to turn right.
+3. **Move Forward**: After turning right, you need to move forward twice to reach the door.
+4. **Use Key**: Once you reach the door, use the yellow key to unlock it.
+
+ACTION: turn right","You carry a yellow key
+a wall 1 step forward
+a wall 3 steps right
+a locked yellow door 2 steps left and 1 step forward",0,False
+62,turn left,"Given the current observation, let's break down the steps:
+
+1. **Identify the Door's Location**: The door is 2 steps left and 1 step forward from your current position.
+2. **Turn Left**: To move towards the door, you need to turn left.
+3. **Move Forward**: After turning left, you need to move forward once to reach the door.
+4. **Use Key**: Once you reach the door, use the yellow key to unlock it.
+
+ACTION: turn left","You carry a yellow key
+a wall 4 steps forward
+a wall 1 step right
+a locked yellow door 1 step right and 2 steps forward",0,False
+63,turn right,"Given the current observation, let's break down the steps:
+
+1. **Identify the Door's Location**: The door is 1 step right and 2 steps forward from your current position.
+2. **Turn Right**: To move towards the door, you need to turn right.
+3. **Move Forward**: After turning right, you need to move forward twice to reach the door.
+4. **Use Key**: Once you reach the door, use the yellow key to unlock it.
+
+ACTION: turn right","You carry a yellow key
+a wall 1 step forward
+a wall 3 steps right
+a locked yellow door 2 steps left and 1 step forward",0,False
+64,turn left,"Given the current observation, let's break down the steps:
+
+1. **Identify the Door's Location**: The door is 2 steps left and 1 step forward from your current position.
+2. **Turn Left**: To move towards the door, you need to turn left.
+3. **Move Forward**: After turning left, you need to move forward once to reach the door.
+4. **Use Key**: Once you reach the door, use the yellow key to unlock it.
+
+ACTION: turn left","You carry a yellow key
+a wall 4 steps forward
+a wall 1 step right
+a locked yellow door 1 step right and 2 steps forward",0,False
+65,turn right,"Given the current observation, let's break down the steps:
+
+1. **Identify the Door's Location**: The door is 1 step right and 2 steps forward from your current position.
+2. **Turn Right**: To move towards the door, you need to turn right.
+3. **Move Forward**: After turning right, you need to move forward twice to reach the door.
+4. **Use Key**: Once you reach the door, use the yellow key to unlock it.
+
+ACTION: turn right","You carry a yellow key
+a wall 1 step forward
+a wall 3 steps right
+a locked yellow door 2 steps left and 1 step forward",0,False
+66,turn left,"Given the current observation, let's break down the steps:
+
+1. **Identify the Door's Location**: The door is 2 steps left and 1 step forward from your current position.
+2. **Turn Left**: To move towards the door, you need to turn left.
+3. **Move Forward**: After turning left, you need to move forward once to reach the door.
+4. **Use Key**: Once you reach the door, use the yellow key to unlock it.
+
+ACTION: turn left","You carry a yellow key
+a wall 4 steps forward
+a wall 1 step right
+a locked yellow door 1 step right and 2 steps forward",0,False
+67,turn right,"Given the current observation, let's break down the steps:
+
+1. **Identify the Door's Location**: The door is 1 step right and 2 steps forward from your current position.
+2. **Turn Right**: To move towards the door, you need to turn right.
+3. **Move Forward**: After turning right, you need to move forward twice to reach the door.
+4. **Use Key**: Once you reach the door, use the yellow key to unlock it.
+
+ACTION: turn right","You carry a yellow key
+a wall 1 step forward
+a wall 3 steps right
+a locked yellow door 2 steps left and 1 step forward",0,False
+68,turn left,"Given the current observation, let's break down the steps:
+
+1. **Identify the Door's Location**: The door is 2 steps left and 1 step forward from your current position.
+2. **Turn Left**: To move towards the door, you need to turn left.
+3. **Move Forward**: After turning left, you need to move forward once to reach the door.
+4. **Use Key**: Once you reach the door, use the yellow key to unlock it.
+
+ACTION: turn left","You carry a yellow key
+a wall 4 steps forward
+a wall 1 step right
+a locked yellow door 1 step right and 2 steps forward",0,False
+69,turn right,"Given the current observation, let's break down the steps:
+
+1. **Identify the Door's Location**: The door is 1 step right and 2 steps forward from your current position.
+2. **Turn Right**: To move towards the door, you need to turn right.
+3. **Move Forward**: After turning right, you need to move forward twice to reach the door.
+4. **Use Key**: Once you reach the door, use the yellow key to unlock it.
+
+ACTION: turn right","You carry a yellow key
+a wall 1 step forward
+a wall 3 steps right
+a locked yellow door 2 steps left and 1 step forward",0,False
+70,turn left,"Given the current observation, let's break down the steps:
+
+1. **Identify the Door's Location**: The door is 2 steps left and 1 step forward from your current position.
+2. **Turn Left**: To move towards the door, you need to turn left.
+3. **Move Forward**: After turning left, you need to move forward once to reach the door.
+4. **Use Key**: Once you reach the door, use the yellow key to unlock it.
+
+ACTION: turn left","You carry a yellow key
+a wall 4 steps forward
+a wall 1 step right
+a locked yellow door 1 step right and 2 steps forward",0,False
+71,turn right,"Given the current observation, let's break down the steps:
+
+1. **Identify the Door's Location**: The door is 1 step right and 2 steps forward from your current position.
+2. **Turn Right**: To move towards the door, you need to turn right.
+3. **Move Forward**: After turning right, you need to move forward twice to reach the door.
+4. **Use Key**: Once you reach the door, use the yellow key to unlock it.
+
+ACTION: turn right","You carry a yellow key
+a wall 1 step forward
+a wall 3 steps right
+a locked yellow door 2 steps left and 1 step forward",0,False
+72,turn left,"Given the current observation, let's break down the steps:
+
+1. **Identify the Door's Location**: The door is 2 steps left and 1 step forward from your current position.
+2. **Turn Left**: To move towards the door, you need to turn left.
+3. **Move Forward**: After turning left, you need to move forward to reach the door.
+4. **Use Key**: Once you reach the door, use the yellow key to unlock it.
+
+ACTION: turn left","You carry a yellow key
+a wall 4 steps forward
+a wall 1 step right
+a locked yellow door 1 step right and 2 steps forward",0,False
+73,turn right,"Given the current observation, let's break down the steps:
+
+1. **Identify the Door's Location**: The door is 1 step right and 2 steps forward from your current position.
+2. **Turn Right**: To move towards the door, you need to turn right.
+3. **Move Forward**: After turning right, you need to move forward to reach the door.
+4. **Use Key**: Once you reach the door, use the yellow key to unlock it.
+
+ACTION: turn right","You carry a yellow key
+a wall 1 step forward
+a wall 3 steps right
+a locked yellow door 2 steps left and 1 step forward",0,False
+74,turn left,"Given the current observation, let's break down the steps:
+
+1. **Identify the Door's Location**: The door is 2 steps left and 1 step forward from your current position.
+2. **Turn Left**: To move towards the door, you need to turn left.
+3. **Move Forward**: After turning left, you need to move forward to reach the door.
+4. **Use Key**: Once you reach the door, use the yellow key to unlock it.
+
+ACTION: turn left","You carry a yellow key
+a wall 4 steps forward
+a wall 1 step right
+a locked yellow door 1 step right and 2 steps forward",0,False
+75,turn right,"Given the current observation, let's break down the steps:
+
+1. **Identify the Door's Location**: The door is 1 step right and 2 steps forward from your current position.
+2. **Turn Right**: To move towards the door, you need to turn right.
+3. **Move Forward**: After turning right, you need to move forward to reach the door.
+4. **Use Key**: Once you reach the door, use the yellow key to unlock it.
+
+ACTION: turn right","You carry a yellow key
+a wall 1 step forward
+a wall 3 steps right
+a locked yellow door 2 steps left and 1 step forward",0,False
+76,turn left,"Given the current observation, let's break down the steps:
+
+1. **Identify the Door's Location**: The door is 2 steps left and 1 step forward from your current position.
+2. **Turn Left**: To move towards the door, you need to turn left.
+3. **Move Forward**: After turning left, you need to move forward to reach the door.
+4. **Use Key**: Once you reach the door, use the yellow key to unlock it.
+
+ACTION: turn left","You carry a yellow key
+a wall 4 steps forward
+a wall 1 step right
+a locked yellow door 1 step right and 2 steps forward",0,False
+77,turn right,"Given the current observation, let's break down the steps:
+
+1. **Identify the Door's Location**: The door is 1 step right and 2 steps forward from your current position.
+2. **Turn Right**: To move towards the door, you need to turn right.
+3. **Move Forward**: After turning right, you need to move forward twice to reach the door.
+4. **Use Key**: Once you reach the door, use the yellow key to unlock it.
+
+ACTION: turn right","You carry a yellow key
+a wall 1 step forward
+a wall 3 steps right
+a locked yellow door 2 steps left and 1 step forward",0,False
+78,turn left,"Given the current observation, let's break down the steps:
+
+1. **Identify the Door's Location**: The door is 2 steps left and 1 step forward from your current position.
+2. **Turn Left**: To move towards the door, you need to turn left.
+3. **Move Forward**: After turning left, you need to move forward once to reach the door.
+4. **Use Key**: Once you reach the door, use the yellow key to unlock it.
+
+ACTION: turn left","You carry a yellow key
+a wall 4 steps forward
+a wall 1 step right
+a locked yellow door 1 step right and 2 steps forward",0,False
+79,turn right,"Given the current observation, let's break down the steps:
+
+1. **Identify the Door's Location**: The door is 1 step right and 2 steps forward from your current position.
+2. **Turn Right**: To move towards the door, you need to turn right.
+3. **Move Forward**: After turning right, you need to move forward twice to reach the door.
+4. **Use Key**: Once you reach the door, use the yellow key to unlock it.
+
+ACTION: turn right","You carry a yellow key
+a wall 1 step forward
+a wall 3 steps right
+a locked yellow door 2 steps left and 1 step forward",0,False
+80,turn left,"Given the current observation, let's break down the steps:
+
+1. **Identify the Door's Location**: The door is 2 steps left and 1 step forward from your current position.
+2. **Turn Left**: To move towards the door, you need to turn left.
+3. **Move Forward**: After turning left, you need to move forward once to reach the door.
+4. **Use Key**: Once you reach the door, use the yellow key to unlock it.
+
+ACTION: turn left","You carry a yellow key
+a wall 4 steps forward
+a wall 1 step right
+a locked yellow door 1 step right and 2 steps forward",0,False
+81,turn right,"Given the current observation, let's break down the steps:
+
+1. **Identify the Door's Location**: The door is 1 step right and 2 steps forward from your current position.
+2. **Turn Right**: To move towards the door, you need to turn right.
+3. **Move Forward**: After turning right, you need to move forward twice to reach the door.
+4. **Use Key**: Once you reach the door, use the yellow key to unlock it.
+
+ACTION: turn right","You carry a yellow key
+a wall 1 step forward
+a wall 3 steps right
+a locked yellow door 2 steps left and 1 step forward",0,False
+82,turn left,"Given the current observation, let's break down the steps:
+
+1. **Identify the Door's Location**: The door is 2 steps left and 1 step forward from your current position.
+2. **Turn Left**: To move towards the door, you need to turn left.
+3. **Move Forward**: After turning left, you need to move forward once to reach the door.
+4. **Use Key**: Once you reach the door, use the yellow key to unlock it.
+
+ACTION: turn left","You carry a yellow key
+a wall 4 steps forward
+a wall 1 step right
+a locked yellow door 1 step right and 2 steps forward",0,False
+83,turn right,"Given the current observation, let's break down the steps:
+
+1. **Identify the Door's Location**: The door is 1 step right and 2 steps forward from your current position.
+2. **Turn Right**: To move towards the door, you need to turn right.
+3. **Move Forward**: After turning right, you need to move forward twice to reach the door.
+4. **Use Key**: Once you reach the door, use the yellow key to unlock it.
+
+ACTION: turn right","You carry a yellow key
+a wall 1 step forward
+a wall 3 steps right
+a locked yellow door 2 steps left and 1 step forward",0,False
+84,turn left,"Given the current observation, let's break down the steps:
+
+1. **Identify the Door's Location**: The door is 2 steps left and 1 step forward from your current position.
+2. **Turn Left**: To move towards the door, you need to turn left.
+3. **Move Forward**: After turning left, you need to move forward once to reach the door.
+4. **Use Key**: Once you reach the door, use the yellow key to unlock it.
+
+ACTION: turn left","You carry a yellow key
+a wall 4 steps forward
+a wall 1 step right
+a locked yellow door 1 step right and 2 steps forward",0,False
+85,turn right,"Given the current observation, let's break down the steps:
+
+1. **Identify the Door's Location**: The door is 1 step right and 2 steps forward from your current position.
+2. **Turn Right**: To move towards the door, you need to turn right.
+3. **Move Forward**: After turning right, you need to move forward twice to reach the door.
+4. **Use Key**: Once you reach the door, use the yellow key to unlock it.
+
+ACTION: turn right","You carry a yellow key
+a wall 1 step forward
+a wall 3 steps right
+a locked yellow door 2 steps left and 1 step forward",0,False
+86,turn left,"Given the current observation, let's break down the steps:
+
+1. **Identify the Door's Location**: The door is 2 steps left and 1 step forward from your current position.
+2. **Turn Left**: To move towards the door, you need to turn left.
+3. **Move Forward**: After turning left, you need to move forward once to reach the door.
+4. **Use Key**: Once you reach the door, use the yellow key to unlock it.
+
+ACTION: turn left","You carry a yellow key
+a wall 4 steps forward
+a wall 1 step right
+a locked yellow door 1 step right and 2 steps forward",0,False
+87,turn right,"Given the current observation, let's break down the steps:
+
+1. **Identify the Door's Location**: The door is 1 step right and 2 steps forward from your current position.
+2. **Turn Right**: To move towards the door, you need to turn right.
+3. **Move Forward**: After turning right, you need to move forward twice to reach the door.
+4. **Use Key**: Once you reach the door, use the yellow key to unlock it.
+
+ACTION: turn right","You carry a yellow key
+a wall 1 step forward
+a wall 3 steps right
+a locked yellow door 2 steps left and 1 step forward",0,False
+88,turn left,"Given the current observation, let's break down the steps:
+
+1. **Identify the Door's Location**: The door is 2 steps left and 1 step forward from your current position.
+2. **Turn Left**: To move towards the door, you need to turn left.
+3. **Move Forward**: After turning left, you need to move forward once to reach the door.
+4. **Use Key**: Once you reach the door, use the yellow key to unlock it.
+
+ACTION: turn left","You carry a yellow key
+a wall 4 steps forward
+a wall 1 step right
+a locked yellow door 1 step right and 2 steps forward",0,False
+89,turn right,"Given the current observation, let's break down the steps:
+
+1. **Identify the Door's Location**: The door is 1 step right and 2 steps forward from your current position.
+2. **Turn Right**: To move towards the door, you need to turn right.
+3. **Move Forward**: After turning right, you need to move forward twice to reach the door.
+4. **Use Key**: Once you reach the door, use the yellow key to unlock it.
+
+ACTION: turn right","You carry a yellow key
+a wall 1 step forward
+a wall 3 steps right
+a locked yellow door 2 steps left and 1 step forward",0,False
+90,turn left,"Given the current observation, let's break down the steps:
+
+1. **Identify the Door's Location**: The door is 2 steps left and 1 step forward from your current position.
+2. **Turn Left**: To move towards the door, you need to turn left.
+3. **Move Forward**: After turning left, you need to move forward once to reach the door.
+4. **Use Key**: Once you reach the door, use the yellow key to unlock it.
+
+ACTION: turn left","You carry a yellow key
+a wall 4 steps forward
+a wall 1 step right
+a locked yellow door 1 step right and 2 steps forward",0,False
+91,turn right,"Given the current observation, let's break down the steps:
+
+1. **Identify the Door's Location**: The door is 1 step right and 2 steps forward from your current position.
+2. **Turn Right**: To move towards the door, you need to turn right.
+3. **Move Forward**: After turning right, you need to move forward twice to reach the door.
+4. **Use Key**: Once you reach the door, use the yellow key to unlock it.
+
+ACTION: turn right","You carry a yellow key
+a wall 1 step forward
+a wall 3 steps right
+a locked yellow door 2 steps left and 1 step forward",0,False
+92,turn left,"Given the current observation, let's break down the steps:
+
+1. **Identify the Door's Location**: The door is 2 steps left and 1 step forward from your current position.
+2. **Turn Left**: To move towards the door, you need to turn left.
+3. **Move Forward**: After turning left, you need to move forward once to reach the door.
+4. **Use Key**: Once you reach the door, use the yellow key to unlock it.
+
+ACTION: turn left","You carry a yellow key
+a wall 4 steps forward
+a wall 1 step right
+a locked yellow door 1 step right and 2 steps forward",0,False
+93,turn right,"Given the current observation, let's break down the steps:
+
+1. **Identify the Door's Location**: The door is 1 step right and 2 steps forward from your current position.
+2. **Turn Right**: To move towards the door, you need to turn right.
+3. **Move Forward**: After turning right, you need to move forward twice to reach the door.
+4. **Use Key**: Once you reach the door, use the yellow key to unlock it.
+
+ACTION: turn right","You carry a yellow key
+a wall 1 step forward
+a wall 3 steps right
+a locked yellow door 2 steps left and 1 step forward",0,False
+94,turn left,"Given the current observation, let's break down the steps:
+
+1. **Identify the Door's Location**: The door is 2 steps left and 1 step forward from your current position.
+2. **Turn Left**: To move towards the door, you need to turn left.
+3. **Move Forward**: After turning left, you need to move forward once to reach the door.
+4. **Use Key**: Once you reach the door, use the yellow key to unlock it.
+
+ACTION: turn left","You carry a yellow key
+a wall 4 steps forward
+a wall 1 step right
+a locked yellow door 1 step right and 2 steps forward",0,False
+95,turn right,"Given the current observation, let's break down the steps:
+
+1. **Identify the Door's Location**: The door is 1 step right and 2 steps forward from your current position.
+2. **Turn Right**: To move towards the door, you need to turn right.
+3. **Move Forward**: After turning right, you need to move forward twice to reach the door.
+4. **Use Key**: Once you reach the door, use the yellow key to unlock it.
+
+ACTION: turn right","You carry a yellow key
+a wall 1 step forward
+a wall 3 steps right
+a locked yellow door 2 steps left and 1 step forward",0,False
+96,turn left,"Given the current observation, let's break down the steps:
+
+1. **Identify the Door's Location**: The door is 2 steps left and 1 step forward from your current position.
+2. **Turn Left**: To move towards the door, you need to turn left.
+3. **Move Forward**: After turning left, you need to move forward once to reach the door.
+4. **Use Key**: Once you reach the door, use the yellow key to unlock it.
+
+ACTION: turn left","You carry a yellow key
+a wall 4 steps forward
+a wall 1 step right
+a locked yellow door 1 step right and 2 steps forward",0,False
+97,turn right,"Let's break down the steps to reach and unlock the door:
+
+1. **Identify the Door's Location**: The door is 2 steps forward and 1 step right from your current position.
+2. **Turn Right**: To move towards the door, you need to turn right.
+3. **Move Forward**: After turning right, you need to move forward twice to reach the door.
+4. **Use Key**: Once you reach the door, use the yellow key to unlock it.
+
+ACTION: turn right","You carry a yellow key
+a wall 1 step forward
+a wall 3 steps right
+a locked yellow door 2 steps left and 1 step forward",0,False
+98,turn left,"Based on the current observation, the best course of action is to turn left to move towards the door.
+
+ACTION: turn left","You carry a yellow key
+a wall 4 steps forward
+a wall 1 step right
+a locked yellow door 1 step right and 2 steps forward",0,False
+99,go forward,"Based on the current observation, the best course of action is to continue moving towards the door. Since the door is located 1 step right and 2 steps forward from your current position, we need to move right and then forward to reach it.
+
+ACTION: go forward","You carry a yellow key
+a wall 3 steps forward
+a wall 1 step right
+a locked yellow door 1 step right and 1 step forward",0,False
+100,go forward,"Based on the current observation, the best course of action is to continue moving towards the door. The door is located 1 step right and 1 step forward from your current position. 
+
+Step-by-step:
+1. Turn right.
+2. Go forward.
+
+ACTION: turn right
+
+After turning right, proceed with the next action:
+
+ACTION: go forward","You carry a yellow key
+a wall 2 steps forward
+a locked yellow door 1 step right",0,False
+101,go forward,"Based on the current observation, the best course of action is to move directly towards the door. Since the door is only 1 step to the right, we can proceed as follows:
+
+1. Turn right.
+2. Go forward.
+
+ACTION: turn right
+
+After turning right, proceed with the next action:
+
+ACTION: go forward","You carry a yellow key
+a wall 1 step forward
+a wall 1 step right",0,False
+102,turn right,"Based on the current observation, it seems that the door might have been obstructed or moved, and there is no longer a direct path to it. The key is still with us, so we need to reassess our approach.
+
+1. Turn right: This action will allow us to face the direction where the door might be.
+2. Go forward: After turning right, we can take one step forward to see if the door is now accessible.
+
+ACTION: turn right","You carry a yellow key
+a wall 1 step forward
+a wall 1 step left
+a locked yellow door 1 step right and 1 step forward",0,False
+103,go forward,"Now that we have turned right, we can see the locked yellow door directly in front of us, just one step away. Since we are carrying the yellow key, the best course of action is to approach the door and use the key to unlock it.
+
+ACTION: go forward","You carry a yellow key
+a wall 1 step forward
+a wall 1 step left
+a locked yellow door 1 step right and 1 step forward",0,False
+104,go forward,"Let's break down the best course of action step by step:
+
+1. We are currently facing a wall one step forward.
+2. There is a locked yellow door one step right and one step forward from our current position.
+3. We need to move towards the door and use the key to unlock it.
+
+ACTION: go forward","You carry a yellow key
+a wall 1 step forward
+a wall 1 step left
+a locked yellow door 1 step right and 1 step forward",0,False
+105,turn right,"Let's break down the best course of action step by step:
+
+1. We are currently facing a wall one step forward.
+2. We need to move one step right to face the door.
+3. After turning right, we need to move one step forward to reach the door.
+4. Finally, we can use the yellow key to unlock the door.
+
+ACTION: turn right","You carry a yellow key
+a wall 6 steps forward
+a wall 1 step left
+a locked yellow door 1 step left and 1 step forward",0,False
+106,go forward,"Now that we have updated the observation, let's think through the best course of action step by step:
+
+1. We are currently facing a wall one step left and a locked yellow door one step left and one step forward.
+2. To interact with the door, we need to move one step forward to be directly in front of it.
+3. Once in front of the door, we can use the yellow key to unlock it.
+
+ACTION: go forward","You carry a yellow key
+a wall 5 steps forward
+a locked yellow door 1 step left",0,False
+107,turn left,"Now that we have updated the observation, let's think through the best course of action step by step:
+
+1. We are currently facing a wall five steps forward and a locked yellow door one step left.
+2. To interact with the door, we need to move one step left to be directly in front of it.
+3. Once in front of the door, we can use the yellow key to unlock it.
+
+ACTION: turn left","You carry a yellow key
+a wall 2 steps left
+a locked yellow door 1 step forward",0,False
+108,go forward,"Now that we have updated the observation, let's think through the best course of action step by step:
+
+1. We are currently facing a wall two steps left and a locked yellow door one step forward.
+2. To interact with the door, we need to move one step forward to be directly in front of it.
+3. Once in front of the door, we can use the yellow key to unlock it.
+
+ACTION: go forward","You carry a yellow key
+a wall 2 steps left
+a locked yellow door 1 step forward",0,False
+109,toggle,"Now that we are directly in front of the locked yellow door, the next step is to use the yellow key to unlock it.
+
+ACTION: toggle","You carry a yellow key
+a wall 2 steps left
+a open yellow door 1 step forward",0.2265625,True

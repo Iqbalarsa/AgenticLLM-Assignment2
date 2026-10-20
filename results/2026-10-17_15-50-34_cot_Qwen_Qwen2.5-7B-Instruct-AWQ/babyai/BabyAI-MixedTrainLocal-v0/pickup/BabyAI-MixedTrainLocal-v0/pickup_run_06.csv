@@ -1,0 +1,102 @@
+Step,Action,Reasoning,Observation,Reward,Done
+0,go forward,"Given the current observation, we need to navigate around the walls to find the grey key. The best course of action is to go forward until we encounter the first wall, then turn right to proceed towards the next area.
+
+Step 1: Go forward until you hit the wall.
+Step 2: Turn right to continue the search for the grey key.
+
+ACTION: go forward","a wall 4 steps forward
+a wall 1 step right",0,False
+1,turn right,"Given the current observation, we have hit the wall 4 steps forward and there is a wall 1 step right. This indicates that going forward will lead us to the wall again, so we should turn right to explore a new path.
+
+Step 1: Turn right to move away from the wall in front of us.
+Step 2: Proceed forward to see if this path leads to the grey key.
+
+ACTION: turn right","a wall 1 step forward
+a wall 3 steps right",0,False
+2,turn right,"Given the current observation, we have a wall 1 step forward and a wall 3 steps right. This suggests that we should proceed right to avoid the wall in front of us and explore the path to the right.
+
+Step 1: Turn right to move away from the wall in front of us.
+Step 2: Go forward to continue exploring the path.
+
+ACTION: turn right","a wall 3 steps forward
+a wall 1 step left",0,False
+3,turn left,"Given the current observation, we have a wall 3 steps forward and a wall 1 step left. The best course of action is to go left to avoid the wall in front and explore the path to the left.
+
+Step 1: Turn left to move away from the wall in front of us.
+Step 2: Go forward to continue exploring the path to the left.
+
+ACTION: turn left","a wall 1 step forward
+a wall 3 steps right",0,False
+4,turn right,"Given the current observation, we have a wall directly in front of us and another wall 3 steps to the right. The best course of action is to go right to avoid the wall in front and continue exploring.
+
+Step 1: Turn right to move away from the wall in front of us.
+Step 2: Go forward to continue exploring the path to the right.
+
+ACTION: turn right","a wall 3 steps forward
+a wall 1 step left",0,False
+5,turn left,"Given the current observation, we have a wall directly in front of us and another wall to the left. The best course of action is to turn left to avoid the wall in front of us and continue exploring.
+
+Step 1: Turn left to move away from the wall in front of us.
+Step 2: Go forward to continue exploring the path to the left.
+
+ACTION: turn left","a wall 1 step forward
+a wall 3 steps right",0,False
+6,turn right,"Given the current observation, we have a wall directly in front of us and another wall to the right. The best course of action is to turn right to avoid the wall in front of us and continue exploring.
+
+Step 1: Turn right to move away from the wall in front of us.
+Step 2: Go forward to continue exploring the path to the right.
+
+ACTION: turn right","a wall 3 steps forward
+a wall 1 step left",0,False
+7,turn right,"Given the current observation, we have a wall directly in front of us and another wall to the left. The best course of action is to continue turning right until we find an open path or the grey key.
+
+Step 1: Turn right to move away from the wall in front of us.
+Step 2: Go forward to continue exploring the path to the right.
+
+If we encounter a path or the grey key, we can proceed accordingly. If not, we will need to re-evaluate our path.
+
+ACTION: turn right","a wall 3 steps left
+a grey key 5 steps forward",0,False
+8,go forward,"Given the current observation, we have identified the location of the grey key. The best course of action is to move forward until we reach it.
+
+Step 1: Move forward until we are in front of the grey key.
+Step 2: Pick up the grey key.
+
+ACTION: go forward","a wall 3 steps left
+a grey key 4 steps forward",0,False
+9,go forward,"Given the current observation, we still need to move forward until we are in front of the grey key. Here's the step-by-step plan:
+
+1. Move forward until we are in front of the grey key.
+2. Pick up the grey key.
+
+ACTION: go forward","a wall 3 steps left
+a grey key 3 steps forward",0,False
+10,go forward,"Given the current observation, we are now 3 steps away from the grey key. The best course of action is to continue moving forward until we are in front of the grey key, and then pick it up.
+
+Step 1: Move forward 3 times.
+Step 2: Pick up the grey key.
+
+ACTION: go forward","a wall 3 steps left
+a grey key 2 steps forward",0,False
+11,go forward,"Given the current observation, we are now 2 steps away from the grey key. The best course of action is to continue moving forward until we are in front of the grey key, and then pick it up.
+
+Step 1: Move forward 2 times.
+Step 2: Pick up the grey key.
+
+ACTION: go forward","a wall 3 steps left
+a grey key 1 step forward",0,False
+12,go forward,"Given the current observation, we are now 1 step away from the grey key. The best course of action is to move forward one more time and then pick up the grey key.
+
+Step 1: Move forward 1 time.
+Step 2: Pick up the grey key.
+
+ACTION: go forward","a wall 3 steps left
+a grey key 1 step forward",0,False
+13,pick up,"Given the current observation, we are now directly in front of the grey key. The best course of action is to move forward one more time and then pick up the grey key.
+
+Step 1: Move forward 1 time.
+Step 2: Pick up the grey key.
+
+ACTION: pick up","You carry a grey key
+a wall 2 steps forward
+a wall 3 steps left",0.803125,True

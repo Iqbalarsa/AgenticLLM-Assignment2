@@ -1,0 +1,210 @@
+Step,Action,Reasoning,Observation,Reward,Done
+0,go forward,"Thought: Based on the current observation, there are walls blocking the path directly forward and to the left. This means that turning left or right would not help me move closer to the purple ball. My next action should be to go forward, as this might help me navigate around the walls and get closer to the ball.
+Plan: No changes to the plan.","a wall 4 steps forward
+a wall 2 steps left",0,False
+1,go forward,"Thought: From the previous observation, there was a wall 5 steps forward and a wall 2 steps left. Now, the observation has changed to a wall 4 steps forward and a wall 2 steps left. This suggests that we might have moved closer to the ball, but there is still a wall blocking our path. Given the information, the best course of action would be to continue moving forward until we can see the ball or reach it.
+Plan: No changes to the plan.","a wall 3 steps forward
+a wall 2 steps left",0,False
+2,turn left,"Thought: Based on the previous observations, the wall is moving closer as I go forward. This indicates that I am approaching an obstacle or a change in the environment. My goal is to find the purple ball, so I need to explore the area systematically while keeping track of the walls and potential paths.
+
+Given the current observation:
+- There is a wall 3 steps forward.
+- There is a wall 2 steps left.
+
+I cannot move forward because there is a wall blocking my path. Therefore, I should explore the left side to see if the path continues or if there is another direction to proceed.
+Plan: Turn left and then go forward to check the path.","a wall 2 steps forward
+a wall 3 steps right",0,False
+3,turn right,"Thought: From the previous observations, it seems like there are walls obstructing my path. I turned left to try to find a clear path, but now I see another wall directly in front of me. Given this, I need to explore further to the right, as turning left repeatedly isn't helping me progress. My plan is to turn right and then move forward to check if there's a path available there.
+Plan: Turn right and then go forward.","a wall 3 steps forward
+a wall 2 steps left",0,False
+4,turn right,"Thought: From the previous observations, it seems that turning left and right repeatedly without making progress is not effective. Based on the current observation, there is a wall 3 steps forward and 2 steps left. This suggests that the agent is likely in a corridor with walls on both sides. Turning right will move the agent closer to the purple ball, which is presumably located ahead. After turning right, going forward will bring the agent closer to the target.
+Plan: Turn right and then go forward.","a wall 5 steps forward
+a wall 3 steps left
+a purple ball 3 steps right and 4 steps forward",0,False
+5,turn left,"Thought: From the previous observation, we were facing a wall 3 steps left and a purple ball 3 steps right and 4 steps forward. We turned right, which moved us closer to the ball but still didn't allow us to see it directly. The current observation shows that we are now facing a wall 5 steps forward and a wall 3 steps left, indicating that we have moved further away from the ball. 
+
+Given this, turning right again would not help us get closer to the ball. Instead, we should turn left to face the ball, then move forward to pick it up.
+Plan: Turn left and then go forward.","a wall 3 steps forward
+a wall 2 steps left",0,False
+6,turn left,"Thought: From the previous observations, we know there are walls blocking our path. We need to move around these walls to reach the purple ball. Turning left and then going forward is a logical step since it might allow us to navigate around the walls.
+Plan: Turn left and then go forward.","a wall 2 steps forward
+a wall 3 steps right",0,False
+7,go forward,"Thought: From the previous observation, I turned left and encountered walls blocking my path. The current observation indicates that there are walls directly in front of me and to my right. Turning left again would not help as there are walls in both the front and the left direction. Therefore, I should try moving forward and then turning left to see if I can find the purple ball.
+Plan: Go forward, then turn left.","a wall 1 step forward
+a wall 3 steps right",0,False
+8,go forward,"Thought: From the previous observation, we saw a wall 1 step forward and a wall 3 steps right. This indicates that going forward will hit a wall, so we need to adjust our strategy. The current plan of going forward then turning left might still be viable if there's a path to the purple ball that doesn't involve hitting walls. Let's execute the first part of the plan and see if it leads us closer to the ball.
+Plan: Go forward, then turn left.","a wall 1 step forward
+a wall 3 steps right",0,False
+9,turn left,"Thought: From the previous observation, I moved forward and encountered a wall. This means the wall was blocking my path. Given the current observation, there is still a wall in front of me and to my right. This suggests that moving forward again would hit another wall. Therefore, I should turn left to explore the other direction and look for the purple ball.
+Plan: Turn left.","a wall 4 steps forward
+a wall 1 step right",0,False
+10,go forward,"Thought: From the previous observation, I was facing a wall 1 step right. Turning left would help me face the wall 4 steps forward. However, since the wall is directly in front of me, turning left again would not be beneficial. Instead, I should move forward to potentially uncover the purple ball or find a path to it.
+Plan: Go forward.","a wall 3 steps forward
+a wall 1 step right",0,False
+11,go forward,"Thought: From the previous observations, I encountered walls both forward and to the right. Turning left and right repeatedly did not help, as it didn't allow me to move forward towards the purple ball. Now, based on the current observation, there is a wall 3 steps forward and a wall 1 step right. Given this, going forward is the most logical next step since there seems to be an open path in that direction.
+Plan: Go forward.","a wall 2 steps forward
+a wall 1 step right",0,False
+12,go forward,"Thought: From the previous observations, it's clear that there are walls obstructing my path. The ball might be further back, but given the walls, going forward is necessary to continue moving towards potential interaction points.
+Plan: Continue moving forward until the ball is within reach.","a wall 1 step forward
+a wall 1 step right",0,False
+13,go forward,"Thought: Based on the current observation, there is a wall directly in front of me and to my right. This indicates that I am very close to the walls and likely need to find another direction to move. Previously, I was turning left and right without progress. Now, I should try to go forward again to see if the ball is within reach or if I need to navigate around the walls.
+Plan: Continue moving forward until the ball is within reach.","a wall 1 step forward
+a wall 1 step right",0,False
+14,turn right,"Thought: From the observations, it seems that there is a wall directly in front of me and to my right. This means that moving forward would be futile as I am blocked. I need to explore other directions to find the purple ball.
+Plan: Turn right to see if the ball is to my right or behind me.","a wall 1 step forward
+a wall 1 step left",0,False
+15,turn right,"Thought: From the previous observation, it was clear that there was a wall directly in front of me and to my left. Turning right will help me explore the area to my right and potentially locate the purple ball. After turning right, I should proceed forward to see if the ball is in front of me or if I need to continue exploring.
+Plan: Turn right to check the right side for the ball.","a wall 6 steps forward
+a wall 1 step left",0,False
+16,turn right,"Thought: From the previous observations, it seems like the environment is symmetrically blocking me. I turned right and still see a wall, suggesting the walls are obstructing my path. Given the walls in front and to the left, the ball might be to the right. Let's turn right to explore that direction.
+Plan: Turn right to check the right side for the ball.","a wall 1 step right
+a purple ball 5 steps forward",0,False
+17,turn right,"Thought: From the previous observation, I encountered a wall 1 step right and noticed a wall extending forward. This indicates that there is no path to the left or forward. Given the current observation, there is now a wall 1 step right and a purple ball 5 steps forward. Since turning left and right repeatedly did not help, I need to adjust my strategy. Turning right would be a logical step to check if the ball is on the right side.
+Plan: Turn right to check the right side for the ball.","a wall 1 step forward
+a wall 1 step right",0,False
+18,turn right,"Thought: From the previous observation, we noticed that there was a wall directly in front of us and to the right. Now, the observation shows a wall in front and to the right, indicating that we are still facing a wall and not closer to the ball. Given this, turning right again will help us explore the right side of the environment where the ball might be located.
+Plan: Turn right to check the right side for the ball.","a wall 1 step forward
+a wall 1 step left",0,False
+19,turn right,"Thought: From the previous observation, we found out that there was a wall both forward and to the left. Turning right will allow us to check the right side for the ball. This is our first attempt at this direction since we know there is a wall directly in front of us and to our left.
+Plan: Turn right to check the right side for the ball.","a wall 6 steps forward
+a wall 1 step left",0,False
+20,turn right,"Thought: From the previous observations, it seems like turning left and right repeatedly has not helped in finding the ball. Now, I see a wall 6 steps forward and a wall 1 step left. This means the ball must be somewhere to the right. Turning right will allow me to check the right side for the ball.
+Plan: Turn right to check the right side for the ball.","a wall 1 step right
+a purple ball 5 steps forward",0,False
+21,turn right,"Thought: From the previous observations, it seems like turning left and right repeatedly hasn't helped. The current observation indicates that there is a wall 1 step right and a purple ball 5 steps forward. Given this, turning right makes sense to see if the ball is indeed 5 steps forward in that direction.
+Plan: Turn right to check if the purple ball is 5 steps forward in that direction.","a wall 1 step forward
+a wall 1 step right",0,False
+22,turn right,"Thought: From the previous observation, I noticed walls blocking my path forward and to the right. The current observation shows a wall directly in front and to the right, indicating that moving forward or to the right will not help me get closer to the purple ball. Given that the ball is 5 steps forward in the direction I need to go, turning right will allow me to move closer to the ball without hitting any walls.
+Plan: Move towards the purple ball by turning right and then going forward until the ball is within reach.","a wall 1 step forward
+a wall 1 step left",0,False
+23,turn right,"Thought: From the previous observations, I know there are walls blocking my path to the purple ball. My current position is such that turning right will allow me to move closer to the ball. After turning right, I should proceed forward until the ball is within reach.
+Plan: Move towards the purple ball by turning right and then going forward until the ball is within reach.","a wall 6 steps forward
+a wall 1 step left",0,False
+24,turn right,"Thought: Based on the current observation, there is a wall 6 steps forward and a wall 1 step left. This means that moving forward is blocked by a wall. The plan should be to turn right to avoid the wall and then move forward to get closer to the purple ball.
+Plan: Turn right and then go forward until the purple ball is within reach.","a wall 1 step right
+a purple ball 5 steps forward",0,False
+25,turn right,"Thought: From the previous observations, it's clear that turning left and right repeatedly led to no progress. The current observation shows that there is a wall directly in front and to the left, while the purple ball is 5 steps forward. Turning right will align me with the path towards the purple ball.
+Plan: Turn right and then go forward until the purple ball is within reach.","a wall 1 step forward
+a wall 1 step right",0,False
+26,turn right,"Thought: From the previous observations, I realized that turning left and right repeatedly without making progress was inefficient. Now, I see a wall directly in front of me and a wall to my right. Given this, turning right will allow me to move closer to the purple ball, which is 5 steps forward in the current observation.
+Plan: Turn right and then go forward until the purple ball is within reach.","a wall 1 step forward
+a wall 1 step left",0,False
+27,turn right,"Thought: From the previous observation, we know there is a wall in both the forward and left directions. This means we need to navigate around these walls to find the purple ball. Turning right from the current position will allow us to move forward and potentially find the ball. After moving forward, we should continue to follow the path that leads us closer to the ball.
+Plan: Turn right and then go forward until the purple ball is within reach.","a wall 6 steps forward
+a wall 1 step left",0,False
+28,turn right,"Thought: From the previous observations, I realized that turning repeatedly without progress was ineffective. Now, I see a wall directly ahead and a wall to the left. The purple ball is 5 steps forward. My plan is to turn right and then move forward to reach the purple ball.
+Plan: Turn right and then go forward until the purple ball is within reach.","a wall 1 step right
+a purple ball 5 steps forward",0,False
+29,turn right,"Thought: From the previous observations, I realized that turning left and right repeatedly was inefficient. Now, based on the current observation, I see that the wall is directly to my right and the purple ball is 5 steps forward. To pick up the purple ball, I need to move forward towards it.
+Plan: Turn right and then go forward until the purple ball is within reach.","a wall 1 step forward
+a wall 1 step right",0,False
+30,turn right,"Thought: From the previous observations, it seems like turning repeatedly did not help in finding the purple ball. Now, the observation indicates that there is a wall directly in front and to the right. Given this, turning right will allow me to move towards the purple ball that is 5 steps forward. After turning right, I should continue moving forward until I am close enough to interact with the ball.
+Plan: Turn right and then go forward until the purple ball is within reach.","a wall 1 step forward
+a wall 1 step left",0,False
+31,turn right,"Thought: From the previous observations, it seems like turning right multiple times has not helped in moving towards the purple ball. The walls observed indicate that moving forward will likely be more effective in reaching the ball. Turning right once should help me face the direction where the ball is located, and then going forward will attempt to move me closer to the ball.
+Plan: Turn right to face the direction of the ball, then go forward.","a wall 6 steps forward
+a wall 1 step left",0,False
+32,turn right,"Thought: From the previous observations, I realized that turning repeatedly without progress was not effective. Now, I see a wall directly in front of me and to my left. This means the ball must be behind me, to my right. Turning right will align me with the path towards the ball, and then I can proceed forward.
+Plan: Turn right to face the direction of the ball, then go forward.","a wall 1 step right
+a purple ball 5 steps forward",0,False
+33,turn right,"Thought: From the previous observations, it was clear that turning left and right repeatedly without making progress was inefficient. Now, based on the current observation, there is a wall directly to the right and the purple ball is 5 steps forward. The best course of action is to turn right to face the direction of the ball, then proceed forward.
+Plan: Turn right to face the direction of the ball, then go forward.","a wall 1 step forward
+a wall 1 step right",0,False
+34,turn right,"Thought: From the previous observations, it seems that turning left and right repeatedly didn't help because the walls obstructed movement in those directions. The current observation indicates that there is a wall directly in front and to the right, so turning right makes sense to face the direction of the ball. After facing the ball, going forward should allow me to move closer to it.
+Plan: Turn right to face the direction of the ball, then go forward.","a wall 1 step forward
+a wall 1 step left",0,False
+35,turn right,"Thought: From the previous observation, we were facing towards the purple ball, but now the walls are blocking our path. We need to find a way to navigate around these walls to reach the ball. Turning right should help us move away from the walls and towards the ball.
+Plan: Turn right, then go forward to move closer to the ball.","a wall 6 steps forward
+a wall 1 step left",0,False
+36,go forward,"Thought: From the previous observations, I noticed walls blocking my path. By turning right, I moved away from these walls. Now, the observation indicates another wall directly in front of me and to my left. This suggests that turning right was a correct decision as it allowed me to bypass the obstacles. To get closer to the purple ball, which is 5 steps forward, I need to continue moving in that direction. Therefore, the next logical step is to go forward.
+Plan: Turn right, then go forward to move closer to the ball.","a wall 5 steps forward
+a wall 1 step left",0,False
+37,go forward,"Thought: From the previous observations, it seems that turning left and right repeatedly has not helped in moving towards the purple ball. The current observation indicates that there is a wall 5 steps forward and a wall 1 step left. This means that going forward will likely lead me closer to the ball since there is no obstacle blocking the path directly ahead.
+Plan: Go forward.","a wall 4 steps forward
+a wall 1 step left",0,False
+38,turn left,"Thought: From the previous observation, we were 4 steps forward from a wall and 1 step left from a wall. Moving forward brought us to a point where we are 5 steps forward from a wall and 1 step left from a wall. This suggests that moving forward again might not bring us closer to the purple ball, as we seem to be moving towards more walls.
+Plan: Go left to check for the purple ball.","a wall 1 step forward
+a wall 3 steps left",0,False
+39,go forward,"Thought: From the previous observations, it seems that moving forward repeatedly only leads to hitting walls. Turning left and right did not reveal the purple ball either. Given the current observation, there is a wall directly in front and another wall to the left, three steps away. Since there is no indication of the ball being ahead or to the left, the best course of action is to move forward again, as it might lead us past the ball or open up a path we haven't explored yet.
+Plan: Go forward to explore further.","a wall 1 step forward
+a wall 3 steps left",0,False
+40,turn left,"Thought: From the previous observations, I can see that there are walls blocking my path forward. Turning left has allowed me to move closer to the walls, but I still haven't found the purple ball. Given that the walls are blocking my forward path, going forward again might not help unless I find an opening. My next step should be to explore further by turning left and then go forward if there's an unobstructed path.
+Plan: Continue exploring by turning left and then go forward if possible.","a wall 3 steps forward
+a wall 1 step right",0,False
+41,turn left,"Thought: From the previous observation, we were facing a wall 3 steps forward and 1 step right. This means the purple ball is likely not in front of us or to our right. We should turn left to explore the area to our left, as this might lead us closer to the ball. After turning left, we should try going forward to see if we can find the ball.
+Plan: Continue exploring by turning left and then go forward if possible.","a wall 6 steps forward
+a wall 3 steps right
+a purple ball 2 steps right and 5 steps forward",0,False
+42,turn right,"Thought: From the previous observation, we were facing a wall 6 steps forward and a wall 3 steps right. Now, we see a wall 6 steps forward and a wall 3 steps right again, indicating that we haven't moved forward. However, we now see a purple ball 2 steps right and 5 steps forward. This suggests that we need to move right and then forward to reach the ball.
+Plan: Move right until we are facing the purple ball, then go forward to pick it up.","a wall 3 steps forward
+a wall 1 step right",0,False
+43,turn right,"Thought: Based on the current observation, moving right should allow us to face the purple ball. From there, we can proceed forward to pick it up. The previous actions did not provide any useful information about the ball's location, so we need to adjust our strategy.
+Plan: Move right until we face the purple ball, then go forward to pick it up.","a wall 1 step forward
+a wall 3 steps left",0,False
+44,turn right,"Thought: From the previous observations, it seems like turning left and right did not help in finding the purple ball. Now, based on the current observation, there are walls blocking the path forward and to the left. To move closer to the purple ball, which is located 2 steps right and 5 steps forward, I need to turn right twice to face it directly.
+Plan: Turn right twice to face the purple ball, then go forward to pick it up.","a wall 4 steps forward
+a wall 1 step left",0,False
+45,turn right,"Thought: From the previous observations, we know there are walls blocking our path. We need to find a way to get to the purple ball. Turning right twice should help us face the purple ball. After facing the purple ball, we can move forward to pick it up.
+Plan: Turn right twice to face the purple ball, then go forward to pick it up.","a wall 6 steps forward
+a wall 3 steps right
+a purple ball 2 steps right and 5 steps forward",0,False
+46,turn right,"Thought: From the previous observations, it was clear that turning right and left repeatedly without a clear strategy was not efficient. The current observation shows that the purple ball is 2 steps right and 5 steps forward. To reach the ball, I need to first face it by turning right twice, and then move forward to pick it up.
+Plan: Turn right twice to face the purple ball, then go forward to pick it up.","a wall 3 steps forward
+a wall 1 step right",0,False
+47,turn right,"Thought: From the previous observation, I turned right twice, which should have aligned me with the purple ball. However, the current observation shows that there are walls blocking my path, so I need to adjust my plan accordingly. Since turning right twice did not directly align me with the purple ball, I should reassess my position and plan my next moves carefully.
+Plan: Turn right twice to face the purple ball, then check the path to ensure it is clear before proceeding.","a wall 1 step forward
+a wall 3 steps left",0,False
+48,turn right,"Thought: From the previous observation, we moved right twice to face the purple ball. Now, the observation shows only walls in the forward direction and to the left. This means our path to the purple ball is blocked. We need to find an alternative path to reach the purple ball.
+Plan: Turn right to face forward, then check the path again to determine the best route to the purple ball.","a wall 4 steps forward
+a wall 1 step left",0,False
+49,turn right,"Thought: From the previous observation, I turned right but did not find the purple ball directly in front of me. The walls block my path forward, so I need to navigate around them. Given the current observation, turning right will face me forward again. I should then check the path to see if the purple ball is now within reach.
+Plan: Turn right to face forward, then check the path again to determine the best route to the purple ball.","a wall 6 steps forward
+a wall 3 steps right
+a purple ball 2 steps right and 5 steps forward",0,False
+50,turn right,"Thought: From the previous observations, it seems like turning right multiple times has not brought me closer to the purple ball. Given the current observation, I should turn right to face forward and then reassess the path to the purple ball. Turning right will allow me to move closer to the ball, which is located 2 steps right and 5 steps forward.
+Plan: Turn right to face forward, then check the path again to determine the best route to the purple ball.","a wall 3 steps forward
+a wall 1 step right",0,False
+51,go forward,"Thought: From the previous observations, it was clear that turning left and right repeatedly was not effective as it did not help me move closer to the purple ball. The current observation shows that there are walls blocking my path forward and to the right. Therefore, I need to find another direction to move towards the purple ball. Turning right will allow me to face forward and potentially see the path to the ball more clearly.
+Plan: Move forward and check the path to the purple ball.","a wall 2 steps forward
+a wall 1 step right",0,False
+52,go forward,"Thought: From the previous observation, we moved forward and encountered two walls blocking our path. This means we need to navigate around these walls to find the purple ball. The current observation shows only walls directly in front and to the right, so we should continue moving forward until we can see the path to the purple ball.
+Plan: Move forward until the path to the purple ball becomes visible.","a wall 1 step forward
+a wall 1 step right",0,False
+53,go forward,"Thought: From the current observation, there is a wall directly in front and to the right, blocking the path. Since the ball is located 2 steps right and 5 steps forward, I need to navigate around the walls to reach it. My plan is to go forward until I can see the path to the ball.
+Plan: Move forward until the path to the purple ball becomes visible.","a wall 1 step forward
+a wall 1 step right",0,False
+54,turn left,"Thought: From the previous observations, it was clear that the agent was moving towards the purple ball. However, the agent kept running into walls, which indicates it's not yet facing the correct direction. The walls are blocking the direct path to the purple ball, so the agent needs to adjust its position to face the ball directly.
+Plan: Turn left to face the purple ball.","a wall 1 step right
+a purple ball 5 steps forward",0,False
+55,pick up,"Thought: From the previous observation, we were facing a wall to our right and needed to move forward to find the purple ball. After turning left, we should now be facing the purple ball directly. We can now proceed to pick it up.
+Plan: Turn left to face the purple ball, then pick it up.","a wall 1 step right
+a purple ball 5 steps forward",0,False
+56,turn left,"Thought: From the previous observations, I realized that turning left would bring me closer to the purple ball. After turning left, I need to move forward until I am directly in front of the ball, and then I can pick it up. This plan avoids unnecessary movements and focuses on direct interaction with the ball.
+Plan: Turn left to face the purple ball, then move forward until the ball is in front of me, and finally pick it up.","a wall 6 steps forward
+a wall 1 step left",0,False
+57,turn left,"Thought: From the previous observation, we know there is a wall 6 steps forward and a wall 1 step left. This means the purple ball is located 5 steps forward and 1 step to the left. My previous action was to turn left, which brought me closer to the ball. Now, I need to move forward until the ball is directly in front of me and then pick it up.
+Plan: Turn left to face the purple ball, then move forward 5 steps, and finally pick it up.","a wall 1 step forward
+a wall 1 step left",0,False
+58,turn left,"Thought: From the previous observation, we saw that there was a wall directly in front of us and to the left. This means the wall blocks our path forward, so we need to turn left to face the purple ball. The current observation confirms that the purple ball is still 5 steps forward. Therefore, we should turn left to face the ball and then move forward 5 steps to pick it up.
+Plan: Turn left to face the purple ball, then move forward 5 steps, and finally pick it up.","a wall 1 step forward
+a wall 1 step right",0,False
+59,go forward,"Thought: Based on the current observation, there is a wall directly in front of me and another wall to my right. This means the purple ball is likely in front of me since there are no other obstacles blocking the path. My previous turns were not helping me progress towards the ball, so I need to adjust my strategy. Turning left again would not help as it would just create more walls in front of me. Instead, I should try moving forward to see if I can get closer to the ball.
+Plan: Move forward to approach the purple ball.","a wall 1 step forward
+a wall 1 step right",0,False
+60,go forward,"Thought: From the previous observation, we could see a wall directly in front of us and on our right. Moving forward should help us get closer to the purple ball, which is located 5 steps forward from our initial position. Since we need to pick up the purple ball to complete the task, moving forward seems like the most logical first step.
+Plan: Move forward to approach the purple ball.","a wall 1 step forward
+a wall 1 step right",0,False
+61,turn right,"Thought: From the previous observations, it seems there are walls blocking my path both forward and to the sides. This means I cannot move directly towards the purple ball by going forward or turning left/right. Given this, my best option is to explore further to the right to find an alternative path to the ball.
+Plan: Move right to explore for an alternative path to the purple ball.","a wall 1 step forward
+a wall 1 step left",0,False
+62,turn right,"Thought: From the previous observations, it seems there are walls obstructing my path. Turning left and right repeatedly without progress indicates a need for a new approach. Given the current observation, there are walls both forward and to the left, so moving right would be a logical step to explore an alternative path.
+Plan: Move right to explore for an alternative path to the purple ball.","a wall 6 steps forward
+a wall 1 step left",0,False
+63,go right,"Thought: From the previous observations, it seems like there are walls blocking my path forward and to the left. Turning right might provide an alternative path to find the purple ball. My current plan is to move right to explore for an alternative path.
+Plan: Move right to explore for an alternative path.","
+
+Your previous output did not contain a valid action. Defaulted to action: go forward
+
+Observation:
+a wall 5 steps forward
+a wall 1 step left",0,True

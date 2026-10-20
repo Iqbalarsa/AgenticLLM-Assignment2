@@ -1,0 +1,54 @@
+{
+    "task": "BabyAI-MixedTrainLocal-v0/open",
+    "action_frequency": {
+        "turn right": 9,
+        "turn left": 12,
+        "go forward": 55,
+        "pick up": 1,
+        "toggle": 19
+    },
+    "input_tokens": 48210,
+    "output_tokens": 8263,
+    "done": true,
+    "episode_return": 0.32499999999999996,
+    "num_steps": 96,
+    "failed_candidates": [
+        "go right",
+        "go right",
+        "go right",
+        "go right",
+        "go right",
+        "go left",
+        "go left",
+        "go left",
+        "go left",
+        "go left"
+    ],
+    "mission": "open the green door",
+    "progression": 1.0,
+    "process_num": null,
+    "seed": 2550975552,
+    "agent": {
+        "type": "ref",
+        "remember_cot": true,
+        "max_text_history": 5,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "openai",
+        "model_id": "Qwen/Qwen2.5-7B-Instruct-AWQ",
+        "base_url": "http://localhost:8080/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 512,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

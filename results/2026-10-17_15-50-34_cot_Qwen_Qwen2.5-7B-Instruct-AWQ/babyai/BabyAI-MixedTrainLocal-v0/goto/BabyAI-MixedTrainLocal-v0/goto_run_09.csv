@@ -1,0 +1,609 @@
+Step,Action,Reasoning,Observation,Reward,Done
+0,turn left,"Given the current observation, there are no objects to interact with or pick up. The immediate challenge is navigating through the environment. Since the walls are blocking the way directly ahead and to the right, we need to explore other directions.
+
+Let's consider the possible actions:
+1. Turning left would move us away from the wall in front and potentially allow us to move forward.
+2. Turning right would also move us away from the wall in front but might block another path.
+
+Since turning left is likely to open up a path without immediately hitting another wall, let's try that first.
+
+ACTION: turn left","a wall 5 steps forward
+a wall 1 step right",0,False
+1,turn left,"Given the current observation, turning left initially opened a path, but now we have walls both forward and to the right. This suggests that the path to the green box is not straightforward and may involve more turns.
+
+Let's analyze the situation step by step:
+
+1. There is a wall 5 steps forward, so moving forward is not possible.
+2. There is a wall 1 step right, so moving right is also not possible.
+
+Since both forward and right are blocked, we should continue exploring other directions. Turning left again might help us find a path.
+
+ACTION: turn left","a wall 6 steps forward
+a wall 2 steps left
+a green box 3 steps right and 5 steps forward",0,False
+2,turn right,"Given the current observation, we have a wall directly in front of us (6 steps forward) and to our left (2 steps). However, there is a green box 3 steps right and 5 steps forward from our current position. Since moving forward or left is not possible due to walls, we should move right to explore this new direction.
+
+ACTION: turn right","a wall 5 steps forward
+a wall 1 step right",0,False
+3,turn left,"Given the current observation, we have a wall directly in front of us (5 steps forward) and to our right (1 step). We previously identified the green box to be 3 steps right and 5 steps forward from our original position. However, since moving forward or right is not possible due to walls, we need to explore other directions.
+
+Let's consider the following steps:
+
+1. Turn left to face the direction opposite to the wall.
+2. Move forward until we encounter another wall or find a path to the green box.
+
+ACTION: turn left","a wall 6 steps forward
+a wall 2 steps left
+a green box 3 steps right and 5 steps forward",0,False
+4,turn right,"Given the current observation, we have a wall directly in front of us (6 steps forward) and to our left (2 steps). The green box is located 3 steps right and 5 steps forward from our current position. Since moving forward is blocked by a wall, we need to explore the right side.
+
+1. Turn right to face the direction towards the green box.
+2. Move forward until we reach the green box.
+
+ACTION: turn right","a wall 5 steps forward
+a wall 1 step right",0,False
+5,turn left,"Given the current observation, we have walls blocking both the forward path and the right path. This means we need to continue exploring other directions to find a way to the green box.
+
+1. Turning left would allow us to explore the direction perpendicular to where we currently are.
+2. Moving forward after turning left would help us progress since the wall in front of us is blocking our path.
+
+ACTION: turn left","a wall 6 steps forward
+a wall 2 steps left
+a green box 3 steps right and 5 steps forward",0,False
+6,turn right,"Given the current observation, we see that there is a path available to the right and forward. The green box is located 3 steps right and 5 steps forward. 
+
+Step-by-step plan:
+1. Turn right to face the direction towards the green box.
+2. Move forward 5 steps to reach the green box.
+3. Pick up the green box.
+
+ACTION: turn right","a wall 5 steps forward
+a wall 1 step right",0,False
+7,turn left,"Given the current observation, we have walls directly ahead and to the right. This means we cannot proceed forward or to the right as there is no clear path. Let's re-evaluate our strategy:
+
+1. **Turn Left**: Turning left would give us a new direction to explore, potentially finding a path to the green box.
+2. **Move Forward**: After turning left, we can attempt to move forward to see if there is an unblocked path.
+3. **Pick Up Green Box**: Once we locate the green box, we can pick it up.
+
+Let's execute this plan step-by-step:
+
+ACTION: turn left","a wall 6 steps forward
+a wall 2 steps left
+a green box 3 steps right and 5 steps forward",0,False
+8,go forward,"Given the current observation, the best course of action is to move forward, as the green box is located 3 steps to the right and 5 steps forward from our current position after turning left.
+
+ACTION: go forward","a wall 5 steps forward
+a wall 2 steps left
+a green box 3 steps right and 4 steps forward",0,False
+9,go forward,"Given the current observation, let's break down the steps to reach the green box:
+
+1. **Turn Right**: Since the green box is 3 steps to the right and 4 steps forward, we need to align ourselves to the direction where the green box is.
+2. **Go Forward**: After turning right, we need to move forward 4 steps to reach the green box.
+
+Step-by-step plan:
+1. Turn right.
+2. Go forward 4 steps.
+
+ACTION: go forward","a wall 4 steps forward
+a wall 2 steps left
+a green box 3 steps right and 3 steps forward",0,False
+10,turn right,"Given the current observation, the best course of action is to align with the direction of the green box. Here's the step-by-step plan:
+
+1. **Turn Right**: To face the direction where the green box is located.
+2. **Go Forward**: Move towards the green box.
+
+ACTION: turn right","a wall 5 steps forward
+a wall 3 steps right
+a green box 3 steps left and 3 steps forward",0,False
+11,turn left,"Given the current observation, the best course of action is to move towards the green box by turning left and then going forward.
+
+ACTION: turn left","a wall 4 steps forward
+a wall 2 steps left
+a green box 3 steps right and 3 steps forward",0,False
+12,turn right,"Given the current observation, the best course of action is to turn right and then go forward to move closer to the green box.
+
+ACTION: turn right","a wall 5 steps forward
+a wall 3 steps right
+a green box 3 steps left and 3 steps forward",0,False
+13,turn right,"Given the current observation, let's break down the best course of action step by step:
+
+1. We need to get to the green box, which is located 3 steps left and 3 steps forward.
+2. Currently, we are facing forward, and there is a wall 5 steps ahead. So, turning right would be a good first move since it allows us to move towards the left side where the green box is located.
+
+ACTION: turn right","a wall 3 steps forward
+a wall 2 steps right",0,False
+14,turn right,"Given the current observation, let's break down the best course of action step by step:
+
+1. We need to move towards the green box, which is located 3 steps left and 3 steps forward from our current position.
+2. Currently, turning right would align us to move towards the left side where the green box is located.
+3. After turning right, we can move forward until we reach the green box.
+
+ACTION: turn right","a wall 2 steps forward
+a wall 3 steps left",0,False
+15,turn left,"Given the current observation, let's break down the best course of action step by step:
+
+1. We are facing a wall 2 steps forward and a wall 3 steps left.
+2. To reach the green box, which is 3 steps left and 3 steps forward, we need to move left first to align ourselves correctly.
+3. After moving left, we can then move forward to reach the green box.
+
+ACTION: turn left","a wall 3 steps forward
+a wall 2 steps right",0,False
+16,turn left,"Given the current observation, let's break down the best course of action step by step:
+
+1. We are facing a wall 3 steps forward and a wall 2 steps right.
+2. Since we need to reach the green box which is 3 steps left and 3 steps forward from our current position, we need to turn left first to face the correct direction.
+3. After turning left, we can move forward three steps to reach the green box.
+
+ACTION: turn left","a wall 5 steps forward
+a wall 3 steps right
+a green box 3 steps left and 3 steps forward",0,False
+17,turn left,"Given the current observation, let's break down the best course of action step by step:
+
+1. We are facing a wall 5 steps forward and a wall 3 steps right.
+2. The green box is 3 steps left and 3 steps forward from our current position.
+3. To reach the green box, we need to turn left to face the direction of the green box.
+4. After turning left, we can move forward three steps to reach the green box.
+
+ACTION: turn left","a wall 4 steps forward
+a wall 2 steps left
+a green box 3 steps right and 3 steps forward",0,False
+18,turn right,"Given the current observation, let's break down the best course of action step by step:
+
+1. We are facing a wall 4 steps forward and a wall 2 steps left.
+2. The green box is 3 steps right and 3 steps forward from our current position.
+3. To reach the green box, we need to turn right to face the direction of the green box.
+4. After turning right, we can move forward three steps to reach the green box.
+
+ACTION: turn right","a wall 5 steps forward
+a wall 3 steps right
+a green box 3 steps left and 3 steps forward",0,False
+19,turn left,"Given the current observation, let's break down the best course of action step by step:
+
+1. We are facing a wall 5 steps forward and a wall 3 steps right.
+2. The green box is 3 steps left and 3 steps forward from our current position.
+3. To reach the green box, we need to turn left to face the direction of the green box.
+4. After turning left, we can move forward three steps to reach the green box.
+
+ACTION: turn left","a wall 4 steps forward
+a wall 2 steps left
+a green box 3 steps right and 3 steps forward",0,False
+20,turn right,"Given the current observation, let's break down the best course of action step by step:
+
+1. We are facing a wall 4 steps forward and a wall 2 steps left.
+2. The green box is 3 steps right and 3 steps forward from our current position.
+3. To reach the green box, we need to turn right to face the direction of the green box.
+4. After turning right, we can move forward three steps to reach the green box.
+
+ACTION: turn right","a wall 5 steps forward
+a wall 3 steps right
+a green box 3 steps left and 3 steps forward",0,False
+21,turn left,"Given the current observation, let's break down the best course of action step by step:
+
+1. We are facing a wall 5 steps forward and a wall 3 steps right.
+2. The green box is 3 steps left and 3 steps forward from our current position.
+3. To reach the green box, we need to turn left to face the direction of the green box.
+4. After turning left, we can move forward three steps to reach the green box.
+
+ACTION: turn left","a wall 4 steps forward
+a wall 2 steps left
+a green box 3 steps right and 3 steps forward",0,False
+22,turn right,"Given the current observation, let's break down the best course of action step by step:
+
+1. We are currently facing a wall 4 steps forward and a wall 2 steps left.
+2. The green box is 3 steps right and 3 steps forward from our current position.
+3. To reach the green box, we need to turn right to face the direction of the green box.
+4. After turning right, we can move forward three steps to reach the green box.
+
+ACTION: turn right","a wall 5 steps forward
+a wall 3 steps right
+a green box 3 steps left and 3 steps forward",0,False
+23,turn left,"Given the current observation, let's break down the best course of action step by step:
+
+1. We are currently facing a wall 5 steps forward and a wall 3 steps right.
+2. The green box is 3 steps left and 3 steps forward from our current position.
+3. To reach the green box, we need to turn left to face the direction of the green box.
+4. After turning left, we can move forward three steps to reach the green box.
+
+ACTION: turn left","a wall 4 steps forward
+a wall 2 steps left
+a green box 3 steps right and 3 steps forward",0,False
+24,turn right,"Given the current observation, let's break down the best course of action step by step:
+
+1. We are currently facing a wall 4 steps forward and a wall 2 steps left.
+2. The green box is 3 steps right and 3 steps forward from our current position.
+3. To reach the green box, we need to turn right to face the direction of the green box.
+4. After turning right, we can move forward three steps to reach the green box.
+
+ACTION: turn right","a wall 5 steps forward
+a wall 3 steps right
+a green box 3 steps left and 3 steps forward",0,False
+25,turn left,"Given the current observation, let's break down the best course of action step by step:
+
+1. We are currently facing a wall 5 steps forward and a wall 3 steps right.
+2. The green box is 3 steps left and 3 steps forward from our current position.
+3. To reach the green box, we need to turn left to face the direction of the green box.
+4. After turning left, we can move forward three steps to reach the green box.
+
+ACTION: turn left","a wall 4 steps forward
+a wall 2 steps left
+a green box 3 steps right and 3 steps forward",0,False
+26,turn right,"Given the current observation, let's break down the best course of action step by step:
+
+1. We are currently facing a wall 4 steps forward and a wall 2 steps left.
+2. The green box is 3 steps right and 3 steps forward from our current position.
+3. To reach the green box, we need to turn right to face the direction of the green box.
+4. After turning right, we can move forward three steps to reach the green box.
+
+ACTION: turn right","a wall 5 steps forward
+a wall 3 steps right
+a green box 3 steps left and 3 steps forward",0,False
+27,turn left,"Given the current observation, let's break down the best course of action step by step:
+
+1. We are currently facing a wall 5 steps forward and a wall 3 steps right.
+2. The green box is 3 steps left and 3 steps forward from our current position.
+3. To reach the green box, we need to turn left to face the direction of the green box.
+4. After turning left, we can move forward three steps to reach the green box.
+
+ACTION: turn left","a wall 4 steps forward
+a wall 2 steps left
+a green box 3 steps right and 3 steps forward",0,False
+28,turn right,"Given the current observation, let's break down the best course of action step by step:
+
+1. We are currently facing a wall 4 steps forward and a wall 2 steps left.
+2. The green box is 3 steps right and 3 steps forward from our current position.
+3. To reach the green box, we need to turn right to face the direction of the green box.
+4. After turning right, we can move forward three steps to reach the green box.
+
+ACTION: turn right","a wall 5 steps forward
+a wall 3 steps right
+a green box 3 steps left and 3 steps forward",0,False
+29,turn left,"Given the current observation, let's break down the best course of action step by step:
+
+1. We are currently facing a wall 5 steps forward and a wall 3 steps right.
+2. The green box is 3 steps left and 3 steps forward from our current position.
+3. To reach the green box, we need to turn left to face the direction of the green box.
+4. After turning left, we can move forward three steps to reach the green box.
+
+ACTION: turn left","a wall 4 steps forward
+a wall 2 steps left
+a green box 3 steps right and 3 steps forward",0,False
+30,turn right,"Given the current observation, let's break down the best course of action step by step:
+
+1. We are currently facing a wall 4 steps forward and a wall 2 steps left.
+2. The green box is 3 steps right and 3 steps forward from our current position.
+3. To reach the green box, we need to turn right to face the direction of the green box.
+4. After turning right, we can move forward three steps to reach the green box.
+
+ACTION: turn right","a wall 5 steps forward
+a wall 3 steps right
+a green box 3 steps left and 3 steps forward",0,False
+31,turn left,"Given the current observation, let's break down the best course of action step by step:
+
+1. We are currently facing a wall 5 steps forward and a wall 3 steps right.
+2. The green box is 3 steps left and 3 steps forward from our current position.
+3. To reach the green box, we need to turn left to face the direction of the green box.
+4. After turning left, we can move forward three steps to reach the green box.
+
+ACTION: turn left","a wall 4 steps forward
+a wall 2 steps left
+a green box 3 steps right and 3 steps forward",0,False
+32,turn right,"Given the current observation, let's break down the best course of action step by step:
+
+1. We are currently facing a wall 4 steps forward and a wall 2 steps left.
+2. The green box is 3 steps right and 3 steps forward from our current position.
+3. To reach the green box, we need to turn right to face the direction of the green box.
+4. After turning right, we can move forward three steps to reach the green box.
+
+ACTION: turn right","a wall 5 steps forward
+a wall 3 steps right
+a green box 3 steps left and 3 steps forward",0,False
+33,turn left,"Given the current observation, let's break down the best course of action step by step:
+
+1. We are currently facing a wall 5 steps forward and a wall 3 steps right.
+2. The green box is 3 steps left and 3 steps forward from our current position.
+3. To reach the green box, we need to turn left to face the direction of the green box.
+4. After turning left, we can move forward three steps to reach the green box.
+
+ACTION: turn left","a wall 4 steps forward
+a wall 2 steps left
+a green box 3 steps right and 3 steps forward",0,False
+34,turn right,"Given the current observation, let's break down the best course of action step by step:
+
+1. We are currently facing a wall 4 steps forward and a wall 2 steps left.
+2. The green box is 3 steps right and 3 steps forward from our current position.
+3. To reach the green box, we need to turn right to face the direction of the green box.
+4. After turning right, we can move forward three steps to reach the green box.
+
+ACTION: turn right","a wall 5 steps forward
+a wall 3 steps right
+a green box 3 steps left and 3 steps forward",0,False
+35,turn left,"Given the current observation, let's break down the best course of action step by step:
+
+1. We are currently facing a wall 5 steps forward and a wall 3 steps right.
+2. The green box is 3 steps left and 3 steps forward from our current position.
+3. To reach the green box, we need to turn left to face the direction of the green box.
+4. After turning left, we can move forward three steps to reach the green box.
+
+ACTION: turn left","a wall 4 steps forward
+a wall 2 steps left
+a green box 3 steps right and 3 steps forward",0,False
+36,turn right,"Given the current observation, let's break down the best course of action step by step:
+
+1. We are currently facing a wall 4 steps forward and a wall 2 steps left.
+2. The green box is 3 steps right and 3 steps forward from our current position.
+3. To reach the green box, we need to turn right to face the direction of the green box.
+4. After turning right, we can move forward three steps to reach the green box.
+
+ACTION: turn right","a wall 5 steps forward
+a wall 3 steps right
+a green box 3 steps left and 3 steps forward",0,False
+37,turn left,"Given the current observation, let's break down the best course of action step by step:
+
+1. We are currently facing a wall 5 steps forward and a wall 3 steps right.
+2. The green box is 3 steps left and 3 steps forward from our current position.
+3. To reach the green box, we need to turn left to face the direction of the green box.
+4. After turning left, we can move forward three steps to reach the green box.
+
+ACTION: turn left","a wall 4 steps forward
+a wall 2 steps left
+a green box 3 steps right and 3 steps forward",0,False
+38,turn right,"Given the current observation, let's break down the best course of action step by step:
+
+1. We are currently facing a wall 4 steps forward and a wall 2 steps left.
+2. The green box is 3 steps right and 3 steps forward from our current position.
+3. To reach the green box, we need to turn right to face the direction of the green box.
+4. After turning right, we can move forward three steps to reach the green box.
+
+ACTION: turn right","a wall 5 steps forward
+a wall 3 steps right
+a green box 3 steps left and 3 steps forward",0,False
+39,turn left,"Given the current observation, let's break down the best course of action step by step:
+
+1. We are currently facing a wall 5 steps forward and a wall 3 steps right.
+2. The green box is 3 steps left and 3 steps forward from our current position.
+3. To reach the green box, we need to turn left to face the direction of the green box.
+4. After turning left, we can move forward three steps to reach the green box.
+
+ACTION: turn left","a wall 4 steps forward
+a wall 2 steps left
+a green box 3 steps right and 3 steps forward",0,False
+40,turn right,"Given the current observation, let's break down the best course of action step by step:
+
+1. We are currently facing a wall 4 steps forward and a wall 2 steps left.
+2. The green box is 3 steps right and 3 steps forward from our current position.
+3. To reach the green box, we need to turn right to face the direction of the green box.
+4. After turning right, we can move forward three steps to reach the green box.
+
+ACTION: turn right","a wall 5 steps forward
+a wall 3 steps right
+a green box 3 steps left and 3 steps forward",0,False
+41,turn left,"Given the current observation, let's break down the best course of action step by step:
+
+1. We are currently facing a wall 5 steps forward and a wall 3 steps right.
+2. The green box is 3 steps left and 3 steps forward from our current position.
+3. To reach the green box, we need to turn left to face the direction of the green box.
+4. After turning left, we can move forward three steps to reach the green box.
+
+ACTION: turn left","a wall 4 steps forward
+a wall 2 steps left
+a green box 3 steps right and 3 steps forward",0,False
+42,turn right,"Given the current observation, let's break down the best course of action step by step:
+
+1. We are currently facing a wall 4 steps forward and a wall 2 steps left.
+2. The green box is 3 steps right and 3 steps forward from our current position.
+3. To reach the green box, we need to turn right to face the direction of the green box.
+4. After turning right, we can move forward three steps to reach the green box.
+
+ACTION: turn right","a wall 5 steps forward
+a wall 3 steps right
+a green box 3 steps left and 3 steps forward",0,False
+43,turn left,"Given the current observation, let's break down the best course of action step by step:
+
+1. We are currently facing a wall 5 steps forward and a wall 3 steps right.
+2. The green box is 3 steps left and 3 steps forward from our current position.
+3. To reach the green box, we need to turn left to face the direction of the green box.
+4. After turning left, we can move forward three steps to reach the green box.
+
+ACTION: turn left","a wall 4 steps forward
+a wall 2 steps left
+a green box 3 steps right and 3 steps forward",0,False
+44,turn right,"Given the current observation, let's break down the best course of action step by step:
+
+1. We are currently facing a wall 4 steps forward and a wall 2 steps left.
+2. The green box is 3 steps right and 3 steps forward from our current position.
+3. To reach the green box, we need to turn right to face the direction of the green box.
+4. After turning right, we can move forward three steps to reach the green box.
+
+ACTION: turn right","a wall 5 steps forward
+a wall 3 steps right
+a green box 3 steps left and 3 steps forward",0,False
+45,turn left,"Given the current observation, let's break down the best course of action step by step:
+
+1. We are currently facing a wall 5 steps forward and a wall 3 steps right.
+2. The green box is 3 steps left and 3 steps forward from our current position.
+3. To reach the green box, we need to turn left to face the direction of the green box.
+4. After turning left, we can move forward three steps to reach the green box.
+
+ACTION: turn left","a wall 4 steps forward
+a wall 2 steps left
+a green box 3 steps right and 3 steps forward",0,False
+46,turn right,"Given the current observation, let's break down the best course of action step by step:
+
+1. We are currently facing a wall 4 steps forward and a wall 2 steps left.
+2. The green box is 3 steps right and 3 steps forward from our current position.
+3. To reach the green box, we need to turn right to face the direction of the green box.
+4. After turning right, we can move forward three steps to reach the green box.
+
+ACTION: turn right","a wall 5 steps forward
+a wall 3 steps right
+a green box 3 steps left and 3 steps forward",0,False
+47,turn left,"Given the current observation, let's break down the best course of action step by step:
+
+1. We are currently facing a wall 5 steps forward and a wall 3 steps right.
+2. The green box is 3 steps left and 3 steps forward from our current position.
+3. To reach the green box, we need to turn left to face the direction of the green box.
+4. After turning left, we can move forward three steps to reach the green box.
+
+ACTION: turn left","a wall 4 steps forward
+a wall 2 steps left
+a green box 3 steps right and 3 steps forward",0,False
+48,turn right,"Given the current observation, let's break down the best course of action step by step:
+
+1. We are currently facing a wall 4 steps forward and a wall 2 steps left.
+2. The green box is 3 steps right and 3 steps forward from our current position.
+3. To reach the green box, we need to turn right to face the direction of the green box.
+4. After turning right, we can move forward three steps to reach the green box.
+
+ACTION: turn right","a wall 5 steps forward
+a wall 3 steps right
+a green box 3 steps left and 3 steps forward",0,False
+49,turn left,"Given the current observation, let's break down the best course of action step by step:
+
+1. We are currently facing a wall 5 steps forward and a wall 3 steps right.
+2. The green box is 3 steps left and 3 steps forward from our current position.
+3. To reach the green box, we need to turn left to face the direction of the green box.
+4. After turning left, we can move forward three steps to reach the green box.
+
+ACTION: turn left","a wall 4 steps forward
+a wall 2 steps left
+a green box 3 steps right and 3 steps forward",0,False
+50,turn right,"Given the current observation, let's break down the best course of action step by step:
+
+1. We are currently facing a wall 4 steps forward and a wall 2 steps left.
+2. The green box is 3 steps right and 3 steps forward from our current position.
+3. To reach the green box, we need to turn right to face the direction of the green box.
+4. After turning right, we can move forward three steps to reach the green box.
+
+ACTION: turn right","a wall 5 steps forward
+a wall 3 steps right
+a green box 3 steps left and 3 steps forward",0,False
+51,turn left,"Given the current observation, let's break down the best course of action step by step:
+
+1. We are currently facing a wall 5 steps forward and a wall 3 steps right.
+2. The green box is 3 steps left and 3 steps forward from our current position.
+3. To reach the green box, we need to turn left to face the direction of the green box.
+4. After turning left, we can move forward three steps to reach the green box.
+
+ACTION: turn left","a wall 4 steps forward
+a wall 2 steps left
+a green box 3 steps right and 3 steps forward",0,False
+52,turn right,"Given the current observation, let's break down the best course of action step by step:
+
+1. We are currently facing a wall 4 steps forward and a wall 2 steps left.
+2. The green box is 3 steps right and 3 steps forward from our current position.
+3. To reach the green box, we need to turn right to face the direction of the green box.
+4. After turning right, we can move forward three steps to reach the green box.
+
+ACTION: turn right","a wall 5 steps forward
+a wall 3 steps right
+a green box 3 steps left and 3 steps forward",0,False
+53,turn left,"Given the current observation, let's break down the best course of action step by step:
+
+1. We are currently facing a wall 5 steps forward and a wall 3 steps right.
+2. The green box is 3 steps left and 3 steps forward from our current position.
+3. To reach the green box, we need to turn left to face the direction of the green box.
+4. After turning left, we can move forward three steps to reach the green box.
+
+ACTION: turn left","a wall 4 steps forward
+a wall 2 steps left
+a green box 3 steps right and 3 steps forward",0,False
+54,turn right,"Given the current observation, let's break down the best course of action step by step:
+
+1. We are currently facing a wall 4 steps forward and a wall 2 steps left.
+2. The green box is 3 steps right and 3 steps forward from our current position.
+3. To reach the green box, we need to turn right to face the direction of the green box.
+4. After turning right, we can move forward three steps to reach the green box.
+
+ACTION: turn right","a wall 5 steps forward
+a wall 3 steps right
+a green box 3 steps left and 3 steps forward",0,False
+55,turn left,"Given the current observation, let's break down the best course of action step by step:
+
+1. We are currently facing a wall 5 steps forward and a wall 3 steps right.
+2. The green box is 3 steps left and 3 steps forward from our current position.
+3. To reach the green box, we need to turn left to face the direction of the green box.
+4. After turning left, we can move forward three steps to reach the green box.
+
+ACTION: turn left","a wall 4 steps forward
+a wall 2 steps left
+a green box 3 steps right and 3 steps forward",0,False
+56,turn right,"Given the current observation, let's break down the best course of action step by step:
+
+1. We are currently facing a wall 4 steps forward and a wall 2 steps left.
+2. The green box is 3 steps right and 3 steps forward from our current position.
+3. To reach the green box, we need to turn right to face the direction of the green box.
+4. After turning right, we can move forward three steps to reach the green box.
+
+ACTION: turn right","a wall 5 steps forward
+a wall 3 steps right
+a green box 3 steps left and 3 steps forward",0,False
+57,turn left,"Given the current observation, let's break down the best course of action step by step:
+
+1. We are currently facing a wall 5 steps forward and a wall 3 steps right.
+2. The green box is 3 steps left and 3 steps forward from our current position.
+3. To reach the green box, we need to turn left to face the direction of the green box.
+4. After turning left, we can move forward three steps to reach the green box.
+
+ACTION: turn left","a wall 4 steps forward
+a wall 2 steps left
+a green box 3 steps right and 3 steps forward",0,False
+58,turn right,"Given the current observation, let's break down the best course of action step by step:
+
+1. We are currently facing a wall 4 steps forward and a wall 2 steps left.
+2. The green box is 3 steps right and 3 steps forward from our current position.
+3. To reach the green box, we need to turn right to face the direction of the green box.
+4. After turning right, we can move forward three steps to reach the green box.
+
+ACTION: turn right","a wall 5 steps forward
+a wall 3 steps right
+a green box 3 steps left and 3 steps forward",0,False
+59,turn left,"Given the current observation, let's break down the best course of action step by step:
+
+1. We are currently facing a wall 5 steps forward and a wall 3 steps right.
+2. The green box is 3 steps left and 3 steps forward from our current position.
+3. To reach the green box, we need to turn left to face the direction of the green box.
+4. After turning left, we can move forward three steps to reach the green box.
+
+ACTION: turn left","a wall 4 steps forward
+a wall 2 steps left
+a green box 3 steps right and 3 steps forward",0,False
+60,turn right,"Given the current observation, let's break down the best course of action step by step:
+
+1. We are currently facing a wall 4 steps forward and a wall 2 steps left.
+2. The green box is 3 steps right and 3 steps forward from our current position.
+3. To reach the green box, we need to turn right to face the direction of the green box.
+4. After turning right, we can move forward three steps to reach the green box.
+
+ACTION: turn right","a wall 5 steps forward
+a wall 3 steps right
+a green box 3 steps left and 3 steps forward",0,False
+61,turn left,"Given the current observation, let's break down the best course of action step by step:
+
+1. We are currently facing a wall 5 steps forward and a wall 3 steps right.
+2. The green box is 3 steps left and 3 steps forward from our current position.
+3. To reach the green box, we need to turn left to face the direction of the green box.
+4. After turning left, we can move forward three steps to reach the green box.
+
+ACTION: turn left","a wall 4 steps forward
+a wall 2 steps left
+a green box 3 steps right and 3 steps forward",0,False
+62,turn right,"Given the current observation, let's break down the best course of action step by step:
+
+1. We are currently facing a wall 4 steps forward and a wall 2 steps left.
+2. The green box is 3 steps right and 3 steps forward from our current position.
+3. To reach the green box, we need to turn right to face the direction of the green box.
+4. After turning right, we can move forward three steps to reach the green box.
+
+ACTION: turn right","a wall 5 steps forward
+a wall 3 steps right
+a green box 3 steps left and 3 steps forward",0,False
+63,turn left,"Given the current observation, let's break down the best course of action step by step:
+
+1. We are currently facing a wall 5 steps forward and a wall 3 steps right.
+2. The green box is 3 steps left and 3 steps forward from our current position.
+3. To reach the green box, we need to turn left to face the direction of the green box.
+4. After turning left, we can move forward three steps to reach the green box.
+
+ACTION: turn left","a wall 4 steps forward
+a wall 2 steps left
+a green box 3 steps right and 3 steps forward",0,True

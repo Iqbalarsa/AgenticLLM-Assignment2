@@ -1,0 +1,25 @@
+Step,Action,Reasoning,Observation,Reward,Done
+0,turn left,"Given the current observation, the grey ball is not visible, and there are walls blocking the immediate path. Therefore, the best course of action is to explore the area by turning left and checking if the ball is nearby.
+
+ACTION: turn left","a wall 2 steps forward
+a wall 2 steps left",0,False
+1,turn right,"Given the current observation, both the left and forward paths are blocked by walls. Since turning left did not reveal the grey ball, we should try another direction to explore.
+
+ACTION: turn right","a wall 5 steps forward
+a wall 2 steps left",0,False
+2,turn right,"Given the current observation, we have a wall 5 steps forward and a wall 2 steps left. This means moving forward or turning left will hit a wall. Therefore, the only viable direction to explore is to the right.
+
+ACTION: turn right","a wall 2 steps right
+a grey ball 4 steps forward",0,False
+3,go forward,"Given the current observation, we see that there is a wall 2 steps to the right and a grey ball 4 steps forward. The best course of action is to move forward until we reach the grey ball.
+
+ACTION: go forward","a wall 2 steps right
+a grey ball 3 steps forward",0,False
+4,go forward,"Given the current observation, we now see that there is a wall 2 steps to the right and a grey ball 3 steps forward. The best course of action is to continue moving forward until we reach the grey ball.
+
+ACTION: go forward","a wall 2 steps right
+a grey ball 2 steps forward",0,False
+5,go forward,"Given the current observation, the grey ball is only 2 steps forward. The best course of action is to move directly towards the grey ball.
+
+ACTION: go forward","a wall 2 steps right
+a grey ball 1 step forward",0.915625,True

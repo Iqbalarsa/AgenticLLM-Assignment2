@@ -1,0 +1,79 @@
+{
+    "task": "default",
+    "action_frequency": {
+        "Move West": 30,
+        "Move South": 20,
+        "Do": 41,
+        "Place Table": 7,
+        "Make Wood Pickaxe": 5,
+        "Make Wood Sword": 3,
+        "Move East": 10,
+        "Move North": 34,
+        "Make Stone Pickaxe": 14,
+        "Make Stone Sword": 1,
+        "Place Furnace": 1,
+        "Make Iron Pickaxe": 2,
+        "Make Iron Sword": 1,
+        "Place Stone": 3,
+        "Noop": 1
+    },
+    "input_tokens": 289459,
+    "output_tokens": 376,
+    "done": true,
+    "episode_return": 10.100000000000003,
+    "num_steps": 173,
+    "failed_candidates": [
+        "Drink from lake or move to water Wait theres no water nearby lets find water\nMove North"
+    ],
+    "score": 11.0,
+    "progression": 0.5,
+    "achievements": {
+        "collect_coal": 1,
+        "collect_diamond": 0,
+        "collect_drink": 0,
+        "collect_iron": 0,
+        "collect_sapling": 0,
+        "collect_stone": 12,
+        "collect_wood": 10,
+        "defeat_skeleton": 0,
+        "defeat_zombie": 2,
+        "eat_cow": 1,
+        "eat_plant": 0,
+        "make_iron_pickaxe": 0,
+        "make_iron_sword": 0,
+        "make_stone_pickaxe": 1,
+        "make_stone_sword": 1,
+        "make_wood_pickaxe": 2,
+        "make_wood_sword": 0,
+        "place_furnace": 1,
+        "place_plant": 0,
+        "place_stone": 1,
+        "place_table": 3,
+        "wake_up": 0
+    },
+    "process_num": null,
+    "seed": 1939362573,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "gemini",
+        "model_id": "gemini-3.5-flash-lite",
+        "base_url": "http://localhost:8080/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

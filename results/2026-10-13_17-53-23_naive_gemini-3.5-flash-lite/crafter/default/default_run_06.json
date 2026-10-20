@@ -1,0 +1,80 @@
+{
+    "task": "default",
+    "action_frequency": {
+        "Move West": 14,
+        "Move South": 27,
+        "Do": 64,
+        "Move North": 31,
+        "Place Table": 9,
+        "Make Wood Pickaxe": 3,
+        "Move East": 38,
+        "Make Wood Sword": 2,
+        "Noop": 2,
+        "Make Stone Pickaxe": 6,
+        "Make Stone Sword": 6,
+        "Place Furnace": 1,
+        "Make Iron Pickaxe": 1,
+        "Make Iron Sword": 1,
+        "Sleep": 9
+    },
+    "input_tokens": 408232,
+    "output_tokens": 387,
+    "done": true,
+    "episode_return": 10.1,
+    "num_steps": 214,
+    "failed_candidates": [
+        "Move SouthEast",
+        "Move NorthEast"
+    ],
+    "score": 11.0,
+    "progression": 0.5,
+    "achievements": {
+        "collect_coal": 1,
+        "collect_diamond": 0,
+        "collect_drink": 2,
+        "collect_iron": 1,
+        "collect_sapling": 0,
+        "collect_stone": 11,
+        "collect_wood": 9,
+        "defeat_skeleton": 0,
+        "defeat_zombie": 1,
+        "eat_cow": 3,
+        "eat_plant": 0,
+        "make_iron_pickaxe": 0,
+        "make_iron_sword": 0,
+        "make_stone_pickaxe": 1,
+        "make_stone_sword": 0,
+        "make_wood_pickaxe": 1,
+        "make_wood_sword": 0,
+        "place_furnace": 1,
+        "place_plant": 0,
+        "place_stone": 0,
+        "place_table": 3,
+        "wake_up": 0
+    },
+    "process_num": null,
+    "seed": 3732284452,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "gemini",
+        "model_id": "gemini-3.5-flash-lite",
+        "base_url": "http://localhost:8080/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

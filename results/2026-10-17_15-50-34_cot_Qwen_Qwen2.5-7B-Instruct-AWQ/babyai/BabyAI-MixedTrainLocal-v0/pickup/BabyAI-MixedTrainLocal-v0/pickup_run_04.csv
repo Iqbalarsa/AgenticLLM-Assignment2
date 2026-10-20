@@ -1,0 +1,453 @@
+Step,Action,Reasoning,Observation,Reward,Done
+0,turn left,"Given the current observation, we cannot see any objects or pathways that would allow us to progress towards picking up the blue ball. There are walls directly in front of us and to our right. 
+
+The best course of action here is to explore other directions. We should try turning left to see if there's a path that allows us to move closer to the blue ball.
+
+ACTION: turn left","a wall 4 steps forward
+a wall 3 steps left",0,False
+1,turn right,"Given the current observation, we encounter walls both forward and to the left. This indicates that moving in these directions is not feasible. To explore further and find the blue ball, we should continue to look in different directions.
+
+The best course of action now is to try turning right. Turning right will help us avoid the walls and potentially find a path to the blue ball.
+
+ACTION: turn right","a wall 4 steps forward
+a wall 3 steps right",0,False
+2,turn left,"Given the current observation, we see walls both forward and to the right. This suggests that moving directly forward or to the right will not be productive. We need to explore other directions to find a path to the blue ball.
+
+1. Turning left again would allow us to move away from the walls and potentially find a new direction to explore.
+2. After turning left, we can then proceed with moving forward to see if this new path leads us closer to the blue ball.
+
+ACTION: turn left","a wall 4 steps forward
+a wall 3 steps left",0,False
+3,turn right,"Given the current observation, we have walls both forward and to the left. This indicates that moving in these directions won't help us find the blue ball. Let's consider the following steps:
+
+1. **Turn Right**: Turning right from the current position will allow us to move away from the walls and explore a new direction.
+2. **Move Forward**: After turning right, we can move forward to see if this new path leads us closer to the blue ball.
+
+ACTION: turn right","a wall 4 steps forward
+a wall 3 steps right",0,False
+4,turn left,"Given the current observation, we still have walls both forward and to the right. This suggests that moving in these directions won't be productive. Let's consider the following steps:
+
+1. **Turn Left**: Turning left from the current position will allow us to move away from the walls and explore a new direction.
+2. **Move Forward**: After turning left, we can move forward to see if this new path leads us closer to the blue ball.
+
+ACTION: turn left","a wall 4 steps forward
+a wall 3 steps left",0,False
+5,turn left,"Given the current observation, we have walls both forward and to the left. Turning right again would likely lead us back to the same wall configuration. Therefore, turning left is a reasonable next step to explore a new direction.
+
+ACTION: turn left","a wall 3 steps forward
+a wall 3 steps left
+a blue ball 2 steps left and 1 step forward",0,False
+6,turn left,"Given the current observation, the blue ball is located 2 steps left and 1 step forward from our current position. The best course of action is to move towards the ball.
+
+Step-by-step plan:
+1. Turn left to face the direction of the ball.
+2. Move forward twice to reach the ball.
+3. Pick up the blue ball.
+
+ACTION: turn left","a wall 3 steps forward
+a wall 3 steps right
+a blue ball 1 step right and 2 steps forward",0,False
+7,turn right,"Given the current observation, the blue ball is located 1 step right and 2 steps forward from our current position. The best course of action is to move towards the ball.
+
+Step-by-step plan:
+1. Turn right to face the direction of the ball.
+2. Move forward twice to reach the ball.
+3. Pick up the blue ball.
+
+ACTION: turn right","a wall 3 steps forward
+a wall 3 steps left
+a blue ball 2 steps left and 1 step forward",0,False
+8,turn left,"Given the current observation, the blue ball is located 2 steps left and 1 step forward from our current position. The best course of action is to move towards the ball.
+
+Step-by-step plan:
+1. Turn left to face the direction of the ball.
+2. Move forward once to reach the ball.
+3. Pick up the blue ball.
+
+ACTION: turn left","a wall 3 steps forward
+a wall 3 steps right
+a blue ball 1 step right and 2 steps forward",0,False
+9,turn right,"Given the current observation, the blue ball is now located 1 step right and 2 steps forward from our current position. The best course of action is to move towards the ball.
+
+Step-by-step plan:
+1. Turn right to face the direction of the ball.
+2. Move forward twice to reach the ball.
+3. Pick up the blue ball.
+
+ACTION: turn right","a wall 3 steps forward
+a wall 3 steps left
+a blue ball 2 steps left and 1 step forward",0,False
+10,go forward,"Given the current observation, the blue ball is now directly in front of us after turning right. We should proceed as follows:
+
+1. Move forward two steps to reach the blue ball.
+2. Pick up the blue ball.
+
+ACTION: go forward","a wall 2 steps forward
+a blue ball 2 steps left",0,False
+11,turn left,"Given the current observation, the blue ball is now to our left. Here’s the best course of action step by step:
+
+1. Turn left to face the blue ball.
+2. Move forward two steps to reach the blue ball.
+3. Pick up the blue ball.
+
+ACTION: turn left","a wall 2 steps right
+a blue ball 2 steps forward",0,False
+12,go forward,ACTION: go forward,"a wall 2 steps right
+a blue ball 1 step forward",0,False
+13,go forward,"Based on the current observation, the blue ball is 1 step forward. The best course of action is to move closer to the ball and then pick it up.
+
+Step 1: Go forward to reach the blue ball.
+Step 2: Pick up the blue ball.
+
+ACTION: go forward","a wall 2 steps right
+a blue ball 1 step forward",0,False
+14,go forward,"Based on the current observation, the blue ball is directly in front of you. The best course of action is to move forward to reach the blue ball and then pick it up.
+
+Step 1: Go forward to reach the blue ball.
+Step 2: Pick up the blue ball.
+
+ACTION: go forward","a wall 2 steps right
+a blue ball 1 step forward",0,False
+15,go forward,"Given the current observation, the blue ball is directly in front of you. The best course of action is to move forward to pick up the blue ball.
+
+Step 1: Go forward to reach the blue ball.
+Step 2: Pick up the blue ball.
+
+ACTION: go forward","a wall 2 steps right
+a blue ball 1 step forward",0,False
+16,go forward,"Given the current observation, the blue ball is directly in front of you. The best course of action is to move forward to pick up the blue ball.
+
+Step 1: Go forward to reach the blue ball.
+Step 2: Pick up the blue ball.
+
+ACTION: go forward","a wall 2 steps right
+a blue ball 1 step forward",0,False
+17,go forward,"Given the current observation, the blue ball is directly in front of you. The best course of action is to move forward to reach the ball and then pick it up.
+
+Step 1: Go forward to reach the blue ball.
+Step 2: Pick up the blue ball.
+
+ACTION: go forward","a wall 2 steps right
+a blue ball 1 step forward",0,False
+18,go forward,"Given the current observation, the blue ball is directly in front of you. The best course of action is to move forward to reach the ball and then pick it up.
+
+Step 1: Go forward to reach the blue ball.
+Step 2: Pick up the blue ball.
+
+ACTION: go forward","a wall 2 steps right
+a blue ball 1 step forward",0,False
+19,go forward,"Given the current observation, the blue ball is directly in front of you. The best course of action is to move forward to reach the ball and then pick it up.
+
+Step 1: Go forward to reach the blue ball.
+Step 2: Pick up the blue ball.
+
+ACTION: go forward","a wall 2 steps right
+a blue ball 1 step forward",0,False
+20,go forward,"Given the current observation, the blue ball is directly in front of you. The best course of action is to move forward to reach the ball and then pick it up.
+
+Step 1: Go forward to reach the blue ball.
+Step 2: Pick up the blue ball.
+
+ACTION: go forward","a wall 2 steps right
+a blue ball 1 step forward",0,False
+21,go forward,"Given the current observation, the blue ball is directly in front of you. The best course of action is to move forward to reach the ball and then pick it up.
+
+Step 1: Go forward to reach the blue ball.
+Step 2: Pick up the blue ball.
+
+ACTION: go forward","a wall 2 steps right
+a blue ball 1 step forward",0,False
+22,go forward,"Given the current observation, the blue ball is directly in front of you. The best course of action is to move forward to reach the ball and then pick it up.
+
+Step 1: Go forward to reach the blue ball.
+Step 2: Pick up the blue ball.
+
+ACTION: go forward","a wall 2 steps right
+a blue ball 1 step forward",0,False
+23,go forward,"Given the current observation, the blue ball is directly in front of you. The best course of action is to move forward to reach the ball and then pick it up.
+
+Step 1: Go forward to reach the blue ball.
+Step 2: Pick up the blue ball.
+
+ACTION: go forward","a wall 2 steps right
+a blue ball 1 step forward",0,False
+24,go forward,"Given the current observation, the blue ball is directly in front of you. The best course of action is to move forward to reach the ball and then pick it up.
+
+Step 1: Go forward to reach the blue ball.
+Step 2: Pick up the blue ball.
+
+ACTION: go forward","a wall 2 steps right
+a blue ball 1 step forward",0,False
+25,go forward,"Given the current observation, the blue ball is directly in front of you. The best course of action is to move forward to reach the blue ball and then pick it up.
+
+Step 1: Go forward to reach the blue ball.
+Step 2: Pick up the blue ball.
+
+ACTION: go forward","a wall 2 steps right
+a blue ball 1 step forward",0,False
+26,go forward,"Given the current observation, the blue ball is directly in front of you. The best course of action is to move forward to reach the blue ball and then pick it up.
+
+Step 1: Go forward to reach the blue ball.
+Step 2: Pick up the blue ball.
+
+ACTION: go forward","a wall 2 steps right
+a blue ball 1 step forward",0,False
+27,go forward,"Given the current observation, the blue ball is directly in front of you. The best course of action is to move forward to reach the blue ball and then pick it up.
+
+Step 1: Go forward to reach the blue ball.
+Step 2: Pick up the blue ball.
+
+ACTION: go forward","a wall 2 steps right
+a blue ball 1 step forward",0,False
+28,go forward,"Given the current observation, the blue ball is directly in front of you. The best course of action is to move forward to reach the blue ball and then pick it up.
+
+Step 1: Go forward to reach the blue ball.
+Step 2: Pick up the blue ball.
+
+ACTION: go forward","a wall 2 steps right
+a blue ball 1 step forward",0,False
+29,go forward,"Given the current observation, the blue ball is directly in front of you. The best course of action is to move forward to reach the blue ball and then pick it up.
+
+Step 1: Go forward to reach the blue ball.
+Step 2: Pick up the blue ball.
+
+ACTION: go forward","a wall 2 steps right
+a blue ball 1 step forward",0,False
+30,go forward,"Given the current observation, the blue ball is directly in front of you. The best course of action is to move forward to reach the blue ball and then pick it up.
+
+Step 1: Go forward to reach the blue ball.
+Step 2: Pick up the blue ball.
+
+ACTION: go forward","a wall 2 steps right
+a blue ball 1 step forward",0,False
+31,go forward,"Given the current observation, the blue ball is directly in front of you. The best course of action is to move forward to reach the blue ball and then pick it up.
+
+Step 1: Go forward to reach the blue ball.
+Step 2: Pick up the blue ball.
+
+ACTION: go forward","a wall 2 steps right
+a blue ball 1 step forward",0,False
+32,go forward,"Given the current observation, the blue ball is directly in front of you. The best course of action is to move forward to reach the blue ball and then pick it up.
+
+Step 1: Go forward to reach the blue ball.
+Step 2: Pick up the blue ball.
+
+ACTION: go forward","a wall 2 steps right
+a blue ball 1 step forward",0,False
+33,go forward,"Given the current observation, the blue ball is directly in front of you. The best course of action is to move forward to reach the blue ball and then pick it up.
+
+Step 1: Go forward to reach the blue ball.
+Step 2: Pick up the blue ball.
+
+ACTION: go forward","a wall 2 steps right
+a blue ball 1 step forward",0,False
+34,go forward,"Given the current observation, the blue ball is directly in front of you. The best course of action is to move forward to reach the blue ball and then pick it up.
+
+Step 1: Go forward to reach the blue ball.
+Step 2: Pick up the blue ball.
+
+ACTION: go forward","a wall 2 steps right
+a blue ball 1 step forward",0,False
+35,go forward,"Given the current observation, the blue ball is directly in front of you. The best course of action is to move forward to reach the blue ball and then pick it up.
+
+Step 1: Go forward to reach the blue ball.
+Step 2: Pick up the blue ball.
+
+ACTION: go forward","a wall 2 steps right
+a blue ball 1 step forward",0,False
+36,go forward,"Given the current observation, the blue ball is directly in front of you. The best course of action is to move forward to reach the blue ball and then pick it up.
+
+Step 1: Go forward to reach the blue ball.
+Step 2: Pick up the blue ball.
+
+ACTION: go forward","a wall 2 steps right
+a blue ball 1 step forward",0,False
+37,go forward,"Given the current observation, the blue ball is directly in front of you. The best course of action is to move forward to reach the blue ball and then pick it up.
+
+Step 1: Go forward to reach the blue ball.
+Step 2: Pick up the blue ball.
+
+ACTION: go forward","a wall 2 steps right
+a blue ball 1 step forward",0,False
+38,go forward,"Given the current observation, the blue ball is directly in front of you. The best course of action is to move forward to reach the blue ball and then pick it up.
+
+Step 1: Go forward to reach the blue ball.
+Step 2: Pick up the blue ball.
+
+ACTION: go forward","a wall 2 steps right
+a blue ball 1 step forward",0,False
+39,go forward,"Given the current observation, the blue ball is directly in front of you. The best course of action is to move forward to reach the blue ball and then pick it up.
+
+Step 1: Go forward to reach the blue ball.
+Step 2: Pick up the blue ball.
+
+ACTION: go forward","a wall 2 steps right
+a blue ball 1 step forward",0,False
+40,go forward,"Given the current observation, the blue ball is directly in front of you. The best course of action is to move forward to reach the blue ball and then pick it up.
+
+Step 1: Go forward to reach the blue ball.
+Step 2: Pick up the blue ball.
+
+ACTION: go forward","a wall 2 steps right
+a blue ball 1 step forward",0,False
+41,go forward,"Given the current observation, the blue ball is directly in front of you. The best course of action is to move forward to reach the blue ball and then pick it up.
+
+Step 1: Go forward to reach the blue ball.
+Step 2: Pick up the blue ball.
+
+ACTION: go forward","a wall 2 steps right
+a blue ball 1 step forward",0,False
+42,go forward,"Given the current observation, the blue ball is directly in front of you. The best course of action is to move forward to reach the blue ball and then pick it up.
+
+Step 1: Go forward to reach the blue ball.
+Step 2: Pick up the blue ball.
+
+ACTION: go forward","a wall 2 steps right
+a blue ball 1 step forward",0,False
+43,go forward,"Given the current observation, the blue ball is directly in front of you. The best course of action is to move forward to reach the blue ball and then pick it up.
+
+Step 1: Go forward to reach the blue ball.
+Step 2: Pick up the blue ball.
+
+ACTION: go forward","a wall 2 steps right
+a blue ball 1 step forward",0,False
+44,go forward,"Given the current observation, the blue ball is directly in front of you. The best course of action is to move forward to reach the blue ball and then pick it up.
+
+Step 1: Go forward to reach the blue ball.
+Step 2: Pick up the blue ball.
+
+ACTION: go forward","a wall 2 steps right
+a blue ball 1 step forward",0,False
+45,go forward,"Given the current observation, the blue ball is directly in front of you. The best course of action is to move forward to reach the blue ball and then pick it up.
+
+Step 1: Go forward to reach the blue ball.
+Step 2: Pick up the blue ball.
+
+ACTION: go forward","a wall 2 steps right
+a blue ball 1 step forward",0,False
+46,go forward,"Given the current observation, the blue ball is directly in front of you. The best course of action is to move forward to reach the blue ball and then pick it up.
+
+Step 1: Go forward to reach the blue ball.
+Step 2: Pick up the blue ball.
+
+ACTION: go forward","a wall 2 steps right
+a blue ball 1 step forward",0,False
+47,go forward,"Given the current observation, the blue ball is directly in front of you. The best course of action is to move forward to reach the blue ball and then pick it up.
+
+Step 1: Go forward to reach the blue ball.
+Step 2: Pick up the blue ball.
+
+ACTION: go forward","a wall 2 steps right
+a blue ball 1 step forward",0,False
+48,go forward,"Given the current observation, the blue ball is directly in front of you. The best course of action is to move forward to reach the blue ball and then pick it up.
+
+Step 1: Go forward to reach the blue ball.
+Step 2: Pick up the blue ball.
+
+ACTION: go forward","a wall 2 steps right
+a blue ball 1 step forward",0,False
+49,go forward,"Given the current observation, the blue ball is directly in front of you. The best course of action is to move forward to reach the blue ball and then pick it up.
+
+Step 1: Go forward to reach the blue ball.
+Step 2: Pick up the blue ball.
+
+ACTION: go forward","a wall 2 steps right
+a blue ball 1 step forward",0,False
+50,go forward,"Given the current observation, the blue ball is directly in front of you. The best course of action is to move forward to reach the blue ball and then pick it up.
+
+Step 1: Go forward to reach the blue ball.
+Step 2: Pick up the blue ball.
+
+ACTION: go forward","a wall 2 steps right
+a blue ball 1 step forward",0,False
+51,go forward,"Given the current observation, the blue ball is directly in front of you. The best course of action is to move forward to reach the blue ball and then pick it up.
+
+Step 1: Go forward to reach the blue ball.
+Step 2: Pick up the blue ball.
+
+ACTION: go forward","a wall 2 steps right
+a blue ball 1 step forward",0,False
+52,go forward,"Given the current observation, the blue ball is directly in front of you. The best course of action is to move forward to reach the blue ball and then pick it up.
+
+Step 1: Go forward to reach the blue ball.
+Step 2: Pick up the blue ball.
+
+ACTION: go forward","a wall 2 steps right
+a blue ball 1 step forward",0,False
+53,go forward,"Given the current observation, the blue ball is directly in front of you. The best course of action is to move forward to reach the blue ball and then pick it up.
+
+Step 1: Go forward to reach the blue ball.
+Step 2: Pick up the blue ball.
+
+ACTION: go forward","a wall 2 steps right
+a blue ball 1 step forward",0,False
+54,go forward,"Given the current observation, the blue ball is directly in front of you. The best course of action is to move forward to reach the blue ball and then pick it up.
+
+Step 1: Go forward to reach the blue ball.
+Step 2: Pick up the blue ball.
+
+ACTION: go forward","a wall 2 steps right
+a blue ball 1 step forward",0,False
+55,go forward,"Given the current observation, the blue ball is directly in front of you. The best course of action is to move forward to reach the blue ball and then pick it up.
+
+Step 1: Go forward to reach the blue ball.
+Step 2: Pick up the blue ball.
+
+ACTION: go forward","a wall 2 steps right
+a blue ball 1 step forward",0,False
+56,go forward,"Given the current observation, the blue ball is directly in front of you. The best course of action is to move forward to reach the blue ball and then pick it up.
+
+Step 1: Go forward to reach the blue ball.
+Step 2: Pick up the blue ball.
+
+ACTION: go forward","a wall 2 steps right
+a blue ball 1 step forward",0,False
+57,go forward,"Given the current observation, the blue ball is directly in front of you. The best course of action is to move forward to reach the blue ball and then pick it up.
+
+Step 1: Go forward to reach the blue ball.
+Step 2: Pick up the blue ball.
+
+ACTION: go forward","a wall 2 steps right
+a blue ball 1 step forward",0,False
+58,go forward,"Given the current observation, the blue ball is directly in front of you. The best course of action is to move forward to reach the blue ball and then pick it up.
+
+Step 1: Go forward to reach the blue ball.
+Step 2: Pick up the blue ball.
+
+ACTION: go forward","a wall 2 steps right
+a blue ball 1 step forward",0,False
+59,go forward,"Given the current observation, the blue ball is directly in front of you. The best course of action is to move forward to reach the blue ball and then pick it up.
+
+Step 1: Go forward to reach the blue ball.
+Step 2: Pick up the blue ball.
+
+ACTION: go forward","a wall 2 steps right
+a blue ball 1 step forward",0,False
+60,go forward,"Given the current observation, the blue ball is directly in front of you. The best course of action is to move forward to reach the blue ball and then pick it up.
+
+Step 1: Go forward to reach the blue ball.
+Step 2: Pick up the blue ball.
+
+ACTION: go forward","a wall 2 steps right
+a blue ball 1 step forward",0,False
+61,go forward,"Given the current observation, the blue ball is directly in front of you. The best course of action is to move forward to reach the blue ball and then pick it up.
+
+Step 1: Go forward to reach the blue ball.
+Step 2: Pick up the blue ball.
+
+ACTION: go forward","a wall 2 steps right
+a blue ball 1 step forward",0,False
+62,go forward,"Given the current observation, the blue ball is directly in front of you. The best course of action is to move forward to reach the blue ball and then pick it up.
+
+Step 1: Go forward to reach the blue ball.
+Step 2: Pick up the blue ball.
+
+ACTION: go forward","a wall 2 steps right
+a blue ball 1 step forward",0,False
+63,go forward,"Given the current observation, the blue ball is directly in front of you. The best course of action is to move forward to reach the blue ball and then pick it up.
+
+Step 1: Go forward to reach the blue ball.
+Step 2: Pick up the blue ball.
+
+ACTION: go forward","a wall 2 steps right
+a blue ball 1 step forward",0,True

@@ -1,0 +1,57 @@
+Step,Action,Reasoning,Observation,Reward,Done
+0,go forward,"Given the current observation, the best course of action would be to move forward until we find an opening or the grey key. Let's start by moving forward.
+
+ACTION: go forward","a wall 2 steps forward
+a wall 3 steps right",0,False
+1,turn left,"Given the current observation, we have a wall directly in front of us, blocking our path. We should turn around to explore other directions.
+
+ACTION: turn left","a wall 4 steps forward
+a wall 2 steps right",0,False
+2,turn left,"Given the current observation, we have walls both forward and to the right, which means we need to explore further to the left or potentially downwards (if such directions were available). However, since only left is explicitly mentioned, we will proceed by exploring that direction.
+
+Step-by-step reasoning:
+1. There is a wall directly in front of us, so going forward is not an option.
+2. There is also a wall to the right, so turning right is not a viable option.
+3. The logical next step is to turn left to explore a different direction.
+
+ACTION: turn left","a wall 5 steps forward
+a wall 3 steps left
+a grey key 1 step left and 3 steps forward",0,False
+3,go forward,"Let's break down the steps:
+
+1. **Identify the key location**: The grey key is located 1 step left and 3 steps forward from our current position.
+2. **Plan the path**:
+   - First, move 3 steps forward to align with the key's vertical position.
+   - Then, move 1 step left to reach the key.
+
+Given this plan, the sequence of actions would be:
+1. Go forward 3 steps.
+2. Turn left.
+3. Pick up the grey key.
+
+However, since we can only perform one action at a time, let's execute the plan step by step.
+
+ACTION: go forward","a wall 4 steps forward
+a wall 3 steps left
+a grey key 1 step left and 2 steps forward",0,False
+4,go forward,"Given the updated observation, the best course of action is to continue moving towards the grey key:
+
+1. **Move forward**: We need to get closer to the key.
+2. **Turn left**: To align with the key's horizontal position.
+3. **Pick up the key**: Once aligned, we can pick it up.
+
+Let's execute these steps:
+
+ACTION: go forward","a wall 3 steps forward
+a wall 3 steps left
+a grey key 1 step left and 1 step forward",0,False
+5,go forward,"Given the current observation, the best course of action is to align with the grey key and then pick it up. Here's the step-by-step plan:
+
+1. **Go forward**: To move closer to the key.
+2. **Turn left**: To align with the key's horizontal position.
+3. **Pick up**: To obtain the key.
+
+ACTION: go forward","a wall 2 steps forward
+a grey key 1 step left",0,False
+6,turn left,ACTION: turn left,"a wall 2 steps right
+a grey key 1 step forward",0.9015625,True

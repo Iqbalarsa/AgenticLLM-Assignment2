@@ -1,0 +1,340 @@
+Step,Action,Reasoning,Observation,Reward,Done
+0,turn right,"Given the current observation, we should first try to navigate around the walls. Since there is a wall 3 steps forward and a wall 1 step to the right, we can start by turning right to avoid hitting the wall directly ahead.
+
+ACTION: turn right","a wall 1 step forward
+a wall 3 steps left",0,False
+1,turn left,"Given the current observation, we see that there is a wall both forward and to the left. This suggests that we need to continue turning until we find an open path. 
+
+1. Turning left from the current orientation would help us avoid the wall directly ahead.
+2. After turning left, we need to check if there is an open path.
+
+Let's perform the turn left action.
+
+ACTION: turn left","a wall 3 steps forward
+a wall 1 step right",0,False
+2,turn left,"Given the current observation, we see that there is a wall both forward and to the right. Turning left again would be the best course of action to avoid the walls and potentially find an open path.
+
+Step-by-step reasoning:
+1. Turn left to avoid the wall directly ahead and the wall to the right.
+2. After turning left, check the path forward.
+
+ACTION: turn left","a wall 6 steps forward
+a wall 3 steps right
+a green box 1 step left and 1 step forward",0,False
+3,turn left,"Given the current observation, we need to navigate around the walls and proceed towards the green box. Here’s the step-by-step reasoning:
+
+1. There is a wall 6 steps forward, so moving forward would not be an option.
+2. There is also a wall 3 steps right, so moving right would also not be feasible.
+3. The green box is located 1 step left and 1 step forward from our current position.
+
+To reach the green box, we should move left to avoid the wall and then move forward to reach the box.
+
+ACTION: turn left","a wall 4 steps forward
+a wall 1 step left
+a green box 1 step right and 1 step forward",0,False
+4,turn right,"Given the current observation, we need to navigate around the walls and proceed towards the green box. Here’s the step-by-step reasoning:
+
+1. There is a wall 4 steps forward, so moving forward would not be an option.
+2. There is a wall 1 step left, so moving left would not be feasible.
+3. The green box is located 1 step right and 1 step forward from our current position.
+
+To reach the green box, we should move right to avoid the wall and then move forward to reach the box.
+
+ACTION: turn right","a wall 6 steps forward
+a wall 3 steps right
+a green box 1 step left and 1 step forward",0,False
+5,turn left,"Given the current observation, the green box is located 1 step left and 1 step forward from our current position. The best course of action is to move left and then move forward to reach the green box.
+
+ACTION: turn left","a wall 4 steps forward
+a wall 1 step left
+a green box 1 step right and 1 step forward",0,False
+6,turn right,"Given the current observation, the green box is located 1 step right and 1 step forward from our current position. The best course of action is to move right and then move forward to reach the green box.
+
+ACTION: turn right","a wall 6 steps forward
+a wall 3 steps right
+a green box 1 step left and 1 step forward",0,False
+7,turn left,"Given the current observation, the green box is located 1 step left and 1 step forward from our current position. The best course of action is to move left and then move forward to reach the green box.
+
+ACTION: turn left","a wall 4 steps forward
+a wall 1 step left
+a green box 1 step right and 1 step forward",0,False
+8,turn right,"Given the current observation, the green box is located 1 step right and 1 step forward from our current position. The best course of action is to move right and then move forward to reach the green box.
+
+ACTION: turn right","a wall 6 steps forward
+a wall 3 steps right
+a green box 1 step left and 1 step forward",0,False
+9,turn left,"Given the current observation, the green box is located 1 step left and 1 step forward from our current position. The best course of action is to move left and then move forward to reach the green box.
+
+ACTION: turn left","a wall 4 steps forward
+a wall 1 step left
+a green box 1 step right and 1 step forward",0,False
+10,turn right,"Given the current observation, the green box is located 1 step right and 1 step forward from our current position. The best course of action is to move right and then move forward to reach the green box.
+
+ACTION: turn right","a wall 6 steps forward
+a wall 3 steps right
+a green box 1 step left and 1 step forward",0,False
+11,turn left,"Given the current observation, the green box is located 1 step left and 1 step forward from our current position. The best course of action is to move left and then move forward to reach the green box.
+
+ACTION: turn left","a wall 4 steps forward
+a wall 1 step left
+a green box 1 step right and 1 step forward",0,False
+12,turn right,"Given the current observation, the green box is located 1 step right and 1 step forward from our current position. The best course of action is to move right and then move forward to reach the green box.
+
+ACTION: turn right","a wall 6 steps forward
+a wall 3 steps right
+a green box 1 step left and 1 step forward",0,False
+13,turn left,"Given the current observation, the green box is located 1 step left and 1 step forward from our current position. The best course of action is to move left and then move forward to reach the green box.
+
+ACTION: turn left","a wall 4 steps forward
+a wall 1 step left
+a green box 1 step right and 1 step forward",0,False
+14,turn right,"Given the current observation, the green box is located 1 step right and 1 step forward from our current position. The best course of action is to move right and then move forward to reach the green box.
+
+ACTION: turn right","a wall 6 steps forward
+a wall 3 steps right
+a green box 1 step left and 1 step forward",0,False
+15,turn left,"Given the current observation, the green box is located 1 step left and 1 step forward from our current position. The best course of action is to move left and then move forward to reach the green box.
+
+ACTION: turn left","a wall 4 steps forward
+a wall 1 step left
+a green box 1 step right and 1 step forward",0,False
+16,turn right,"Given the current observation, the green box is located 1 step right and 1 step forward from our current position. The best course of action is to move right and then move forward to reach the green box.
+
+ACTION: turn right","a wall 6 steps forward
+a wall 3 steps right
+a green box 1 step left and 1 step forward",0,False
+17,turn left,"Given the current observation, the green box is located 1 step left and 1 step forward from our current position. The best course of action is to move left and then move forward to reach the green box.
+
+ACTION: turn left","a wall 4 steps forward
+a wall 1 step left
+a green box 1 step right and 1 step forward",0,False
+18,turn right,"Given the current observation, the green box is located 1 step right and 1 step forward from our current position. The best course of action is to move right and then move forward to reach the green box.
+
+ACTION: turn right","a wall 6 steps forward
+a wall 3 steps right
+a green box 1 step left and 1 step forward",0,False
+19,turn left,"Given the current observation, the green box is located 1 step left and 1 step forward from our current position. The best course of action is to move left and then move forward to reach the green box.
+
+ACTION: turn left","a wall 4 steps forward
+a wall 1 step left
+a green box 1 step right and 1 step forward",0,False
+20,turn right,"Given the current observation, the green box is located 1 step right and 1 step forward from our current position. The best course of action is to move right and then move forward to reach the green box.
+
+ACTION: turn right","a wall 6 steps forward
+a wall 3 steps right
+a green box 1 step left and 1 step forward",0,False
+21,turn left,"Given the current observation, the green box is located 1 step left and 1 step forward from our current position. The best course of action is to move left and then move forward to reach the green box.
+
+ACTION: turn left","a wall 4 steps forward
+a wall 1 step left
+a green box 1 step right and 1 step forward",0,False
+22,turn right,"Given the current observation, the green box is located 1 step right and 1 step forward from our current position. The best course of action is to move right and then move forward to reach the green box.
+
+ACTION: turn right","a wall 6 steps forward
+a wall 3 steps right
+a green box 1 step left and 1 step forward",0,False
+23,turn left,"Given the current observation, the green box is located 1 step left and 1 step forward from our current position. The best course of action is to move left and then move forward to reach the green box.
+
+ACTION: turn left","a wall 4 steps forward
+a wall 1 step left
+a green box 1 step right and 1 step forward",0,False
+24,turn right,"Given the current observation, the green box is located 1 step right and 1 step forward from our current position. The best course of action is to move right and then move forward to reach the green box.
+
+ACTION: turn right","a wall 6 steps forward
+a wall 3 steps right
+a green box 1 step left and 1 step forward",0,False
+25,turn left,"Given the current observation, the green box is located 1 step left and 1 step forward from our current position. The best course of action is to move left and then move forward to reach the green box.
+
+ACTION: turn left","a wall 4 steps forward
+a wall 1 step left
+a green box 1 step right and 1 step forward",0,False
+26,turn right,"Given the current observation, the green box is located 1 step right and 1 step forward from our current position. The best course of action is to move right and then move forward to reach the green box.
+
+ACTION: turn right","a wall 6 steps forward
+a wall 3 steps right
+a green box 1 step left and 1 step forward",0,False
+27,turn left,"Given the current observation, the green box is located 1 step left and 1 step forward from our current position. The best course of action is to move left and then move forward to reach the green box.
+
+ACTION: turn left","a wall 4 steps forward
+a wall 1 step left
+a green box 1 step right and 1 step forward",0,False
+28,turn right,"Given the current observation, the green box is located 1 step right and 1 step forward from our current position. The best course of action is to move right and then move forward to reach the green box.
+
+ACTION: turn right","a wall 6 steps forward
+a wall 3 steps right
+a green box 1 step left and 1 step forward",0,False
+29,turn left,"Given the current observation, the green box is located 1 step left and 1 step forward from our current position. The best course of action is to move left and then move forward to reach the green box.
+
+ACTION: turn left","a wall 4 steps forward
+a wall 1 step left
+a green box 1 step right and 1 step forward",0,False
+30,turn right,"Given the current observation, the green box is located 1 step right and 1 step forward from our current position. The best course of action is to move right and then move forward to reach the green box.
+
+ACTION: turn right","a wall 6 steps forward
+a wall 3 steps right
+a green box 1 step left and 1 step forward",0,False
+31,turn left,"Given the current observation, the green box is located 1 step left and 1 step forward from our current position. The best course of action is to move left and then move forward to reach the green box.
+
+ACTION: turn left","a wall 4 steps forward
+a wall 1 step left
+a green box 1 step right and 1 step forward",0,False
+32,turn right,"Given the current observation, the green box is located 1 step right and 1 step forward from our current position. The best course of action is to move right and then move forward to reach the green box.
+
+ACTION: turn right","a wall 6 steps forward
+a wall 3 steps right
+a green box 1 step left and 1 step forward",0,False
+33,turn left,"Given the current observation, the green box is located 1 step left and 1 step forward from our current position. The best course of action is to move left and then move forward to reach the green box.
+
+ACTION: turn left","a wall 4 steps forward
+a wall 1 step left
+a green box 1 step right and 1 step forward",0,False
+34,turn right,"Given the current observation, the green box is located 1 step right and 1 step forward from our current position. The best course of action is to move right and then move forward to reach the green box.
+
+ACTION: turn right","a wall 6 steps forward
+a wall 3 steps right
+a green box 1 step left and 1 step forward",0,False
+35,turn left,"Given the current observation, the green box is located 1 step left and 1 step forward from our current position. The best course of action is to move left and then move forward to reach the green box.
+
+ACTION: turn left","a wall 4 steps forward
+a wall 1 step left
+a green box 1 step right and 1 step forward",0,False
+36,turn right,"Given the current observation, the green box is located 1 step right and 1 step forward from our current position. The best course of action is to move right and then move forward to reach the green box.
+
+ACTION: turn right","a wall 6 steps forward
+a wall 3 steps right
+a green box 1 step left and 1 step forward",0,False
+37,turn left,"Given the current observation, the green box is located 1 step left and 1 step forward from our current position. The best course of action is to move left and then move forward to reach the green box.
+
+ACTION: turn left","a wall 4 steps forward
+a wall 1 step left
+a green box 1 step right and 1 step forward",0,False
+38,turn right,"Given the current observation, the green box is located 1 step right and 1 step forward from our current position. The best course of action is to move right and then move forward to reach the green box.
+
+ACTION: turn right","a wall 6 steps forward
+a wall 3 steps right
+a green box 1 step left and 1 step forward",0,False
+39,turn left,"Given the current observation, the green box is located 1 step left and 1 step forward from our current position. The best course of action is to move left and then move forward to reach the green box.
+
+ACTION: turn left","a wall 4 steps forward
+a wall 1 step left
+a green box 1 step right and 1 step forward",0,False
+40,turn right,"Given the current observation, the green box is located 1 step right and 1 step forward from our current position. The best course of action is to move right and then move forward to reach the green box.
+
+ACTION: turn right","a wall 6 steps forward
+a wall 3 steps right
+a green box 1 step left and 1 step forward",0,False
+41,turn left,"Given the current observation, the green box is located 1 step left and 1 step forward from our current position. The best course of action is to move left and then move forward to reach the green box.
+
+ACTION: turn left","a wall 4 steps forward
+a wall 1 step left
+a green box 1 step right and 1 step forward",0,False
+42,turn right,"Given the current observation, the green box is located 1 step right and 1 step forward from our current position. The best course of action is to move right and then move forward to reach the green box.
+
+ACTION: turn right","a wall 6 steps forward
+a wall 3 steps right
+a green box 1 step left and 1 step forward",0,False
+43,turn left,"Given the current observation, the green box is located 1 step left and 1 step forward from our current position. The best course of action is to move left and then move forward to reach the green box.
+
+ACTION: turn left","a wall 4 steps forward
+a wall 1 step left
+a green box 1 step right and 1 step forward",0,False
+44,turn right,"Given the current observation, the green box is located 1 step right and 1 step forward from our current position. The best course of action is to move right and then move forward to reach the green box.
+
+ACTION: turn right","a wall 6 steps forward
+a wall 3 steps right
+a green box 1 step left and 1 step forward",0,False
+45,turn left,"Given the current observation, the green box is located 1 step left and 1 step forward from our current position. The best course of action is to move left and then move forward to reach the green box.
+
+ACTION: turn left","a wall 4 steps forward
+a wall 1 step left
+a green box 1 step right and 1 step forward",0,False
+46,turn right,"Given the current observation, the green box is located 1 step right and 1 step forward from our current position. The best course of action is to move right and then move forward to reach the green box.
+
+ACTION: turn right","a wall 6 steps forward
+a wall 3 steps right
+a green box 1 step left and 1 step forward",0,False
+47,turn left,"Given the current observation, the green box is located 1 step left and 1 step forward from our current position. The best course of action is to move left and then move forward to reach the green box.
+
+ACTION: turn left","a wall 4 steps forward
+a wall 1 step left
+a green box 1 step right and 1 step forward",0,False
+48,turn right,"Given the current observation, the green box is located 1 step right and 1 step forward from our current position. The best course of action is to move right and then move forward to reach the green box.
+
+ACTION: turn right","a wall 6 steps forward
+a wall 3 steps right
+a green box 1 step left and 1 step forward",0,False
+49,turn left,"Given the current observation, the green box is located 1 step left and 1 step forward from our current position. The best course of action is to move left and then move forward to reach the green box.
+
+ACTION: turn left","a wall 4 steps forward
+a wall 1 step left
+a green box 1 step right and 1 step forward",0,False
+50,turn right,"Given the current observation, the green box is located 1 step right and 1 step forward from our current position. The best course of action is to move right and then move forward to reach the green box.
+
+ACTION: turn right","a wall 6 steps forward
+a wall 3 steps right
+a green box 1 step left and 1 step forward",0,False
+51,turn left,"Given the current observation, the green box is located 1 step left and 1 step forward from our current position. The best course of action is to move left and then move forward to reach the green box.
+
+ACTION: turn left","a wall 4 steps forward
+a wall 1 step left
+a green box 1 step right and 1 step forward",0,False
+52,turn right,"Given the current observation, the green box is located 1 step right and 1 step forward from our current position. The best course of action is to move right and then move forward to reach the green box.
+
+ACTION: turn right","a wall 6 steps forward
+a wall 3 steps right
+a green box 1 step left and 1 step forward",0,False
+53,turn left,"Given the current observation, the green box is located 1 step left and 1 step forward from our current position. The best course of action is to move left and then move forward to reach the green box.
+
+ACTION: turn left","a wall 4 steps forward
+a wall 1 step left
+a green box 1 step right and 1 step forward",0,False
+54,turn right,"Given the current observation, the green box is located 1 step right and 1 step forward from our current position. The best course of action is to move right and then move forward to reach the green box.
+
+ACTION: turn right","a wall 6 steps forward
+a wall 3 steps right
+a green box 1 step left and 1 step forward",0,False
+55,turn left,"Given the current observation, the green box is located 1 step left and 1 step forward from our current position. The best course of action is to move left and then move forward to reach the green box.
+
+ACTION: turn left","a wall 4 steps forward
+a wall 1 step left
+a green box 1 step right and 1 step forward",0,False
+56,turn right,"Given the current observation, the green box is located 1 step right and 1 step forward from our current position. The best course of action is to move right and then move forward to reach the green box.
+
+ACTION: turn right","a wall 6 steps forward
+a wall 3 steps right
+a green box 1 step left and 1 step forward",0,False
+57,turn left,"Given the current observation, the green box is located 1 step left and 1 step forward from our current position. The best course of action is to move left and then move forward to reach the green box.
+
+ACTION: turn left","a wall 4 steps forward
+a wall 1 step left
+a green box 1 step right and 1 step forward",0,False
+58,turn right,"Given the current observation, the green box is located 1 step right and 1 step forward from our current position. The best course of action is to move right and then move forward to reach the green box.
+
+ACTION: turn right","a wall 6 steps forward
+a wall 3 steps right
+a green box 1 step left and 1 step forward",0,False
+59,turn left,"Given the current observation, the green box is located 1 step left and 1 step forward from our current position. The best course of action is to move left and then move forward to reach the green box.
+
+ACTION: turn left","a wall 4 steps forward
+a wall 1 step left
+a green box 1 step right and 1 step forward",0,False
+60,turn right,"Given the current observation, the green box is located 1 step right and 1 step forward from our current position. The best course of action is to move right and then move forward to reach the green box.
+
+ACTION: turn right","a wall 6 steps forward
+a wall 3 steps right
+a green box 1 step left and 1 step forward",0,False
+61,turn left,"Given the current observation, the green box is located 1 step left and 1 step forward from our current position. The best course of action is to move left and then move forward to reach the green box.
+
+ACTION: turn left","a wall 4 steps forward
+a wall 1 step left
+a green box 1 step right and 1 step forward",0,False
+62,turn right,"Given the current observation, the green box is located 1 step right and 1 step forward from our current position. The best course of action is to move right and then move forward to reach the green box.
+
+ACTION: turn right","a wall 6 steps forward
+a wall 3 steps right
+a green box 1 step left and 1 step forward",0,False
+63,turn left,"Given the current observation, the green box is located 1 step left and 1 step forward from our current position. The best course of action is to move left and then move forward to reach the green box.
+
+ACTION: turn left","a wall 4 steps forward
+a wall 1 step left
+a green box 1 step right and 1 step forward",0,True

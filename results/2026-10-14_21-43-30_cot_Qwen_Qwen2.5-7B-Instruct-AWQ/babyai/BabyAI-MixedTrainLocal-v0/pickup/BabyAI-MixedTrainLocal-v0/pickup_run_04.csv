@@ -1,0 +1,358 @@
+Step,Action,Reasoning,Observation,Reward,Done
+0,go forward,"Given the current observation, the best course of action is to move forward until we encounter the yellow key. Since there are walls 4 steps forward and 2 steps right, we need to move forward to avoid the walls.
+
+ACTION: go forward","a wall 3 steps forward
+a wall 2 steps right",0,False
+1,turn right,"Given the current observation, we see that there is a wall 3 steps forward and a wall 2 steps right. This means that moving forward will lead us directly into a wall. Therefore, the best course of action is to turn right to avoid the wall and continue our search for the yellow key.
+
+ACTION: turn right","a wall 2 steps forward
+a wall 3 steps left",0,False
+2,turn left,"Given the current observation, we have a wall 2 steps forward and a wall 3 steps left. Turning left would be the best course of action to avoid the wall and continue searching for the yellow key.
+
+ACTION: turn left","a wall 3 steps forward
+a wall 2 steps right",0,False
+3,turn right,"Given the current observation, we have a wall 3 steps forward and a wall 2 steps right. The best course of action would be to continue moving in a direction that avoids the walls and allows us to explore the area further.
+
+Step-by-step reasoning:
+1. Turning right from the current position would put us in a position where we can move forward without hitting the wall 2 steps right.
+2. Moving forward after turning right will allow us to continue exploring the area.
+
+ACTION: turn right","a wall 2 steps forward
+a wall 3 steps left",0,False
+4,turn left,"Given the current observation, we have a wall 2 steps forward and a wall 3 steps left. The best course of action would be to turn left to avoid the wall and continue exploring the area.
+
+Step-by-step reasoning:
+1. Turn left to avoid the wall 3 steps left.
+2. Move forward to progress in the new direction.
+
+ACTION: turn left","a wall 3 steps forward
+a wall 2 steps right",0,False
+5,turn right,"Given the current observation, we have a wall 3 steps forward and a wall 2 steps right. The best course of action would be to turn right to avoid the wall and continue exploring the area.
+
+Step-by-step reasoning:
+1. Turn right to avoid the wall 2 steps right.
+2. Move forward to progress in the new direction.
+
+ACTION: turn right","a wall 2 steps forward
+a wall 3 steps left",0,False
+6,turn left,"Given the current observation, we have a wall 2 steps forward and a wall 3 steps left. The best course of action would be to turn left to avoid the wall and continue exploring the area.
+
+Step-by-step reasoning:
+1. Turn left to avoid the wall 3 steps left.
+2. Move forward to progress in the new direction.
+
+ACTION: turn left","a wall 3 steps forward
+a wall 2 steps right",0,False
+7,turn right,"Given the current observation, we have a wall 3 steps forward and a wall 2 steps right. The best course of action would be to turn right to avoid the wall and continue exploring the area.
+
+Step-by-step reasoning:
+1. Turn right to avoid the wall 2 steps right.
+2. Move forward to progress in the new direction.
+
+ACTION: turn right","a wall 2 steps forward
+a wall 3 steps left",0,False
+8,go forward,"Given the current observation, we have a wall 2 steps forward and a wall 3 steps left. The best course of action would be to move forward to avoid the wall in front and then explore further.
+
+Step-by-step reasoning:
+1. Move forward to avoid the wall 2 steps forward.
+2. Check the surroundings after moving forward to see if there is any object or path to interact with.
+
+ACTION: go forward","a wall 1 step forward
+a wall 3 steps left",0,False
+9,turn left,"Given the current observation, we have a wall 1 step forward and a wall 3 steps left. The best course of action would be to move left to avoid the wall and continue exploring.
+
+Step-by-step reasoning:
+1. Move left to avoid the wall and explore the area.
+2. After moving left, check the surroundings to see if there is any object or path to interact with.
+
+ACTION: turn left","a wall 3 steps forward
+a wall 1 step right",0,False
+10,go forward,"Given the current observation, we have a wall 3 steps forward and a wall 1 step right. The best course of action would be to go forward to explore the area beyond the wall.
+
+Step-by-step reasoning:
+1. Move forward to explore the area beyond the wall.
+2. After moving forward, check the surroundings to see if there is any object or path to interact with.
+
+ACTION: go forward","a wall 2 steps forward
+a wall 1 step right",0,False
+11,turn right,"Given the current observation, we have a wall 2 steps forward and a wall 1 step right. The best course of action would be to turn right and then move forward to continue exploring the area.
+
+Step-by-step reasoning:
+1. Turn right to face a different direction.
+2. Move forward to explore the new area.
+
+ACTION: turn right","a wall 1 step forward
+a wall 2 steps left",0,False
+12,go forward,"Given the current observation, we have a wall 1 step forward and a wall 2 steps left. The best course of action would be to move forward to see what is behind the wall, as it might lead us closer to the yellow key.
+
+Step-by-step reasoning:
+1. Move forward to explore the area.
+2. Check the next observation to determine the next action.
+
+ACTION: go forward","a wall 1 step forward
+a wall 2 steps left",0,False
+13,turn right,"Given the current observation, we have walls both forward and to the left, which suggests that moving in any of these directions won't help us find the yellow key. Instead, we should explore the other possible directions: turning right or backtracking.
+
+Let's consider turning right:
+
+1. Turn right to see if there's an open path or the yellow key.
+2. If there is an open path, we can proceed forward.
+3. If not, we can reassess our options.
+
+ACTION: turn right","a wall 5 steps forward
+a wall 1 step left
+a yellow key 2 steps right and 3 steps forward",0,False
+14,go forward,"Given the current observation, the yellow key is located 2 steps right and 3 steps forward from your current position. This provides a clear path to the key. Here’s the step-by-step plan:
+
+1. Turn right to face the direction of the yellow key.
+2. Go forward 3 steps to reach the key.
+3. Pick up the yellow key.
+
+ACTION: go forward","a wall 4 steps forward
+a wall 1 step left
+a yellow key 2 steps right and 2 steps forward",0,False
+15,turn right,"Given the current observation, the yellow key is now located 2 steps right and 2 steps forward from your current position. The best course of action is to turn right and then proceed forward to reach the key.
+
+ACTION: turn right","a wall 6 steps forward
+a wall 3 steps right
+a yellow key 2 steps left and 2 steps forward",0,False
+16,turn left,"Given the current observation, the yellow key is located 2 steps left and 2 steps forward from your current position. The best course of action is to turn left and then proceed forward to reach the key.
+
+ACTION: turn left","a wall 4 steps forward
+a wall 1 step left
+a yellow key 2 steps right and 2 steps forward",0,False
+17,turn right,"Given the current observation, the yellow key is located 2 steps right and 2 steps forward from your current position. The best course of action is to turn right and then proceed forward to reach the key.
+
+ACTION: turn right","a wall 6 steps forward
+a wall 3 steps right
+a yellow key 2 steps left and 2 steps forward",0,False
+18,turn left,"Given the current observation, the yellow key is located 2 steps left and 2 steps forward from your current position. The best course of action is to turn left and then proceed forward to reach the key.
+
+ACTION: turn left","a wall 4 steps forward
+a wall 1 step left
+a yellow key 2 steps right and 2 steps forward",0,False
+19,turn right,"Given the current observation, the yellow key is located 2 steps right and 2 steps forward from your current position. The best course of action is to turn right and then proceed forward to reach the key.
+
+ACTION: turn right","a wall 6 steps forward
+a wall 3 steps right
+a yellow key 2 steps left and 2 steps forward",0,False
+20,turn left,"Given the current observation, the yellow key is located 2 steps left and 2 steps forward from your current position. The best course of action is to turn left and then proceed forward to reach the key.
+
+ACTION: turn left","a wall 4 steps forward
+a wall 1 step left
+a yellow key 2 steps right and 2 steps forward",0,False
+21,turn right,"Given the current observation, the yellow key is located 2 steps right and 2 steps forward from your current position. The best course of action is to turn right and then proceed forward to reach the key.
+
+ACTION: turn right","a wall 6 steps forward
+a wall 3 steps right
+a yellow key 2 steps left and 2 steps forward",0,False
+22,turn left,"Given the current observation, the yellow key is located 2 steps left and 2 steps forward from your current position. The best course of action is to turn left and then proceed forward to reach the key.
+
+ACTION: turn left","a wall 4 steps forward
+a wall 1 step left
+a yellow key 2 steps right and 2 steps forward",0,False
+23,turn right,"Given the current observation, the yellow key is located 2 steps right and 2 steps forward from your current position. The best course of action is to turn right and then proceed forward to reach the key.
+
+ACTION: turn right","a wall 6 steps forward
+a wall 3 steps right
+a yellow key 2 steps left and 2 steps forward",0,False
+24,turn left,"Given the current observation, the yellow key is located 2 steps left and 2 steps forward from your current position. The best course of action is to turn left and then proceed forward to reach the key.
+
+ACTION: turn left","a wall 4 steps forward
+a wall 1 step left
+a yellow key 2 steps right and 2 steps forward",0,False
+25,turn right,"Given the current observation, the yellow key is located 2 steps right and 2 steps forward from your current position. The best course of action is to turn right and then proceed forward to reach the key.
+
+ACTION: turn right","a wall 6 steps forward
+a wall 3 steps right
+a yellow key 2 steps left and 2 steps forward",0,False
+26,turn left,"Given the current observation, the yellow key is located 2 steps left and 2 steps forward from your current position. The best course of action is to turn left and then proceed forward to reach the key.
+
+ACTION: turn left","a wall 4 steps forward
+a wall 1 step left
+a yellow key 2 steps right and 2 steps forward",0,False
+27,turn right,"Given the current observation, the yellow key is located 2 steps right and 2 steps forward from your current position. The best course of action is to turn right and then proceed forward to reach the key.
+
+ACTION: turn right","a wall 6 steps forward
+a wall 3 steps right
+a yellow key 2 steps left and 2 steps forward",0,False
+28,turn left,"Given the current observation, the yellow key is located 2 steps left and 2 steps forward from your current position. The best course of action is to turn left and then proceed forward to reach the key.
+
+ACTION: turn left","a wall 4 steps forward
+a wall 1 step left
+a yellow key 2 steps right and 2 steps forward",0,False
+29,turn right,"Given the current observation, the yellow key is located 2 steps right and 2 steps forward from your current position. The best course of action is to turn right and then proceed forward to reach the key.
+
+ACTION: turn right","a wall 6 steps forward
+a wall 3 steps right
+a yellow key 2 steps left and 2 steps forward",0,False
+30,turn left,"Given the current observation, the yellow key is located 2 steps left and 2 steps forward from your current position. The best course of action is to turn left and then proceed forward to reach the key.
+
+ACTION: turn left","a wall 4 steps forward
+a wall 1 step left
+a yellow key 2 steps right and 2 steps forward",0,False
+31,turn right,"Given the current observation, the yellow key is located 2 steps right and 2 steps forward from your current position. The best course of action is to turn right and then proceed forward to reach the key.
+
+ACTION: turn right","a wall 6 steps forward
+a wall 3 steps right
+a yellow key 2 steps left and 2 steps forward",0,False
+32,turn left,"Given the current observation, the yellow key is located 2 steps left and 2 steps forward from your current position. The best course of action is to turn left and then proceed forward to reach the key.
+
+ACTION: turn left","a wall 4 steps forward
+a wall 1 step left
+a yellow key 2 steps right and 2 steps forward",0,False
+33,turn right,"Given the current observation, the yellow key is located 2 steps right and 2 steps forward from your current position. The best course of action is to turn right and then proceed forward to reach the key.
+
+ACTION: turn right","a wall 6 steps forward
+a wall 3 steps right
+a yellow key 2 steps left and 2 steps forward",0,False
+34,turn left,"Given the current observation, the yellow key is located 2 steps left and 2 steps forward from your current position. The best course of action is to turn left and then proceed forward to reach the key.
+
+ACTION: turn left","a wall 4 steps forward
+a wall 1 step left
+a yellow key 2 steps right and 2 steps forward",0,False
+35,turn right,"Given the current observation, the yellow key is located 2 steps right and 2 steps forward from your current position. The best course of action is to turn right and then proceed forward to reach the key.
+
+ACTION: turn right","a wall 6 steps forward
+a wall 3 steps right
+a yellow key 2 steps left and 2 steps forward",0,False
+36,turn left,"Given the current observation, the yellow key is located 2 steps left and 2 steps forward from your current position. The best course of action is to turn left and then proceed forward to reach the key.
+
+ACTION: turn left","a wall 4 steps forward
+a wall 1 step left
+a yellow key 2 steps right and 2 steps forward",0,False
+37,turn right,"Given the current observation, the yellow key is located 2 steps right and 2 steps forward from your current position. The best course of action is to turn right and then proceed forward to reach the key.
+
+ACTION: turn right","a wall 6 steps forward
+a wall 3 steps right
+a yellow key 2 steps left and 2 steps forward",0,False
+38,turn left,"Given the current observation, the yellow key is located 2 steps left and 2 steps forward from your current position. The best course of action is to turn left and then proceed forward to reach the key.
+
+ACTION: turn left","a wall 4 steps forward
+a wall 1 step left
+a yellow key 2 steps right and 2 steps forward",0,False
+39,turn right,"Given the current observation, the yellow key is located 2 steps right and 2 steps forward from your current position. The best course of action is to turn right and then proceed forward to reach the key.
+
+ACTION: turn right","a wall 6 steps forward
+a wall 3 steps right
+a yellow key 2 steps left and 2 steps forward",0,False
+40,turn left,"Given the current observation, the yellow key is located 2 steps left and 2 steps forward from your current position. The best course of action is to turn left and then proceed forward to reach the key.
+
+ACTION: turn left","a wall 4 steps forward
+a wall 1 step left
+a yellow key 2 steps right and 2 steps forward",0,False
+41,turn right,"Given the current observation, the yellow key is located 2 steps right and 2 steps forward from your current position. The best course of action is to turn right and then proceed forward to reach the key.
+
+ACTION: turn right","a wall 6 steps forward
+a wall 3 steps right
+a yellow key 2 steps left and 2 steps forward",0,False
+42,turn left,"Given the current observation, the yellow key is located 2 steps left and 2 steps forward from your current position. The best course of action is to turn left and then proceed forward to reach the key.
+
+ACTION: turn left","a wall 4 steps forward
+a wall 1 step left
+a yellow key 2 steps right and 2 steps forward",0,False
+43,turn right,"Given the current observation, the yellow key is located 2 steps right and 2 steps forward from your current position. The best course of action is to turn right and then proceed forward to reach the key.
+
+ACTION: turn right","a wall 6 steps forward
+a wall 3 steps right
+a yellow key 2 steps left and 2 steps forward",0,False
+44,turn left,"Given the current observation, the yellow key is located 2 steps left and 2 steps forward from your current position. The best course of action is to turn left and then proceed forward to reach the key.
+
+ACTION: turn left","a wall 4 steps forward
+a wall 1 step left
+a yellow key 2 steps right and 2 steps forward",0,False
+45,turn right,"Given the current observation, the yellow key is located 2 steps right and 2 steps forward from your current position. The best course of action is to turn right and then proceed forward to reach the key.
+
+ACTION: turn right","a wall 6 steps forward
+a wall 3 steps right
+a yellow key 2 steps left and 2 steps forward",0,False
+46,turn left,"Given the current observation, the yellow key is located 2 steps left and 2 steps forward from your current position. The best course of action is to turn left and then proceed forward to reach the key.
+
+ACTION: turn left","a wall 4 steps forward
+a wall 1 step left
+a yellow key 2 steps right and 2 steps forward",0,False
+47,turn right,"Given the current observation, the yellow key is located 2 steps right and 2 steps forward from your current position. The best course of action is to turn right and then proceed forward to reach the key.
+
+ACTION: turn right","a wall 6 steps forward
+a wall 3 steps right
+a yellow key 2 steps left and 2 steps forward",0,False
+48,turn left,"Given the current observation, the yellow key is located 2 steps left and 2 steps forward from your current position. The best course of action is to turn left and then proceed forward to reach the key.
+
+ACTION: turn left","a wall 4 steps forward
+a wall 1 step left
+a yellow key 2 steps right and 2 steps forward",0,False
+49,turn right,"Given the current observation, the yellow key is located 2 steps right and 2 steps forward from your current position. The best course of action is to turn right and then proceed forward to reach the key.
+
+ACTION: turn right","a wall 6 steps forward
+a wall 3 steps right
+a yellow key 2 steps left and 2 steps forward",0,False
+50,turn left,"Given the current observation, the yellow key is located 2 steps left and 2 steps forward from your current position. The best course of action is to turn left and then proceed forward to reach the key.
+
+ACTION: turn left","a wall 4 steps forward
+a wall 1 step left
+a yellow key 2 steps right and 2 steps forward",0,False
+51,turn right,"Given the current observation, the yellow key is located 2 steps right and 2 steps forward from your current position. The best course of action is to turn right and then proceed forward to reach the key.
+
+ACTION: turn right","a wall 6 steps forward
+a wall 3 steps right
+a yellow key 2 steps left and 2 steps forward",0,False
+52,turn left,"Given the current observation, the yellow key is located 2 steps left and 2 steps forward from your current position. The best course of action is to turn left and then proceed forward to reach the key.
+
+ACTION: turn left","a wall 4 steps forward
+a wall 1 step left
+a yellow key 2 steps right and 2 steps forward",0,False
+53,turn right,"Given the current observation, the yellow key is located 2 steps right and 2 steps forward from your current position. The best course of action is to turn right and then proceed forward to reach the key.
+
+ACTION: turn right","a wall 6 steps forward
+a wall 3 steps right
+a yellow key 2 steps left and 2 steps forward",0,False
+54,turn left,"Given the current observation, the yellow key is located 2 steps left and 2 steps forward from your current position. The best course of action is to turn left and then proceed forward to reach the key.
+
+ACTION: turn left","a wall 4 steps forward
+a wall 1 step left
+a yellow key 2 steps right and 2 steps forward",0,False
+55,turn right,"Given the current observation, the yellow key is located 2 steps right and 2 steps forward from your current position. The best course of action is to turn right and then proceed forward to reach the key.
+
+ACTION: turn right","a wall 6 steps forward
+a wall 3 steps right
+a yellow key 2 steps left and 2 steps forward",0,False
+56,turn left,"Given the current observation, the yellow key is located 2 steps left and 2 steps forward from your current position. The best course of action is to turn left and then proceed forward to reach the key.
+
+ACTION: turn left","a wall 4 steps forward
+a wall 1 step left
+a yellow key 2 steps right and 2 steps forward",0,False
+57,turn right,"Given the current observation, the yellow key is located 2 steps right and 2 steps forward from your current position. The best course of action is to turn right and then proceed forward to reach the key.
+
+ACTION: turn right","a wall 6 steps forward
+a wall 3 steps right
+a yellow key 2 steps left and 2 steps forward",0,False
+58,turn left,"Given the current observation, the yellow key is located 2 steps left and 2 steps forward from your current position. The best course of action is to turn left and then proceed forward to reach the key.
+
+ACTION: turn left","a wall 4 steps forward
+a wall 1 step left
+a yellow key 2 steps right and 2 steps forward",0,False
+59,turn right,"Given the current observation, the yellow key is located 2 steps right and 2 steps forward from your current position. The best course of action is to turn right and then proceed forward to reach the key.
+
+ACTION: turn right","a wall 6 steps forward
+a wall 3 steps right
+a yellow key 2 steps left and 2 steps forward",0,False
+60,turn left,"Given the current observation, the yellow key is located 2 steps left and 2 steps forward from your current position. The best course of action is to turn left and then proceed forward to reach the key.
+
+ACTION: turn left","a wall 4 steps forward
+a wall 1 step left
+a yellow key 2 steps right and 2 steps forward",0,False
+61,turn right,"Given the current observation, the yellow key is located 2 steps right and 2 steps forward from your current position. The best course of action is to turn right and then proceed forward to reach the key.
+
+ACTION: turn right","a wall 6 steps forward
+a wall 3 steps right
+a yellow key 2 steps left and 2 steps forward",0,False
+62,turn left,"Given the current observation, the yellow key is located 2 steps left and 2 steps forward from your current position. The best course of action is to turn left and then proceed forward to reach the key.
+
+ACTION: turn left","a wall 4 steps forward
+a wall 1 step left
+a yellow key 2 steps right and 2 steps forward",0,False
+63,turn right,"Given the current observation, the yellow key is located 2 steps right and 2 steps forward from your current position. The best course of action is to turn right and then proceed forward to reach the key.
+
+ACTION: turn right","a wall 6 steps forward
+a wall 3 steps right
+a yellow key 2 steps left and 2 steps forward",0,True

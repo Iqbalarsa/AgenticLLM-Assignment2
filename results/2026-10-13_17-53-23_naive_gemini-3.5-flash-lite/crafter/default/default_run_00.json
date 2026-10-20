@@ -1,0 +1,80 @@
+{
+    "task": "default",
+    "action_frequency": {
+        "Move North": 24,
+        "Move West": 23,
+        "Do": 48,
+        "Place Table": 17,
+        "Make Wood Pickaxe": 5,
+        "Make Wood Sword": 3,
+        "Move South": 17,
+        "Make Stone Pickaxe": 9,
+        "Move East": 10,
+        "Make Stone Sword": 3,
+        "Place Stone": 1,
+        "Place Furnace": 2,
+        "Make Iron Pickaxe": 1,
+        "Noop": 2,
+        "Sleep": 7
+    },
+    "input_tokens": 333290,
+    "output_tokens": 328,
+    "done": true,
+    "episode_return": 7.1,
+    "num_steps": 172,
+    "failed_candidates": [
+        "Move SouthEast",
+        "Move NorthEast"
+    ],
+    "score": 8.0,
+    "progression": 0.36363636363636365,
+    "achievements": {
+        "collect_coal": 2,
+        "collect_diamond": 0,
+        "collect_drink": 2,
+        "collect_iron": 0,
+        "collect_sapling": 0,
+        "collect_stone": 6,
+        "collect_wood": 8,
+        "defeat_skeleton": 0,
+        "defeat_zombie": 2,
+        "eat_cow": 0,
+        "eat_plant": 0,
+        "make_iron_pickaxe": 0,
+        "make_iron_sword": 0,
+        "make_stone_pickaxe": 0,
+        "make_stone_sword": 0,
+        "make_wood_pickaxe": 2,
+        "make_wood_sword": 0,
+        "place_furnace": 0,
+        "place_plant": 0,
+        "place_stone": 1,
+        "place_table": 3,
+        "wake_up": 0
+    },
+    "process_num": null,
+    "seed": 4268833007,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "gemini",
+        "model_id": "gemini-3.5-flash-lite",
+        "base_url": "http://localhost:8080/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

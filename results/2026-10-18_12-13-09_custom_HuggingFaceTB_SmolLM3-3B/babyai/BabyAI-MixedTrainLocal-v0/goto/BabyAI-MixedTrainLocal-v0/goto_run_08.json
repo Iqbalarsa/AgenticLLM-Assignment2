@@ -1,0 +1,45 @@
+{
+    "task": "BabyAI-MixedTrainLocal-v0/goto",
+    "action_frequency": {
+        "go forward": 4,
+        "turn right": 1
+    },
+    "input_tokens": 3395,
+    "output_tokens": 2486,
+    "done": true,
+    "episode_return": 0.9296875,
+    "num_steps": 5,
+    "failed_candidates": [
+        null,
+        null,
+        null,
+        null
+    ],
+    "mission": "go to the purple box",
+    "progression": 1.0,
+    "process_num": "ForkProcess-5",
+    "seed": 1977581789,
+    "agent": {
+        "type": "custom",
+        "remember_cot": true,
+        "max_text_history": 5,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "openai",
+        "model_id": "HuggingFaceTB/SmolLM3-3B",
+        "base_url": "http://localhost:8080/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 512,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

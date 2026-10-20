@@ -1,0 +1,45 @@
+{
+    "task": "BabyAI-MixedTrainLocal-v0/pickup",
+    "action_frequency": {
+        "go forward": 21,
+        "turn right": 7,
+        "turn left": 12,
+        "toggle": 1,
+        "pick up": 5
+    },
+    "input_tokens": 34899,
+    "output_tokens": 4009,
+    "done": true,
+    "episode_return": 0.353125,
+    "num_steps": 46,
+    "failed_candidates": [
+        "go forward\n\nThis action aligns with the updated plan of picking up the green key."
+    ],
+    "mission": "pick up the green key",
+    "progression": 1.0,
+    "process_num": "ForkProcess-3",
+    "seed": 2835941507,
+    "agent": {
+        "type": "custom",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "openai",
+        "model_id": "Qwen/Qwen2.5-7B-Instruct-AWQ",
+        "base_url": "http://localhost:8080/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 512,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

@@ -1,0 +1,20 @@
+Step,Action,Reasoning,Observation,Reward,Done
+0,turn left,"Given the current observation, we need to navigate around the walls to find the blue box. Let's break down the steps:
+
+1. There are walls blocking our path forward and to the right. We should start by turning left to avoid the wall directly in front of us.
+2. After turning left, we can proceed forward until we encounter another wall or find the blue box.
+
+ACTION: turn left","a wall 1 step left
+a blue box 4 steps forward",0,False
+1,go forward,"Given the current observation, we see that there is a wall to our left and a blue box 4 steps directly in front of us. The best course of action is to move forward towards the blue box.
+
+ACTION: go forward","a wall 1 step left
+a blue box 3 steps forward",0,False
+2,go forward,"Given the current observation, we see that there is a wall to our left and a blue box 3 steps directly in front of us. The best course of action is to continue moving forward towards the blue box.
+
+ACTION: go forward","a wall 1 step left
+a blue box 2 steps forward",0,False
+3,go forward,"Given the current observation, we now see that the blue box is just 2 steps forward. The best course of action is to move forward again to reach the blue box.
+
+ACTION: go forward","a wall 1 step left
+a blue box 1 step forward",0.94375,True

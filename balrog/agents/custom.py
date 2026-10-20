@@ -28,11 +28,13 @@ class CustomAgent(BaseAgent):
         plan_text = f"Current Plan:\n{self.plan}\n" if self.plan else "You have no plan yet.\n"
 
         planning_instructions = """
-Review the current plan above if present. Decide whether to continue with it or make changes.
-If you make changes, provide the updated plan. Then, provide the next action to take.
-You must output an action at every step.
-Format your answer in the following way:
-PLAN: <your updated plan if changed, or "No changes to the plan." if the current plan is good>
+Review the current plan above if present.
+Think step by step: evaluate what happened from your previous action, analyze the current observation, and decide whether to update the plan or keep it.
+Finally, determine the best next action.
+
+Format your answer strictly in the following way:
+THOUGHT: <your step-by-step reasoning about the observation and situation>
+PLAN: <write your new plan, or "No changes to the plan." ONLY if you already have a plan above>
 ACTION: <your next action>
         """.strip()
 
@@ -43,14 +45,18 @@ ACTION: <your next action>
         response = self.client.generate(messages)
 
         # Extract the plan and action from the LLM's response
-        plan, action = self._extract_plan_and_action(response.completion)
-
+        thought, plan, action = self._extract_plan_and_action(response.completion)
+        
         # Update the internal plan if it has changed
-        if plan != "No changes to the plan.":
+        is_no_changes = "no changes" in plan.lower()
+        
+        if plan and not is_no_changes:
             self.plan = plan
 
         # Save the plan in the response.reasoning field and the action in response.completion
-        response = response._replace(reasoning=plan, completion=action)
+        # Combine thought and plan into reasoning, and set action as completion
+        combined_reasoning = f"Thought: {thought}\nPlan: {plan}" if thought else plan
+        response = response._replace(reasoning=combined_reasoning, completion=action)
         return response
 
     def _extract_plan_and_action(self, response_text):
@@ -62,10 +68,14 @@ ACTION: <your next action>
         Returns:
             tuple: A tuple containing the extracted plan and action.
         """
+        thought_match = re.search(
+            r"THOUGHT:\s*(.*?)(?=\nPLAN:|\Z)", response_text, re.IGNORECASE | re.DOTALL
+        )
         plan_match = re.search(r"PLAN:\s*(.*?)(?=\nACTION:|\Z)", response_text, re.IGNORECASE | re.DOTALL)
         action_match = re.search(r"ACTION:\s*(.*)", response_text, re.IGNORECASE | re.DOTALL)
 
+        thought = thought_match.group(1).strip() if thought_match else ""
         plan = plan_match.group(1).strip() if plan_match else "No changes to the plan."
         action = action_match.group(1).strip() if action_match else None
 
-        return plan, action
+        return thought, plan, action

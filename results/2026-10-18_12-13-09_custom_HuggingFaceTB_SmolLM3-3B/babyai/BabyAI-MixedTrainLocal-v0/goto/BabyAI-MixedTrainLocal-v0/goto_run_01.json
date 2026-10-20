@@ -1,0 +1,50 @@
+{
+    "task": "BabyAI-MixedTrainLocal-v0/goto",
+    "action_frequency": {
+        "go forward": 10,
+        "turn right": 1
+    },
+    "input_tokens": 9374,
+    "output_tokens": 4857,
+    "done": true,
+    "episode_return": 0.8453125,
+    "num_steps": 11,
+    "failed_candidates": [
+        "turn right. Facing the direction of the green key. Then, go forward. Now, how far is the key from here? The original observation says it's two steps right and one forward. So if I move forward once, I take one step towards it. Then, moving forward again would take me another step. But there's a wall two steps forward. So after the first forward step, maybe I can continue moving forward, but the wall is two steps away. Hmm, maybe after the first forward step, I can turn left or right again?\n\nWait, the initial position: wall two steps forward, wall one step left, key two steps right and one forward. So if I turn right, then move forward, I would be one step towards the key. Then, maybe another step forward would take me",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        "turn right\nPLAN: No changes to the plan (will execute turn right followed by go forward)"
+    ],
+    "mission": "go to the green key",
+    "progression": 1.0,
+    "process_num": "ForkProcess-2",
+    "seed": 2035401276,
+    "agent": {
+        "type": "custom",
+        "remember_cot": true,
+        "max_text_history": 5,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "openai",
+        "model_id": "HuggingFaceTB/SmolLM3-3B",
+        "base_url": "http://localhost:8080/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 512,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

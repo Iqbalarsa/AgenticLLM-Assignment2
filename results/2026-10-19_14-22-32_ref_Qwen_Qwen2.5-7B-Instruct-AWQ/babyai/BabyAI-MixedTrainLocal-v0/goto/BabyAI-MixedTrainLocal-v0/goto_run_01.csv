@@ -1,0 +1,213 @@
+Step,Action,Reasoning,Observation,Reward,Done
+0,turn left,"Thought: Since this is the beginning of the game, there is no prior action to consider. My immediate goal is to find the blue ball. Based on the current observation, there are walls blocking my path both forward and to the right. This means that the blue ball is not directly ahead or to the right. I need to explore further to the left.
+Plan: turn left","a wall 5 steps forward
+a wall 1 step right",0,False
+1,turn right,"Thought: The previous action was to turn left, which means I am now facing north. The observation shows a wall 5 steps forward and a wall 1 step right. Since there is a wall directly in front of me, moving forward would not be possible without first finding a way around the obstacle. Therefore, I need to move to the right to try and find a path.
+Plan: Turn right","a wall 1 step forward
+a wall 2 steps right",0,False
+2,turn left,"Thought: From the previous observation, I turned right expecting to move closer to the blue ball. However, the current observation shows that there is a wall both forward and to the right. This suggests that the walls were blocking my path, and turning right did not bring me closer to the blue ball. Given this, I should try another direction.
+Plan: Turn left","a wall 5 steps forward
+a wall 1 step right",0,False
+3,turn left,"Thought: From the previous observations, turning left did not help as there was a wall in front of me. Now, the walls are positioned differently. Turning left again might allow me to move forward without hitting a wall. If there's still a wall in front after this turn, I will reassess.
+Plan: Turn left","a wall 6 steps forward
+a wall 2 steps left
+a blue ball 3 steps right and 5 steps forward",0,False
+4,go forward,"Thought: From the previous observations, it seems like turning left has led us towards the walls, but not directly towards the blue ball. This suggests that continuing to turn left might not be the optimal direction. Now, looking at the current observation, we see that the blue ball is located 3 steps right and 5 steps forward. Based on this information, we should adjust our plan to move in the direction of the blue ball.
+Plan: Move towards the blue ball","a wall 5 steps forward
+a wall 2 steps left
+a blue ball 3 steps right and 4 steps forward",0,False
+5,go forward,"Thought: From the previous observation, I moved forward and found the blue ball 3 steps right and 4 steps forward. Now, the blue ball is directly in my path. Since there are walls blocking the path to the right and left, I should continue moving forward until I reach the blue ball.
+Plan: Move directly towards the blue ball.","a wall 4 steps forward
+a wall 2 steps left
+a blue ball 3 steps right and 3 steps forward",0,False
+6,turn right,"Thought: From the previous observations, moving forward brought me closer to the blue ball but did not reach it yet. Now, with the observation showing that the blue ball is 3 steps right and 3 steps forward, I need to adjust my path to align with the ball's position.
+Plan: Turn right to face the direction where the blue ball is located, then move forward to reach it.","a wall 5 steps forward
+a wall 3 steps right
+a blue ball 3 steps left and 3 steps forward",0,False
+7,turn right,"Thought: From the previous observation, we were facing towards the blue ball but couldn't reach it directly. The walls blocked our path. Now, the observation shows that we need to turn right to face the blue ball directly. Once we face it, we can move forward to reach the blue ball.
+Plan: Turn right to face the blue ball, then move forward to reach it.","a wall 3 steps forward
+a wall 2 steps right",0,False
+8,go forward,"Thought: From the previous observations, turning right allowed me to face the blue ball. Now, the observation shows that there is a wall 3 steps forward and 2 steps right. This means I need to continue moving forward to reach the blue ball.
+Plan: Move forward until the blue ball is directly in front of me.","a wall 2 steps forward
+a wall 2 steps right",0,False
+9,turn right,"Thought: From the previous observations, moving forward caused the blue ball to move out of my direct line of sight. Therefore, I need to turn right to face the blue ball again before proceeding forward.
+Plan: Turn right to face the blue ball.","a wall 2 steps forward
+a wall 2 steps left",0,False
+10,go forward,"Thought: From the previous observation, turning right was aimed at facing the blue ball. However, the current observation shows that there are walls both forward and to the left, indicating that we need to adjust our approach. Since turning right did not reveal the blue ball and only showed walls, we should try going forward instead to see if we can find the blue ball directly ahead or to the sides.
+Plan: No changes to the plan.","a wall 1 step forward
+a wall 2 steps left",0,False
+11,turn left,"Thought: From the previous observation, I was facing towards the blue ball, but after turning right, the walls shifted. This means I am now facing away from the blue ball. To proceed, I need to turn left to face the blue ball again.
+Plan: Turn left to face the blue ball.","a wall 2 steps forward
+a wall 1 step right",0,False
+12,turn right,"Thought: From the previous observations, I turned left and moved forward, but there seems to be a wall in my path. This suggests that turning left was not the correct direction to approach the blue ball. Now, I need to determine the correct direction to face the blue ball. Given the walls observed, it seems that moving right might be the correct direction.
+Plan: Turn right to face the blue ball.","a wall 1 step forward
+a wall 2 steps left",0,False
+13,turn left,"Thought: From the previous observation, turning right allowed me to face the direction where the blue ball was located. Now, the observation shows a wall 1 step forward and a wall 2 steps left. This means I am now facing the correct direction (towards the blue ball) but there is a wall blocking my path. To proceed, I need to move around the wall. Since the wall is 1 step forward, I should take one step back first to avoid hitting it, then move forward to reach the blue ball.
+Plan: Turn left to face the direction of the blue ball.","a wall 2 steps forward
+a wall 1 step right",0,False
+14,turn left,"Thought: From the previous observations, it seems like there is a wall obstructing my path forward. Turning left might help me find the blue ball without hitting walls. However, the current observation still shows a wall 2 steps forward, indicating that turning left did not clear the path. Given this, I need to continue exploring other directions until I find the blue ball.
+Plan: Continue exploring by turning left again to see if it leads to the blue ball.","a wall 6 steps forward
+a wall 2 steps right",0,False
+15,go forward,"Thought: From the observations, there seems to be no immediate path to the blue ball as the walls block the way. My previous actions of turning left repeatedly did not lead to any objects or clear paths. Given the current observation, continuing to turn left does not seem promising either, as it keeps leading back to walls.
+Plan: No changes to the plan.","a wall 5 steps forward
+a wall 2 steps right",0,False
+16,turn left,"Thought: From the previous observations, turning left did not lead to the blue ball, as it either resulted in walls or didn't change the observation significantly. Continuing to turn left might help explore different paths, but it's also possible that turning right might lead us closer to the blue ball since it hasn't been explored yet.
+Plan: Continue exploring by turning left to see if it leads to the blue ball.","a wall 5 steps forward
+a wall 2 steps left
+a blue ball 3 steps right and 4 steps forward",0,False
+17,turn left,"Thought: From the previous observation, we moved forward, which brought us closer to a wall but did not bring us closer to the blue ball. The observation now shows that the blue ball is 3 steps right and 4 steps forward. Turning left is a logical move to continue exploring towards the blue ball.
+Plan: Continue exploring by turning left to see if it leads to the blue ball.","a wall 2 steps forward
+a wall 2 steps left",0,False
+18,turn right,"Thought: From the previous observation, turning left did not lead me closer to the blue ball. Now, with the observation showing walls directly in front and to the left, turning left again would likely continue moving me in a circular path without finding the blue ball. Given this, I should explore a different direction.
+Plan: Turn right to explore a new path towards the blue ball.","a wall 5 steps forward
+a wall 2 steps left
+a blue ball 3 steps right and 4 steps forward",0,False
+19,turn right,"Thought: From the previous observation, we were facing a path that led us to the blue ball. However, turning left didn't help us move closer to the ball. Now, we have a clear path to the right that leads directly to the blue ball. Turning right seems like the best move to proceed towards the ball.
+Plan: Turn right to move closer to the blue ball.","a wall 5 steps forward
+a wall 2 steps right",0,False
+20,turn left,"Thought: From the previous observations, it seems that turning right moved me closer to the blue ball. However, the current observation shows that there are walls blocking my path both forward and to the right. Given this, I need to find a different direction to proceed towards the blue ball.
+Plan: Turn left to continue moving towards the blue ball.","a wall 5 steps forward
+a wall 2 steps left
+a blue ball 3 steps right and 4 steps forward",0,False
+21,turn left,"Thought: From the previous observations, turning right moved me closer to the walls at the left and forward, which did not help in finding the blue ball. Turning left again might help me move closer to the blue ball without hitting any walls.
+Plan: Continue moving towards the blue ball by turning left.","a wall 2 steps forward
+a wall 2 steps left",0,False
+22,turn left,"Thought: From the previous observation, we were moving towards the blue ball by turning left. However, the walls obstructed our path, so we turned left again. Now, we see that there is still a wall 2 steps forward and 2 steps left. This means we need to continue moving towards the blue ball by turning left until we clear the obstacles.
+Plan: Continue moving towards the blue ball by turning left.","a wall 2 steps forward
+a wall 2 steps right",0,False
+23,turn left,"Thought: From the previous observations, we moved left, but the blue ball was not in our direct line of movement. Now, we have walls blocking our path both forward and to the right. Given this, it makes sense to continue moving left until we find a path towards the blue ball.
+Plan: Continue moving left until we find a path towards the blue ball.","a wall 5 steps forward
+a wall 2 steps right",0,False
+24,go forward,"Thought: From the previous observations, it seems like turning left consistently has led us into walls. Given the current observation, there is no wall directly ahead or to the right. This suggests that continuing to turn left might not be the best strategy as it might lead us in circles. Instead, let's try going forward to see if we can move closer to the blue ball.
+Plan: Go forward to see if this leads us closer to the blue ball.","a wall 4 steps forward
+a wall 2 steps right",0,False
+25,go forward,"Thought: From the previous observations, turning left consistently moved me towards the walls. This suggests that the blue ball is likely not in the direction of the walls. Turning left again would likely move me further away from the blue ball. Therefore, moving forward seems like a reasonable next step to continue heading towards the blue ball.
+Plan: Go forward to see if this leads us closer to the blue ball.","a wall 3 steps forward
+a wall 2 steps right",0,False
+26,go forward,"Thought: From the observations, we are still facing walls as we move forward. This suggests we might be circling around obstacles or moving in a loop. However, going forward seems like a reasonable next step to try and get closer to the blue ball. Let's continue this plan for now.
+Plan: Go forward to see if this leads us closer to the blue ball.","a wall 2 steps forward
+a wall 2 steps right",0,False
+27,go forward,"Thought: From the observations, it seems like going forward has consistently reduced the distance to the wall in front of me. This suggests that I am moving in the right direction. However, the walls to my right have not changed, which means there might be obstacles there as well. My plan is to continue moving forward until I find an opening or the blue ball.
+Plan: Go forward until an opening is found or the blue ball is reached.","a wall 1 step forward
+a wall 2 steps right",0,False
+28,turn right,"Thought: From the observations, it seems there is a wall directly in front of me after every attempt to move forward. This suggests that moving forward is not leading to the blue ball but rather into walls. Given this, I should consider turning to the side to explore other paths.
+Plan: Turn right to explore the path on the right side.","a wall 2 steps forward
+a wall 1 step left",0,False
+29,turn right,"Thought: From the previous observations, I moved towards the right side of the wall, but now I see that there's a wall both 2 steps forward and 1 step left. This indicates that there is a wall directly in front of me and to my left. My initial plan was to turn right, which would be a good move since there seems to be an unexplored path on the right side. After turning right, I should move forward to continue exploring.
+Plan: Turn right to explore the path on the right side.","a wall 6 steps forward
+a wall 2 steps left",0,False
+30,go forward,"Thought: From the previous observations, it seems like there is a wall blocking the path directly ahead. Turning right allows me to explore the path on the right side. After turning right, the walls are still blocking the path forward, so I should continue to explore by going forward.
+Plan: Continue exploring by going forward.","a wall 5 steps forward
+a wall 2 steps left",0,False
+31,turn left,"Thought: From the previous observations, it seems that the walls are blocking my path forward. Turning right was not leading me closer to the blue ball either. Given the current observation, there are still walls in the forward direction and to the left. Since going forward isn't an option and turning right hasn't brought me closer to the ball, I should consider exploring other directions. The left might be a promising direction as it hasn't been blocked yet.
+Plan: Explore the left direction.","a wall 2 steps forward
+a wall 2 steps left",0,False
+32,go forward,"Thought: From the previous action of turning left, we moved towards the left direction. However, upon observing again, we are still facing a wall both 2 steps forward and 2 steps left. This suggests that moving further in the left direction won't help us find the blue ball. Given this information, we should explore another direction.
+Plan: Explore the forward direction.","a wall 1 step forward
+a wall 2 steps left",0,False
+33,turn left,"Thought: From the previous observations, it seems that going forward led me to a wall, so continuing in this direction is not feasible. The walls to the left indicate that there might be a way to proceed by moving left first. Turning left could provide a different path.
+Plan: Explore the left direction.","a wall 2 steps forward
+a wall 1 step right",0,False
+34,go forward,"Thought: From the previous observations, moving forward has consistently reduced the number of steps to the wall, suggesting we are making progress through the environment. The current observation indicates a wall to the right, which aligns with our exploration plan. Since the wall is only 1 step to the right, it's likely that continuing straight ahead will lead us to find the blue ball. Therefore, there is no need to deviate from the plan of exploring the left direction.
+Plan: Explore the left direction.","a wall 1 step forward
+a wall 1 step right",0,False
+35,turn right,"Thought: From the previous observations, it seems like moving forward consistently leads to walls. Turning left was meant to explore the left side, but the observation now shows a wall 1 step right, indicating that turning left did not reveal anything new. Given the lack of progress towards finding the blue ball, I need to re-evaluate my approach.
+Plan: Explore the right direction.","a wall 1 step forward
+a wall 1 step left",0,False
+36,go forward,"Thought: From the previous observations, I encountered walls both to the left and forward. Turning right allowed me to move closer to the walls on both sides, indicating a potential path ahead. Now, with a wall directly in front and to the right, going forward would likely lead me to the blue ball. However, since there's also a wall to the left, I should first check if the blue ball is to the right or ahead. Going forward seems the most logical next step as it could lead directly to the blue ball.
+Plan: Explore the path ahead.","a wall 1 step forward
+a wall 1 step left",0,False
+37,turn right,"Thought: From the previous observations, it seems like there are walls obstructing my path directly forward and to the left. Given this, going forward again would likely result in hitting another wall. My next best move is to explore the right side since there's no indication of an obstacle there yet.
+Plan: Explore the right side.","a wall 6 steps forward
+a wall 1 step left",0,False
+38,turn right,"Thought: From the previous observations, going forward and turning right both led to walls, indicating that the walls are blocking my path. Turning right again will likely lead me back to the same configuration. Therefore, I should explore the right side as planned. Since there's a wall to the left, I should continue moving right.
+Plan: Explore the right side.","a wall 6 steps forward
+a wall 1 step right
+a blue ball 1 step left and 5 steps forward",0,False
+39,go forward,"Thought: From the previous observation, I turned right to explore the right side. However, the current observation shows that there is still a wall 6 steps forward and only a blue ball 1 step left and 5 steps forward. This means turning right did not help me get closer to the blue ball. Therefore, I should continue exploring forward until I find the blue ball.
+Plan: Continue exploring forward until the blue ball is in front of me.","a wall 5 steps forward
+a wall 1 step right
+a blue ball 1 step left and 4 steps forward",0,False
+40,go forward,"Thought: From the previous observation, I turned right and moved forward. Now, the blue ball is 1 step left and 4 steps forward from my current position. My plan was to continue moving forward until the blue ball is in front of me. Since the blue ball is now within reach, I should move forward again to get closer to it.
+Plan: Continue moving forward until the blue ball is directly in front of me.","a wall 4 steps forward
+a wall 1 step right
+a blue ball 1 step left and 3 steps forward",0,False
+41,turn left,"Thought: From the previous observation, we were moving towards the blue ball. Now, the blue ball is 3 steps forward from our position. Since we are currently 4 steps forward from the blue ball, we need to move back one step to align ourselves correctly with the blue ball.
+Plan: Move back one step to be aligned with the blue ball.","a wall 6 steps forward
+a wall 3 steps left
+a blue ball 3 steps right and 1 step forward",0,False
+42,turn left,"Thought: From the previous observations, I moved towards the blue ball but it seems I need to adjust my position. The observation now shows that the blue ball is 3 steps right and 1 step forward. To align with the blue ball, I need to move left to get into the correct position.
+Plan: Move left to align with the blue ball.","a wall 3 steps forward
+a wall 1 step left",0,False
+43,turn left,"Thought: From the previous observations, we moved forward, but the blue ball was not in our direct path. We then turned left, which changed our orientation but didn't bring us closer to the blue ball. Now, the observation shows that the blue ball is 3 steps right and 1 step forward. This means we need to move left to align ourselves with the blue ball before proceeding forward.
+Plan: Move left to align with the blue ball.","a wall 1 step forward
+a wall 3 steps right",0,False
+44,go forward,"Thought: From the previous observations, it seems like turning left did not lead me closer to the blue ball. Now, the walls are positioned such that there is a clear path to the blue ball if I move forward. Therefore, I should try moving forward to see if the blue ball is within reach.
+Plan: Move forward to check if the blue ball is in front of me.","a wall 1 step forward
+a wall 3 steps right",0,False
+45,go forward,"Thought: From the previous observations, it seems that turning left repeatedly has moved me closer to the walls, but not necessarily towards the blue ball. The last observation indicates that there is a wall in front and to the right, which suggests that the blue ball might be directly in front of me after these turns. Going forward now should help me confirm if the blue ball is indeed in front of me.
+Plan: Move forward to check if the blue ball is in front of me.","a wall 1 step forward
+a wall 3 steps right",0,False
+46,turn right,"Thought: From the previous observations, moving forward did not change the environment, as both observations were identical: ""a wall 1 step forward, a wall 3 steps right"". This suggests that there might be an obstacle preventing us from reaching the blue ball directly ahead. Given the current observation is the same, it indicates we need to find another direction to approach the blue ball.
+Plan: Move right to check if the blue ball is in a different direction.","a wall 3 steps forward
+a wall 1 step left",0,False
+47,go forward,"Thought: From the previous observations, it seems like there are walls obstructing my path directly forward. The plan was to move right to check if the blue ball is in a different direction. Based on the current observation, there are walls both forward and to the left, indicating that moving right might not be beneficial as it could still encounter walls. Let's try going forward again to see if we can clear the initial obstacles and find the blue ball.
+Plan: Move forward to clear the initial obstacles.","a wall 2 steps forward
+a wall 1 step left",0,False
+48,turn left,"Thought: From the previous observations, it seems like there are walls obstructing my path. Moving forward initially did not clear these obstacles. Turning right allowed me to move closer to the blue ball without hitting more walls. Given the current observation, there is still a wall directly ahead and to the left. This suggests that moving forward again would likely just hit another wall. Therefore, I should continue trying to navigate around the obstacles until I find a clear path to the blue ball.
+Plan: Continue to navigate around obstacles to find a clear path to the blue ball.","a wall 1 step forward
+a wall 2 steps right",0,False
+49,turn right,"Thought: From the previous action of turning left, I moved closer to the walls but did not find the blue ball. Now, the observation shows a wall directly in front and to the right. This suggests I need to move further to the right to avoid the wall in front. My plan should be to continue moving right until I either find the blue ball or a clearer path.
+Plan: Continue moving right until the blue ball is in front of me.","a wall 2 steps forward
+a wall 1 step left",0,False
+50,go forward,"Thought: From the previous observations, I turned right, which brought me closer to the walls that form a corner. Moving forward now should bring me closer to the blue ball. If the blue ball is not immediately in front of me, turning right again might help me align better with its position.
+Plan: Continue moving right until the blue ball is in front of me.","a wall 1 step forward
+a wall 1 step left",0,False
+51,turn right,"Thought: From the previous observations, I noticed that going forward and turning right were bringing me closer to the walls. This suggests that I am likely making a circular path around obstacles. Since I want to find the blue ball, I should continue moving right to potentially clear the circular path and move straight towards the ball.
+Plan: Continue moving right until the blue ball is in front of me.","a wall 6 steps forward
+a wall 1 step left",0,False
+52,turn right,"Thought: From the current observation, there's a wall directly in front of me and another wall one step to my left. This means I'm still facing the walls and not yet close enough to the blue ball. My previous plan was to continue moving right until the blue ball is in front of me. Given the current observation, I should continue turning right to move closer to the potential location of the blue ball.
+Plan: Continue moving right until the blue ball is in front of me.","a wall 6 steps forward
+a wall 1 step right
+a blue ball 1 step left and 5 steps forward",0,False
+53,go forward,"Thought: From the previous observations, turning right did not lead me closer to the blue ball. Now, the observation indicates that the blue ball is 1 step left and 5 steps forward. To move towards the blue ball, I need to go forward until I am directly facing it, and then turn left to align myself with its position.
+Plan: Go forward 5 times to align with the blue ball's vertical position, then turn left.","a wall 5 steps forward
+a wall 1 step right
+a blue ball 1 step left and 4 steps forward",0,False
+54,go forward,"Thought: From the previous observation, I turned right to move closer to the blue ball. Now, the blue ball is 1 step left and 4 steps forward. To align with the blue ball's vertical position, I need to go forward 4 times. After that, I should turn left to face the blue ball.
+Plan: Go forward 4 times, then turn left.","a wall 4 steps forward
+a wall 1 step right
+a blue ball 1 step left and 3 steps forward",0,False
+55,turn left,"Thought: From the previous observations, I moved forward 4 times and now I am facing a wall 4 steps forward and a blue ball 1 step left and 3 steps forward. My plan was to go forward 4 times and then turn left to face the blue ball. Since I have already moved forward 4 times, I should now turn left to proceed towards the blue ball.
+Plan: Turn left","a wall 6 steps forward
+a wall 3 steps left
+a blue ball 3 steps right and 1 step forward",0,False
+56,go forward,"Thought: From the previous observation, we were moving towards the blue ball, but now the blue ball has moved to a position where it is 3 steps right and 1 step forward. Given our current orientation, the best course of action would be to move forward until we are directly in front of the blue ball.
+Plan: Go forward until the blue ball is in front of us.","a wall 5 steps forward
+a wall 3 steps left
+a blue ball 3 steps right",0,False
+57,turn left,"Thought: From the previous observations, we were moving closer to the blue ball but it seemed to be moving diagonally away from our path. Now, the blue ball is three steps to the right and one step forward. To align with the blue ball, we need to turn left. After turning left, we should continue going forward until the blue ball is directly in front of us.
+Plan: Turn left, then go forward.","a wall 3 steps forward
+a wall 2 steps left",0,False
+58,turn right,"Thought: From the previous observations, we turned left and went forward, which brought us closer to the blue ball. However, the current observation shows that there is now a wall 3 steps forward and a wall 2 steps left. This means that turning left did not lead us directly towards the blue ball but instead moved us closer to a wall. Given this, we should reassess our plan.
+Plan: Turn right, then go forward.","a wall 5 steps forward
+a wall 3 steps left
+a blue ball 3 steps right",0,False
+59,go forward,"Thought: From the previous observation, we were facing a blue ball 3 steps right. Turning right would align us with the path to the blue ball. After turning right, the observation shows a wall 5 steps forward and a wall 3 steps left, indicating we are now facing the direction of the blue ball. The next action should be to go forward until we reach the blue ball.
+Plan: Go forward until the blue ball is directly in front of us.","a wall 4 steps forward
+a wall 3 steps left",0,False
+60,go forward,"Thought: From the previous observations, we moved closer to the blue ball. However, the current observation shows that we are now facing a wall 4 steps forward and 3 steps left. This means our previous move did not bring us closer to the blue ball. Let's try moving forward again to see if we can get closer to the ball.
+Plan: Go forward until the blue ball is directly in front of us.","a wall 3 steps forward
+a wall 3 steps left",0,False
+61,turn right,"Thought: From the previous observations, it seems like going forward multiple times has brought us closer to the blue ball, but we've encountered walls that block our path. Now, the blue ball is 3 steps right from us. We need to turn right to face the blue ball and then take three steps forward to reach it.
+Plan: Turn right and then go forward 3 steps.","a wall 4 steps forward
+a wall 3 steps left
+a blue ball 2 steps right and 3 steps forward",0,False
+62,go forward,"Thought: From the previous observation, I turned right but did not move forward, which resulted in me facing a wall 4 steps forward and a wall 3 steps left. This means my previous action of turning right was correct, but moving forward would have put me in front of walls. Now, based on the current observation, the blue ball is 2 steps right and 3 steps forward from my current position. My plan to turn right and then go forward 3 steps is still valid.
+Plan: No changes to the plan.","a wall 3 steps forward
+a wall 3 steps left
+a blue ball 2 steps right and 2 steps forward",0,False
+63,go forward,"Thought: From the previous observations, it seems like going forward multiple times led to hitting walls. The current observation indicates that the blue ball is now directly in front of me after turning right. My plan was to turn right and then go forward 3 steps. Since the blue ball is now in front of me, I should execute the plan.
+Plan: Turn right and then go forward 3 steps.","a wall 2 steps forward
+a wall 3 steps left
+a blue ball 2 steps right and 1 step forward",0,True

@@ -1,0 +1,44 @@
+{
+    "task": "BabyAI-MixedTrainLocal-v0/open",
+    "action_frequency": {
+        "go forward": 110,
+        "turn right": 6,
+        "turn left": 8,
+        "pick up": 4
+    },
+    "input_tokens": 56273,
+    "output_tokens": 8183,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 128,
+    "failed_candidates": [
+        "turn right\n\nAfter executing this action we will gather the next observation and decide on the subsequent move"
+    ],
+    "mission": "open the purple door",
+    "progression": 0.0,
+    "process_num": "ForkProcess-1",
+    "seed": 500498346,
+    "agent": {
+        "type": "cot",
+        "remember_cot": true,
+        "max_text_history": 5,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "openai",
+        "model_id": "Qwen/Qwen2.5-7B-Instruct-AWQ",
+        "base_url": "http://localhost:8080/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 512,
+            "thinking_budget": null
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}
